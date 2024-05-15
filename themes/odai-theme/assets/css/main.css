@@ -1,22 +1,33 @@
+/*
+  Custom CSS Reset by Josh Comeau
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
 body {
-  color: #222;
-  font-family: sans-serif;
   line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+  -webkit-font-smoothing: antialiased;
 }
 
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+input, button, textarea, select {
+  font: inherit;
 }
 
-a {
-  color: #00e;
-  text-decoration: none;
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
 }
