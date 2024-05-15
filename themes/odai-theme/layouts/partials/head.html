@@ -1,5 +1,11 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Website Setting -->
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<meta name="author" content="Odhy Pradhana">
+<meta name="description" content="Welcome to my Portfolio and Blog website!">
+
+<!-- Links and scripts -->
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
