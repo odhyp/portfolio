@@ -1,3 +1,15 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+theme = 'coming-soon'
+
+[params]
+    title = "Demo" 
+    description = "A Demo Website"
+    favicon = ""
+    message = "Coming Soon!" 
+    release = "Jan 1, 2025" 
+    background = "" 
+    socialIcons = [
+    {name = 'github', url = 'https://github.com/odhyp'}
+    ]
