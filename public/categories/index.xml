@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on My New Hugo Site</title>
-    <link>https://example.org/categories/</link>
+    <link>https://odhyp.github.io/demo/categories/</link>
     <description>Recent content in Categories on My New Hugo Site</description>
     <generator>Hugo 0.125.1</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://odhyp.github.io/demo/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
