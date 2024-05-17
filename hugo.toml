@@ -2,3 +2,28 @@ baseURL = 'https://odhyp.github.io/demo/'
 languageCode = 'en-us'
 title = 'Demo Site'
 theme = 'odai-theme'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
+
+[[menus.main]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 40
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
