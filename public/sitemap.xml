@@ -2,32 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://odhyp.github.io/demo/tags/blue/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://odhyp.github.io/demo/tags/green/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
+    <loc>https://odhyp.github.io/demo/tags/blog/</loc>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
   </url><url>
     <loc>https://odhyp.github.io/demo/posts/post-3/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://odhyp.github.io/demo/tags/red/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://odhyp.github.io/demo/tags/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://odhyp.github.io/demo/posts/post-2/</loc>
-    <lastmod>2023-02-15T10:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://odhyp.github.io/demo/posts/post-1/</loc>
-    <lastmod>2023-01-15T09:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://odhyp.github.io/demo/posts/</loc>
-    <lastmod>2023-01-01T08:30:00-07:00</lastmod>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
   </url><url>
     <loc>https://odhyp.github.io/demo/</loc>
-    <lastmod>2023-01-01T08:00:00-07:00</lastmod>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/posts/</loc>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/projects/</loc>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/tags/</loc>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/projects/project-1/</loc>
+    <lastmod>2024-05-17T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/posts/post-2/</loc>
+    <lastmod>2024-05-16T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/projects/project-2/</loc>
+    <lastmod>2024-05-16T06:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://odhyp.github.io/demo/posts/post-1/</loc>
+    <lastmod>2024-05-15T06:00:00+07:00</lastmod>
   </url><url>
     <loc>https://odhyp.github.io/demo/categories/</loc>
   </url>

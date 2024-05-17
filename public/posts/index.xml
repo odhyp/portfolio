@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on Demo Site</title>
     <link>https://odhyp.github.io/demo/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on Demo Site</description>
     <generator>Hugo 0.125.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 06:00:00 +0700</lastBuildDate>
     <atom:link href="https://odhyp.github.io/demo/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Post 3</title>
+      <title>Check out your competition</title>
       <link>https://odhyp.github.io/demo/posts/post-3/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <pubDate>Fri, 17 May 2024 06:00:00 +0700</pubDate>
       <guid>https://odhyp.github.io/demo/posts/post-3/</guid>
-      <description>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.</description>
+      <description>What better way to draw inspiration than to look at your well-established competition?&#xA;It’s worth taking a look at popular, highly reviewed blogs because their strategy and execution is what got them to grow in credibility. The purpose of doing this isn’t to copy these elements, but to gain better insight into what readers appreciate in a quality blog.&#xA;When you find a competitor’s blog, take the following steps:&#xA;Determine whether they’re actually a direct competitor.</description>
     </item>
     <item>
-      <title>Post 2</title>
+      <title>Understand your audience</title>
       <link>https://odhyp.github.io/demo/posts/post-2/</link>
-      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      <pubDate>Thu, 16 May 2024 06:00:00 +0700</pubDate>
       <guid>https://odhyp.github.io/demo/posts/post-2/</guid>
-      <description>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&#xA;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia.</description>
+      <description>Before you start writing your blog post, make sure you have a clear understanding of your target audience. To do so, take the following steps.&#xA;Ask yourself exploratory questions To discover your audience, ask questions like: Who are they? Are they like me, or do I know someone like them? What do they want to know about? What will resonate with them?&#xA;Jot down your notes in a notepad or a document.</description>
     </item>
     <item>
-      <title>Post 1</title>
+      <title>How to Start a Blog</title>
       <link>https://odhyp.github.io/demo/posts/post-1/</link>
-      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <pubDate>Wed, 15 May 2024 06:00:00 +0700</pubDate>
       <guid>https://odhyp.github.io/demo/posts/post-1/</guid>
-      <description>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&#xA;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.</description>
+      <description>If you’ve ever read a blog post, you’ve consumed content from a thought leader that is an expert in their industry. Chances are if the blog post was written effectively, you came away with helpful knowledge and a positive opinion about the writer or brand that produced the content.&#xA;Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet.</description>
     </item>
   </channel>
 </rss>
