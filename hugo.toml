@@ -28,6 +28,11 @@ name = 'About'
 pageRef = '/about'
 weight = 50
 
+[[menus.main]]
+name = 'Categories'
+pageRef = '/categories'
+weight = 60
+
 [module]
   [module.hugoVersion]
     extended = false

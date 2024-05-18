@@ -2,6 +2,7 @@
 date = 2024-05-15T06:00:00+07:00
 draft = false
 title = 'How to Start a Blog'
+categories = ['article']
 tags = ['blog']
 +++
 
