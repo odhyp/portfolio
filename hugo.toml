@@ -1,6 +1,6 @@
 baseURL = 'https://odhyp.github.io/demo/'
 languageCode = 'en-us'
-title = 'Demo Site'
+title = 'Demo'
 theme = 'odai-theme'
 
 [[menus.main]]
