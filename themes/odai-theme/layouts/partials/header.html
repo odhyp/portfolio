@@ -1,2 +1,8 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="nav-bar">
+  <div class="logo">
+    <a href="/demo/">
+      <h3>Odhy</h3>
+    </a>
+  </div>
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
