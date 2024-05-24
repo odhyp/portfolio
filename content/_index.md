@@ -3,6 +3,8 @@ draft = false
 title = 'Home'
 +++
 
-# Welcome
+Welcome! My name is Odhy.
 
-Hi there! welcome to my blog and portfolio website. This website serves as a creative outlet for my hobbies.
+I create Python automations and write about interesting stuffs.
+
+Check them out!
