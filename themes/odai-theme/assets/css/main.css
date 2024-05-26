@@ -80,6 +80,10 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
+.nav-bar a:hover {
+  border-bottom: 1.8px solid #333;
+}
+
 /* ----- Contact button ----- */
 .nav-bar li:last-child {
   background: #333;
