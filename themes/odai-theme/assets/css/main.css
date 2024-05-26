@@ -63,7 +63,7 @@ p, h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5rem;
 }
 
-.nav-bar ul{
+.nav-bar ul {
   display: flex;
   justify-content: space-between;
   width: 25rem;
