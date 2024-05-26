@@ -55,7 +55,7 @@ p, h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   backdrop-filter: blur(0.5rem);
-  background: rgba(248, 248, 248, 0.5);
+  background: rgba(248, 248, 248, 0.8);
 }
 
 .logo {
