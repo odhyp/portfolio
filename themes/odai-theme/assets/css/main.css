@@ -85,13 +85,25 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* ----- Contact button ----- */
+
 .nav-bar li:last-child {
   background: #333;
   border-radius: 0.3rem;
 }
+
 .nav-bar li:last-child a {
   color: white;
   padding: 1rem;
+}
+
+.nav-bar li:last-child:hover {
+  background: #ccc;
+}
+
+.nav-bar li:last-child a:hover {
+  border-bottom: none;
+  color: #333;
+  font-weight: bold;
 }
 
 /* --------------- 2. Home Page --------------- */
