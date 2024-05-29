@@ -108,6 +108,39 @@ footer {
 
 /* 5. Component-level Styles --------------------------- */
 
+.btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-light {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.btn-light:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transition: ease-in 0.2s;
+}
+
+.btn-dark {
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background-color: var(--white);
+  border: 2px dashed var(--black);
+  color: var(--black);
+  transition: ease-in 0.2s;
+}
+
 /* 6. Responsive Design -------------------------------- */
 
 /* 7. Utilities ---------------------------------------- */
