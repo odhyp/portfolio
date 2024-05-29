@@ -132,6 +132,17 @@ footer {
 
 /* 5. Component-level Styles --------------------------- */
 
+/* Logo ---------------------------- */
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Navigations --------------------- */
+
+/* Buttons ------------------------- */
 .btn {
   display: inline-block;
   padding: 0.5em 2em;
