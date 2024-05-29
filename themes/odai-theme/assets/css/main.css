@@ -85,8 +85,8 @@ p {
 }
 
 a {
-  color: var(--primary-color);
   text-decoration: none;
+  color: var(--text-color);
 }
 
 /* 4. Layout Components -------------------------------- */
