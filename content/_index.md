@@ -3,8 +3,6 @@ draft = false
 title = 'Home'
 +++
 
-Welcome! My name is Odhy.
+# Hi! I'm Odhy.
 
-I create Python automations and write about interesting stuffs.
-
-Check them out!
+# I [create](projects/) & [write](posts/) about Python automations, music, and other things.
