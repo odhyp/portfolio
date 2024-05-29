@@ -91,11 +91,35 @@ a {
 
 /* 4. Layout Components -------------------------------- */
 header {
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--transparent-color);
+  backdrop-filter: blur(0.5rem);
 }
 
 nav {
-  
+  width: fit-content;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  gap: 2rem;
+}
+
+nav ul li {
+  list-style: none;
+  letter-spacing: 0.1rem;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid var(--black);
 }
 
 main {
