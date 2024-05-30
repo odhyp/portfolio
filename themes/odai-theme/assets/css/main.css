@@ -142,6 +142,36 @@ footer {
 
 /* Navigations --------------------- */
 
+/* Sticky Headers ------------------ */
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  padding: 0 2rem;
+  position: sticky;
+  top: 4rem;
+  width: 100%;
+  background-color: var(--transparent-color);
+  backdrop-filter: blur(0.5rem);
+  border-top: 1px dashed var(--black-thin);
+  margin-bottom: 4rem;
+}
+
+.sticky-categories {
+  padding: 0.5rem 0;
+}
+
+.sticky-categories a {
+  padding-right: 0.75rem;
+}
+
+.search-bar {
+  background-color: var(--black-thin);
+  padding: 0.5rem 2rem;
+  border-radius: var(--border-radius);
+}
+
 /* Buttons ------------------------- */
 .btn {
   display: inline-block;
