@@ -38,8 +38,9 @@ p, h1, h2, h3, h4, h5, h6 {
   --primary-color: red;
   --secondary-color: blue;
   --accent-color: pink;
-  --white: #F8F8F8;
-  --black: #333333;
+  --white: rgba(248, 248, 248, 1);
+  --black: rgba(51, 51, 51, 1);
+  --black-thin: rgba(51, 51, 51, 0.3);
 
   --background-color: rgba(248, 248, 248, 1);
   --transparent-color: rgba(248, 248, 248, 0.8);
