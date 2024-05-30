@@ -1,13 +1,36 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  <div class="list-intro">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
 
-    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <div class="sticky-header">
+    <div class="sticky-categories">
+      <a href="#">All</a>
+      <a href="#">Python</a>
+      <a href="#">Music</a>
+      <a href="#">Front-end</a>
+      <a href="#">Life</a>
+    </div>
+
+    <div class="search-bar">
+      Search blog
+    </div>
+  </div>
+
+  <div class="list-container">
     
-    <p>{{ .Summary }}</p>
-  {{ end }}
+      {{ range .Pages }}
+      <div class="list-content">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        
+        <p>{{ .Summary }}</p>
+      </div>
+      {{ end }}
+  </div>
+
 {{ end }}
