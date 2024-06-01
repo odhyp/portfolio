@@ -128,7 +128,13 @@ main {
 }
 
 footer {
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  padding: 0 2rem;
+  border: 2px dashed red;
+  margin-top: 4rem;
 }
 
 /* 5. Component-level Styles --------------------------- */
