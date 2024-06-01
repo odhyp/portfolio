@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'About'
+title = 'Contact'
 +++
 
-This is about section
+This is contact section

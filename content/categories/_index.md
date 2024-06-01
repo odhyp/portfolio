@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Category'
+title = 'Categories'
 +++
 
 This is category section

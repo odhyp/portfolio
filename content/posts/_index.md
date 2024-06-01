@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Posts'
+title = 'Blogs'
 +++
 
-Welcome to my blog! I write random stuffs mostly about Python, music, and gaming.
+This is blog section
