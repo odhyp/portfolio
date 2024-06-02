@@ -1,36 +1,46 @@
 {{ define "main" }}
-  <div class="list-intro">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </div>
-
-  <div class="sticky-header">
-    <div class="sticky-categories">
-      <a href="#">All</a>
-      <a href="#">Python</a>
-      <a href="#">Music</a>
-      <a href="#">Front-end</a>
-      <a href="#">Life</a>
-    </div>
-
-    <div class="search-bar">
-      Search blog
+  <div class="container container-wide">
+    <div class="list-intro">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
     </div>
   </div>
 
-  <div class="list-container">
-    
-      {{ range .Pages }}
-      <div class="list-content">
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  <div class="container container-full sticky-header">
+      <hr class="separator">
 
-        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-        {{ $dateHuman := .Date | time.Format ":date_long" }}
-        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-        
-        <p>{{ .Summary }}</p>
+      <div class="list-header">
+        <div class="list-header-categories">
+          <a href="#">All</a>
+          <a href="#">Python</a>
+          <a href="#">HTML/CSS</a>
+          <a href="#">Music</a>
+          <a href="#">Gaming</a>
+          <a href="#">Other</a>
+        </div>
+        <div class="search-bar btn btn-light">
+          <span>Search blog</span>
+        </div>
       </div>
+  </div>
+
+  <div class="container container-wide">
+    <div class="grid-container">
+      {{ range .Pages }}
+        <div class="list-content">
+          <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format ":date_long" }}
+          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+          
+          <!-- <p>{{ .Summary }}</p> -->
+          {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+          {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+        </div>
       {{ end }}
+    </div>
   </div>
 
 {{ end }}
