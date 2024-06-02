@@ -166,6 +166,58 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/* List Page ----------------------- */
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  min-height: 4rem;
+  background-color: var(--transparent-color);
+  backdrop-filter: blur(0.5rem);
+  margin-bottom: 4rem;
+}
+
+.separator {
+  margin: 0;
+  border: none;
+  border-top: 1px dashed var(--black-thin);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  width: 75rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.list-header-categories {
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+
+.list-header-categories a {
+  padding-right: 0.75rem;
+}
+
+.search-bar {
+  background-color: var(--black-thin);
+  padding: 0.5rem 2rem;
+  border-radius: var(--border-radius);
+}
+
+.list-intro {
+  margin-bottom: 4rem;
+  padding-inline: 2rem 32rem; /*Using margin and max-width mess with the left alignments*/
+}
+
+.list-content {
+  padding: 2rem;
+  border: 1px dashed #999;
+}
+
 /* Buttons ------------------------- */
 .btn {
   display: inline-block;
