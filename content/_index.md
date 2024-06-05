@@ -5,4 +5,4 @@ title = 'Home'
 
 # Hi! I'm Odhy.
 
-# I [create](projects/) & [write](posts/) about Python automations, music, and other things.
+# I create & write about Python automations, music, and other things.
