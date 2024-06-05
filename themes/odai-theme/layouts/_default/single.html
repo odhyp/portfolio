@@ -1,10 +1,29 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <a class="nav-btn" onclick="history.back()"><i class="fa-solid fa-arrow-left-long"></i> Back to blog</a>
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <div class="container container-main">
+    <div class="container-post">
+      <h1>{{ .Title }}</h1>
+
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+      {{ .Content }}
+
+      {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </div>
+    
+    <div class="container-side">
+      <h2>Welcome!</h2>
+      <h3>What is this?</h3>
+      <h3>Installation</h3>
+      <h2>Quick Start</h2>
+      <h3>Basic Usage</h3>
+      <h3>How to create elements with sample function</h3>
+    </div>
+  </div>
+
 {{ end }}
