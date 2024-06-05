@@ -1,4 +1,5 @@
 {{ define "main" }}
+
   <div class="container container-wide">
     <div class="list-intro">
       <h1>{{ .Title }}</h1>
@@ -12,11 +13,8 @@
       <div class="list-header">
         <div class="list-header-categories">
           <a href="#">All</a>
-          <a href="#">Python</a>
-          <a href="#">HTML/CSS</a>
-          <a href="#">Music</a>
-          <a href="#">Gaming</a>
-          <a href="#">Other</a>
+          <a href="#">Categories</a>
+          <a href="#">Tags</a>
         </div>
         <div class="search-bar btn btn-light">
           <span>Search blog</span>
@@ -34,7 +32,7 @@
           {{ $dateHuman := .Date | time.Format ":date_long" }}
           <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
           
-          <!-- <p>{{ .Summary }}</p> -->
+          <p>{{ .Summary }}</p>
           {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
           {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
