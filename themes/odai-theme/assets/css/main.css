@@ -133,8 +133,9 @@ footer {
   align-items: center;
   min-height: 4rem;
   padding: 0 2rem;
-  border: 2px dashed red;
   margin-top: 4rem;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 /* 5. Component-level Styles --------------------------- */
