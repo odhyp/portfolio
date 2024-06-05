@@ -206,7 +206,11 @@ footer {
 }
 
 .list-header-categories a {
-  padding-right: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.list-header-categories a:hover {
+  border-bottom: 1.5px solid var(--black);
 }
 
 .search-bar {
