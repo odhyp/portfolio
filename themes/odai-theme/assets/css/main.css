@@ -258,6 +258,19 @@ footer {
   transition: ease-in 0.2s;
 }
 
+.nav-btn {
+  padding: 0.25em 0;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  border-bottom: 2px solid var(--black);
+}
+
+.nav-btn-light {
+  color: var(--white);
+}
+
 /* 6. Responsive Design -------------------------------- */
 
 /* 7. Utilities ---------------------------------------- */
