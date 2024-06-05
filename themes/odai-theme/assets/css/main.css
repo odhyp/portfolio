@@ -253,7 +253,7 @@ footer {
 
 .btn-dark:hover {
   background-color: var(--white);
-  border: 2px dashed var(--black);
+  border: 2px solid var(--black);
   color: var(--black);
   transition: ease-in 0.2s;
 }
