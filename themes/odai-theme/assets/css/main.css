@@ -166,6 +166,12 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.full-page {
+  /* 100 viewport height - (header height + body margin top) */
+  /* Optional: add footer height to show footer in viewport without scrolling */
+  min-height: calc(100vh - (4rem + 8rem));
+}
+
 /* List Page ----------------------- */
 .sticky-header {
   position: -webkit-sticky;
