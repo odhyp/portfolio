@@ -226,6 +226,10 @@ footer {
   padding-inline: 2rem 32rem;
 }
 
+.list-intro h1 {
+  font-weight: bold;
+}
+
 .list-content {
   padding: 2rem;
   border: 1px dashed #999;
