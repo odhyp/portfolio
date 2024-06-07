@@ -221,7 +221,9 @@ footer {
 
 .list-intro {
   margin-bottom: 4rem;
-  padding-inline: 2rem 32rem; /*Using margin and max-width mess with the left alignments*/
+
+  /* Using padding-inline, because margin and max-width mess with the left alignments */
+  padding-inline: 2rem 32rem;
 }
 
 .list-content {
