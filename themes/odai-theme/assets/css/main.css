@@ -167,6 +167,25 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.main-container {
+  display: flex;
+  justify-content: flex-start;
+  padding-inline: 2rem;
+  gap: 4rem;
+}
+
+.post-container {
+  width: 42rem;
+  font-family: var(--font-family-sans);
+}
+
+.sidebar {
+  font-size: 12px;
+  position: sticky;
+  top: 12rem;
+  height: fit-content;
+}
+
 .full-page {
   /* 100 viewport height - (header height + body margin top + footer height(optional)) */
   /* Optional: add footer height to show footer in viewport without scrolling */
