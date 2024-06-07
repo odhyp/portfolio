@@ -189,7 +189,7 @@ footer {
 .full-page {
   /* 100 viewport height - (header height + body margin top + footer height(optional)) */
   /* Optional: add footer height to show footer in viewport without scrolling */
-  min-height: calc(100vh - (4rem + 8rem + 4rem));
+  min-height: calc(100vh - (4rem + 8rem));
 }
 
 /* List Page ----------------------- */
