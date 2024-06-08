@@ -188,6 +188,32 @@ footer {
   width: 20rem;
 }
 
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
+  line-height: 1.2rem;
+  margin-bottom: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar h3 {
+  margin-top: 0.4rem;
+  margin-left: 1rem;
+}
+
+.sidebar h4 {
+  margin-left: 2rem;
+}
+
+.sidebar h5 {
+  margin-left: 3rem;
+}
+
 .full-page {
   /* 100 viewport height - (header height + body margin top + footer height(optional)) */
   /* Optional: add footer height to show footer in viewport without scrolling */
