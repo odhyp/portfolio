@@ -279,7 +279,12 @@ footer {
 
 .list-content {
   padding: 2rem;
-  border: 1px dashed #999;
+}
+
+.list-content h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 /* Buttons ------------------------- */
