@@ -287,6 +287,20 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* Single Page --------------------- */
+.post-container h2 {
+  font-weight: 600;
+}
+
+.post-container p {
+  line-height: 2rem;
+}
+
+.post-container p,
+.highlight {
+  margin-bottom: 2rem;
+}
+
 /* Buttons ------------------------- */
 .btn {
   display: inline-block;
