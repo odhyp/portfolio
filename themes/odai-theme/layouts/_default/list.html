@@ -32,7 +32,6 @@
           {{ $dateHuman := .Date | time.Format ":date_long" }}
           <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
           
-          <p>{{ .Summary }}</p>
           {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
           {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
