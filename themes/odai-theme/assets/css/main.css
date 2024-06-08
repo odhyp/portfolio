@@ -171,19 +171,21 @@ footer {
   display: flex;
   justify-content: flex-start;
   padding-inline: 2rem;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 .post-container {
   width: 42rem;
+  min-width: 42rem;
   font-family: var(--font-family-sans);
 }
 
 .sidebar {
   font-size: 12px;
   position: sticky;
-  top: 12rem;
+  top: 10rem;
   height: fit-content;
+  width: 20rem;
 }
 
 .full-page {
