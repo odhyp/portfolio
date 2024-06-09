@@ -2,8 +2,8 @@
 date = 2024-05-21T06:00:00+07:00
 draft = false
 title = 'THE POETIC EDDA - LAYS OF THE HEROES VÖLUNDARKVITHA'
-categories = ['article', 'interesting']
-tags = ['blog']
+categories = ['Python']
+tags = ['blog', 'python', 'web scraping', 'automation']
 +++
 
 Between the Thrymskvitha and the Alvissmol in the Codex Regius stands the Völundarkvitha. It was also included in the Arnamagnæan Codex, but unluckily it begins at the very end of the fragment which has been preserved, and thus only a few lines of the opening prose remain. This is doubly regrettable because the text in Regius is unquestionably in very bad shape, and the other manuscript would doubtless have been of great assistance in the reconstruction of the poem.
