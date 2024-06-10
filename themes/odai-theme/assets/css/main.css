@@ -301,6 +301,50 @@ footer {
   margin-bottom: 2rem;
 }
 
+
+/* Taxonomy / Terms ---------------- */
+.terms-container {
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+
+.terms-icon {
+  width: 1rem;
+  padding-right: 0.5rem;
+}
+
+.terms-categories {}
+.terms-tags {}
+
+.terms-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.terms-list li {
+  list-style: none;
+}
+
+.terms-item {
+  border: 1px solid var(--black);
+  border-radius: var(--border-radius);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.terms-item:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.2s ease-in;
+}
+
+
 /* Buttons ------------------------- */
 .btn {
   display: inline-block;
