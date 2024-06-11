@@ -19,9 +19,19 @@ pageRef = '/posts'
 weight = 30
 
 [[menus.main]]
+name = 'Categories'
+pageRef = '/categories'
+weight = 40
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 50
+
+[[menus.main]]
 name = 'Contact'
 pageRef = '/contact'
-weight = 40
+weight = 60
 
 [module]
   [module.hugoVersion]
