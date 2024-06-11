@@ -1,7 +1,7 @@
 baseURL = 'https://odhyp.github.io/demo/'
 languageCode = 'en-us'
 title = 'Odhy'
-theme = 'odai-theme'
+theme = 'demo-theme'
 
 [[menus.main]]
 name = 'Home'
