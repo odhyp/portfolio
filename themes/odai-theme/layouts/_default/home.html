@@ -3,5 +3,7 @@
   {{ range site.RegularPages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}
+    {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   {{ end }}
 {{ end }}
