@@ -1,11 +1,11 @@
 +++
-draft = false
 title = 'Projects'
+draft = false
 +++
 
-I am currently working on automating boring stuffs for daily office tasks using Python. I'm also interested in deep learning and any AI-related stuffs.
+## This is Projects section
 
-![](cover.jpg)
+### I am currently working on automating boring stuffs for daily office tasks using Python. I'm also interested in deep learning and any AI-related stuffs.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
