@@ -5,8 +5,10 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = {{ .Date }}
 author = '{{ .Site.Params.author }}'
 
-cover_image = 'cover.webp'
-types = ['types1', 'types2', 'types3']
+categories = ['category1', 'category2']
+tags = ['tag1', 'tag2', 'tag3']
+summary = ''
+
 project_url = ''
 source_code = ''
 +++
