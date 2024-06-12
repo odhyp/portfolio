@@ -20,7 +20,7 @@ weight = 21
 
 [[menus.main]]
 name = 'Blogs'
-pageRef = '/posts'
+pageRef = '/blogs'
 weight = 30
 
 [[menus.main]]
