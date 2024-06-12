@@ -9,7 +9,6 @@ cover_image = 'cover.webp'
 types = ['types1', 'types2', 'types3']
 project_url = ''
 source_code = ''
-
 +++
 
 ## Project Overview
