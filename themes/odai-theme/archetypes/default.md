@@ -1,6 +1,9 @@
 +++
+draft = true
+
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = {{ .Date }}
-author = "Odhy Pradhana"
-draft = true
+author = '{{ .Site.Params.author }}'
 +++
+
+<!-- This is the default archetype -->
