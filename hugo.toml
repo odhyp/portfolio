@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Odhy'
 theme = 'odai-theme'
 
+[params]
+  author = "Odhy Pradhana"
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
