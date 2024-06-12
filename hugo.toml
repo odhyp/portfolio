@@ -3,9 +3,11 @@ languageCode = 'en-us'
 title = 'Odhy'
 theme = 'odai-theme'
 
+# Author information
 [params]
   author = "Odhy Pradhana"
 
+# Main menu configuration
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
@@ -41,11 +43,13 @@ name = 'Contact'
 pageRef = '/contact'
 weight = 40
 
+# Hugo Module version requirement
 [module]
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
 
+# Markup highlighting configuration
 [markup]
   [markup.highlight]
     anchorLineNos = false
