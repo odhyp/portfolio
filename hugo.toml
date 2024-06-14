@@ -44,6 +44,9 @@ weight = 40
     extended = false
     min = "0.116.0"
 
+# Git Info for Last Modify Date
+enableGitInfo = true
+
 # Markup highlighting configuration
 [markup]
   [markup.highlight]
