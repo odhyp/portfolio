@@ -29,4 +29,13 @@
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+  {{ with .PrevInSection }}
+    <a class="previous" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+  {{ end }}
+  {{ with .NextInSection }}
+    <a class="next" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+  {{ end }}
+
+
 {{ end }}
