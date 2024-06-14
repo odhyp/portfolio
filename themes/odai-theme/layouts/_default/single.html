@@ -20,6 +20,10 @@
 
   {{ with .GitInfo }}
     <p>Last Modified: {{ .AuthorDate | time.Format ":date_medium" }}</p>
+    {{ .AuthorDate.Format "2006-01-02" }}
+    {{ .Subject }}
+  {{ else }}
+    <p>No GitInfo Available</p>
   {{ end }}
 
   {{ .ReadingTime }} min read
