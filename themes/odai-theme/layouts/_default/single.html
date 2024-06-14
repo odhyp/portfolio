@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+  {{ with .Resources.GetMatch "cover.*" }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+  {{ else }}
+    {{ with .Resources.GetMatch "*.png" }}
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+    {{ end }}
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
+  By: {{ .Params.author }}
+  <br>
+  
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_medium" }}
+  <time datetime="{{ $dateMachine }}">Published: {{ $dateHuman }}</time>
+  <br>
+
+  {{ with .GitInfo }}
+    <p>Last Modified: {{ .AuthorDate | time.Format ":date_medium" }}</p>
+    {{ .AuthorDate.Format "2006-01-02" }}
+    {{ .Subject }}
+  {{ else }}
+    <p>No GitInfo Available</p>
+  {{ end }}
+
+  {{ .ReadingTime }} min read
+  <br>
+
+  <hr>
+  {{ .Content }}
+  {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+  {{ with .PrevInSection }}
+    <a class="previous" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+  {{ end }}
+  {{ with .NextInSection }}
+    <a class="next" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+  {{ end }}
+
+
+{{ end }}

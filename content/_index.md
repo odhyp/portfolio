@@ -1,6 +1,6 @@
 +++
-draft = false
 title = 'Home'
+draft = false
 +++
 
 # Hi! I'm Odhy.

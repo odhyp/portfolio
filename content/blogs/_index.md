@@ -1,9 +1,11 @@
 +++
-draft = false
 title = 'Blogs'
+draft = false
 +++
 
-This is blog section where I write stuffs about Python, HTML, CSS, Music, Gaming, and other interesting stuffs.
+## This is Blogs section
+
+### I write stuffs about Python, HTML, CSS, Music, Gaming, and other interesting stuffs.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
