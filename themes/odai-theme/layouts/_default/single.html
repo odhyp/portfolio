@@ -10,13 +10,22 @@
 
   <h1>{{ .Title }}</h1>
 
-  {{ .Params.author }}
-  {{ .ReadingTime }} min read
-
+  By: {{ .Params.author }}
+  <br>
+  
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_medium" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <time datetime="{{ $dateMachine }}">Published: {{ $dateHuman }}</time>
+  <br>
 
+  {{ with .GitInfo }}
+    <p>Last Modified: {{ .AuthorDate | time.Format ":date_medium" }}</p>
+  {{ end }}
+
+  {{ .ReadingTime }} min read
+  <br>
+
+  <hr>
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
