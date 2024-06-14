@@ -2,7 +2,7 @@
 draft = false
 
 title = 'Ultimate Office'
-date = 2024-06-12T19:51:06+07:00
+date = 2024-06-10T19:51:06+07:00
 author = 'Odhy Pradhana'
 
 categories = ['python', 'automation']
