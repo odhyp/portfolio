@@ -1,2 +1,25 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="container">
+  <div class="flex header-content">
+    <div class="logo">
+      <a href="/demo">{{ site.Title }}</a>
+    </div>
+
+    <div class="header-menu">
+      <a class="menu-item" href="/demo/">Home</a>
+      <a class="menu-item" href="/demo/projects/">Projects</a>
+
+      <div class="dropdown-menu">
+        <a class="menu-item" href="/demo/blogs/">Blogs<i class="dropdown-icon fa-solid fa-angle-down"></i></a>
+        <div class="dropdown-content">
+          <a class="menu-item" href="/demo/categories">Categories</a>
+          <a class="menu-item" href="/demo/tags/">Tags</a>
+        </div>
+      </div>
+
+      <a class="menu-item" href="/demo/contact/">Contact</a>
+      
+      <a class="header-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a class="header-icon" href="#"><i class="fa-solid fa-moon"></i></a>
+    </div>
+  </div>
+</div>
