@@ -1,19 +1,41 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
 
-    {{ with .Resources.GetMatch "cover.*" }}
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-    {{ else }}
-      {{ with .Resources.GetMatch "*.png" }}
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+  <div class="container container-main">
+
+    <div class="page-heading">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+
+    <div class="grid">
+      {{ range .Pages }}
+        <div class="container-content">
+
+          <div class="list-cover">
+            {{ with .Resources.GetMatch "cover.*" }}
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+            {{ else }}
+              {{ with .Resources.GetMatch "*.png" }}
+                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+              {{ end }}
+            {{ end }}
+          </div>
+
+          <div class="list-content">
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+
+            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+            {{ $dateHuman := .Date | time.Format ":date_medium" }}
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+            {{ .Params.Summary }}
+
+            {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+          </div>
+        </div>
       {{ end }}
-    {{ end }}
-  
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Params.Summary }}
-    {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  {{ end }}
+    </div>
+  </div>
+
 {{ end }}
