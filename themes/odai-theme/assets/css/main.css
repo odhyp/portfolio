@@ -90,7 +90,13 @@ a {
 /* 4. Layout Components -------------------------------- */
 header {}
 main {}
-footer {}
+
+footer {
+  padding: 1rem 0;
+  margin-top: 4rem;
+  background-color: var(--black);
+  color: var(--white);
+}
 
 /* 5. Component-level Styles --------------------------- */
 
@@ -130,6 +136,11 @@ footer {}
 /* Single Page --------------------- */
 /* Taxonomy ------------------------ */
 /* Footer -------------------------- */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* 6. Responsive Design -------------------------------- */
 
