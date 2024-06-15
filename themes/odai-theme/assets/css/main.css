@@ -1,22 +1,132 @@
+/*
+  Author : Odhy Pradhana
+  License: MIT License (2024-present)
+
+  Table of Contents
+  0. CSS Reset (by Josh W. Comeau, modified)
+  1. Custom Properties
+  2. Global Styles
+  3. Base Elements
+  4. Layout Components
+  5. Component-level Styles
+  6. Responsive Design
+  7. Utilities
+*/
+
+/* 0. CSS Reset ---------------------------------------- */
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 1. Custom Properties -------------------------------- */
+:root {
+  /* Colors */
+  --white: rgba(248, 248, 248, 1);
+  --black: rgba(51, 51, 51, 1);
+
+  --bg-full: rgba(248, 248, 248, 1);
+  --bg-transparent: rgba(248, 248, 248, 0.8);
+
+  --text-color: var(--black);
+
+  /* Font Family */
+  --ff-mono: "JetBrains Mono", monospace;
+  --ff-sans: "Inter", sans-serif;
+
+  /* Other */
+  --base-spacing: 1rem;
+  --border-radius: 4px;
+}
+
+/* 2. Global Styles ------------------------------------ */
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-mono);
+  background-color: var(--bg-full);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+/* 3. Base Elements ------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--base-spacing) 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 var(--base-spacing) 0;
 }
 
 a {
-  color: #00e;
   text-decoration: none;
+  color: var(--text-color);
 }
+
+/* 4. Layout Components -------------------------------- */
+header {}
+main {}
+footer {}
+
+/* 5. Component-level Styles --------------------------- */
+
+/* Containers ---------------------- */
+.container {}
+
+.container-main {}
+.container-side {}
+.container-full {}
+
+.grid {}
+.center {}
+
+/* Buttons ------------------------- */
+.btn {}
+.btn-light {}
+.btn-light:hover {}
+.btn-dark {}
+.btn-dark:hover {}
+.btn-naked {}
+.btn-naked:hover {}
+
+/* Lines --------------------------- */
+.separator {}
+
+/* Logo ---------------------------- */
+.logo {}
+
+/* Navigation Bar ------------------ */
+.nav {}
+
+/* List Page ----------------------- */
+/* Single Page --------------------- */
+/* Taxonomy ------------------------ */
+/* Footer -------------------------- */
+
+/* 6. Responsive Design -------------------------------- */
+
+/* 7. Utilities ---------------------------------------- */
