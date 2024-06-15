@@ -1,9 +1,14 @@
+{{- $removeDate := substr .Name 11 -}}
+{{- $pageTitle := replace $removeDate "-" " " | title -}}
+{{- $pageSlug := $removeDate -}}
+
 +++
 draft = true
 
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+title = '{{ $pageTitle }}'
 date = {{ .Date }}
 author = '{{ .Site.Params.author }}'
+slug = '{{ $pageSlug }}'
 
 categories = ['category1', 'category2']
 tags = ['tag1', 'tag2', 'tag3']
