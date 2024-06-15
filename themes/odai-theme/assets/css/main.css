@@ -128,12 +128,46 @@ footer {
 
 
 /* Buttons ------------------------- */
-.btn {}
-.btn-light {}
-.btn-light:hover {}
-.btn-dark {}
-.btn-dark:hover {}
+.btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.btn:hover {
+  scale: 0.95;
+}
+
+.btn-icon {
+  margin-right: 1em;
+}
+
+.btn-light {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.btn-light:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-dark {
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
 .btn-naked {}
+
 .btn-naked:hover {}
 
 /* Lines --------------------------- */
