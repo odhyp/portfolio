@@ -102,6 +102,7 @@ footer {}
 .container-full {}
 
 .grid {}
+.container-content {}
 .center {}
 
 /* Buttons ------------------------- */
@@ -121,6 +122,9 @@ footer {}
 
 /* Navigation Bar ------------------ */
 .nav {}
+
+/* Page ---------------------------- */
+.page-heading {}
 
 /* List Page ----------------------- */
 /* Single Page --------------------- */
