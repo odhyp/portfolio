@@ -102,15 +102,24 @@ footer {
 /* 5. Component-level Styles --------------------------- */
 
 /* Containers ---------------------- */
-.container {}
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+}
 
 .container-main {}
 .container-side {}
 .container-full {}
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .grid {}
 .container-content {}
-.center {}
+
 
 /* Buttons ------------------------- */
 .btn {}
