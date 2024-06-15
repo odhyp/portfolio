@@ -49,6 +49,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* Other */
   --base-spacing: 1rem;
+  --menu-spacing: 1.5rem;
   --border-radius: 4px;
 }
 
