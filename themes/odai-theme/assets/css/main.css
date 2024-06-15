@@ -183,6 +183,11 @@ footer {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.3rem;
+  transition: 0.2s ease-out;
+}
+
+.logo:hover {
+  scale: 1.1;
 }
 
 .header-menu {
