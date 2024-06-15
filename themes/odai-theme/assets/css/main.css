@@ -93,7 +93,6 @@ header {}
 main {}
 
 footer {
-  padding: 1rem 0;
   margin-top: 4rem;
   background-color: var(--black);
   color: var(--white);
@@ -147,9 +146,7 @@ footer {
 /* Taxonomy ------------------------ */
 /* Footer -------------------------- */
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  min-height: 4rem;
 }
 
 /* 6. Responsive Design -------------------------------- */
