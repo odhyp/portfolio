@@ -89,7 +89,14 @@ a {
 }
 
 /* 4. Layout Components -------------------------------- */
-header {}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-transparent);
+  backdrop-filter: blur(0.5rem);
+}
+
 main {}
 
 footer {
@@ -132,11 +139,71 @@ footer {
 /* Lines --------------------------- */
 .separator {}
 
-/* Logo ---------------------------- */
-.logo {}
+/* Header -------------------------- */
+.header-content {
+  min-height: 4rem;
+}
 
-/* Navigation Bar ------------------ */
-.nav {}
+.logo {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--menu-spacing);
+}
+
+.menu-item {
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: underline var(--black) 1.5px;
+  text-underline-offset: 0.5rem;
+}
+
+.dropdown-menu {}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding-top: 0.25rem;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.25rem 0;
+  background-color: var(--bg-transparent);
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+  transition: 0.2s ease-out;
+}
+
+.dropdown-menu:hover .dropdown-icon {
+  rotate: 180deg;
+}
+
+.header-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.header-icon:hover {
+  scale: 1.1;
+}
 
 /* Page ---------------------------- */
 .page-heading {}
