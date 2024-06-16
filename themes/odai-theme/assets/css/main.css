@@ -282,6 +282,10 @@ footer {
   margin-bottom: 4rem;
 }
 
+.page-heading h1 {
+  font-weight: bold;
+}
+
 /* List Page ----------------------- */
 .list-cover {
   width: fit-content;
