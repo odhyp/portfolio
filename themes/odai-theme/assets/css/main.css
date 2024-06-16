@@ -185,7 +185,11 @@ footer {
 */
 
 /* Lines --------------------------- */
-.separator {}
+.separator {
+  margin: 2rem 0;
+  border: none;
+  border-top: 2px dashed lightgray;
+}
 
 /* Header -------------------------- */
 .header-content {
