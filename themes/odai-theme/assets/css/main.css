@@ -126,9 +126,17 @@ footer {
   align-items: center;
 }
 
-.grid {}
-.container-content {}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
 
+.container-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 /* Buttons ------------------------- */
 .btn {
