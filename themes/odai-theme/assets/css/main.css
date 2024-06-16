@@ -97,7 +97,9 @@ header {
   backdrop-filter: blur(0.5rem);
 }
 
-main {}
+main {
+  margin-top: 8rem;
+}
 
 footer {
   margin-top: 4rem;
