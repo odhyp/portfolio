@@ -341,6 +341,21 @@ footer {
 }
 
 /* Single Page --------------------- */
+.single-base {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.single-main {
+  min-width: 44rem;
+  width: 44rem;
+}
+
+.single-side {
+  flex-grow: 1;
+}
+
 /* Taxonomy ------------------------ */
 .term-categories {
   display: flex;
