@@ -10,6 +10,16 @@
       </div>
 
       <div class="page-header">
+        <div class="page-header-cover">
+          {{ with .Resources.GetMatch "cover.*" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+          {{ else }}
+            {{ with .Resources.GetMatch "*.png" }}
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+            {{ end }}
+          {{ end }}
+        </div>
+
         <div class="page-header-content">
           <div>
             <h1>{{ .Title }}</h1>
