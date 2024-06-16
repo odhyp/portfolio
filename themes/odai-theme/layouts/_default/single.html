@@ -32,17 +32,16 @@
           <div>
             {{ .ReadingTime }} min read
           </div>
+
+          <div>
+            {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+          </div>
+
+          <div>
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+          </div>
         </div>
-        
-        <div class="page-header-cover">
-          {{ with .Resources.GetMatch "cover.*" }}
-            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-          {{ else }}
-            {{ with .Resources.GetMatch "*.png" }}
-              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-            {{ end }}
-          {{ end }}
-        </div>
+
       </div>
 
       <hr class="separator">
