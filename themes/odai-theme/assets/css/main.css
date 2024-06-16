@@ -134,11 +134,11 @@ footer {
   padding: 0.5em 2em;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: 0.2s ease-out;
+  transition: 0.1s ease-in;
 }
 
 .btn:hover {
-  scale: 0.95;
+  scale: 0.98;
 }
 
 .btn-icon {
