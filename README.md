@@ -22,6 +22,8 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [ ] Add back to top button
 - [ ] Add code block styling
 - [ ] Add navigation tree in single page header
+- [ ] Add 404 page
+- [ ] Add more dummy contents (at least 7 pages each in projects and blogs)
 
 ## Done/Implemented
 
