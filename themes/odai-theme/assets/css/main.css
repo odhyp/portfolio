@@ -41,7 +41,9 @@ p, h1, h2, h3, h4, h5, h6 {
   --bg-full: rgba(248, 248, 248, 1);
   --bg-transparent: rgba(248, 248, 248, 0.8);
 
-  --text-color: var(--black);
+  --text-main: var(--black);
+  --text-invert: var(--white);
+  --text-dim: rgb(128, 128, 128);
 
   /* Font Family */
   --ff-mono: "JetBrains Mono", monospace;
@@ -64,7 +66,7 @@ body {
   padding: 0;
   font-family: var(--ff-mono);
   background-color: var(--bg-full);
-  color: var(--text-color);
+  color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -85,7 +87,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-main);
 }
 
 /* 4. Layout Components -------------------------------- */
@@ -104,7 +106,7 @@ main {
 footer {
   margin-top: 4rem;
   background-color: var(--black);
-  color: var(--white);
+  color: var(--text-invert);
 }
 
 /* 5. Component-level Styles --------------------------- */
@@ -158,13 +160,13 @@ footer {
 .btn-light {
   background-color: var(--white);
   border: 2px solid var(--black);
-  color: var(--black);
+  color: var(--text-main);
 }
 
 .btn-dark {
   background-color: var(--black);
   border: 2px solid var(--black);
-  color: var(--white);
+  color: var(--text-invert);
 }
 
 .btn-naked {}
@@ -175,12 +177,12 @@ footer {
 /*
 .btn-light:hover {
   background-color: var(--black);
-  color: var(--white);
+  color: var(--text-invert);
 }
 
 .btn-dark:hover {
   background-color: var(--white);
-  color: var(--black);
+  color: var(--text-main);
 }
 */
 
