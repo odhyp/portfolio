@@ -67,7 +67,17 @@
       </div>
 
       <div class="page-footer">
-        This is page footer
+        <div class="card">
+          {{ with .PrevInSection }}
+            <a class="previous" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+          {{ end }}
+        </div>
+
+        <div class="card">
+          {{ with .NextInSection }}
+            <a class="next" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+          {{ end }}
+        </div>
       </div>
 
     </div>
