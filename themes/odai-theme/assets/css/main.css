@@ -276,6 +276,34 @@ footer {
 }
 
 /* List Page ----------------------- */
+.list-cover {
+  width: fit-content;
+  height: fit-content;
+}
+
+.list-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.list-content {
+  font-size: 0.9rem;
+}
+
+.list-content h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.list-content div {
+  padding: 0.25rem 0;
+}
+
+.list-content-date,
+.list-content-summary {
+  color: var(--text-dim);
+}
+
 /* Single Page --------------------- */
 /* Taxonomy ------------------------ */
 /* Footer -------------------------- */
