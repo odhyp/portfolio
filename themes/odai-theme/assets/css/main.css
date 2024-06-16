@@ -263,6 +263,7 @@ footer {
   align-items: center;
   width: 2rem;
   height: 2rem;
+  transition: 0.2s ease-out;
 }
 
 .header-icon:hover {
