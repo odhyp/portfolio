@@ -151,14 +151,20 @@ footer {
   color: var(--black);
 }
 
-.btn-light:hover {
-  background-color: var(--black);
-  color: var(--white);
-}
-
 .btn-dark {
   background-color: var(--black);
   border: 2px solid var(--black);
+  color: var(--white);
+}
+
+.btn-naked {}
+.btn-naked:hover {}
+
+/* Unused hover effect ------------- */
+/* for Button light and dark ------- */
+/*
+.btn-light:hover {
+  background-color: var(--black);
   color: var(--white);
 }
 
@@ -166,10 +172,7 @@ footer {
   background-color: var(--white);
   color: var(--black);
 }
-
-.btn-naked {}
-
-.btn-naked:hover {}
+*/
 
 /* Lines --------------------------- */
 .separator {}
