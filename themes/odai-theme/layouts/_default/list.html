@@ -1,53 +1,55 @@
 {{ define "main" }}
 
-  <div class="container container-main">
+  <div class="container">
+    <div class="container-main">
+      
+      <div class="page-heading">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </div>
 
-    <div class="page-heading">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-    </div>
+      <div class="grid">
+        {{ range .Pages }}
+          <div class="container-showcase">
 
-    <div class="grid">
-      {{ range .Pages }}
-        <div class="container-showcase">
-
-          <div class="list-cover">
-            {{ with .Resources.GetMatch "cover.*" }}
-              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-
-            {{ else }}
-              {{ with .Resources.GetMatch "*.png" }}
+            <div class="list-cover">
+              {{ with .Resources.GetMatch "cover.*" }}
                 <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+
+              {{ else }}
+                {{ with .Resources.GetMatch "*.png" }}
+                  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+                {{ end }}
+
               {{ end }}
+            </div>
 
-            {{ end }}
+            <div class="list-content">
+              <div class="list-content-date">
+                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{ $dateHuman := .Date | time.Format ":date_medium" }}
+                <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+              </div>
+
+              <div>
+                <h2>
+                  <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                </h2>
+              </div>
+
+              <div class="list-content-summary">
+                {{ .Params.Summary }}
+              </div>
+
+              <div>
+                {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+              </div>
+
+            </div>
           </div>
+        {{ end }}
+      </div>
 
-          <div class="list-content">
-            <div class="list-content-date">
-              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-              {{ $dateHuman := .Date | time.Format ":date_medium" }}
-              <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-            </div>
-
-            <div>
-              <h2>
-                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-              </h2>
-            </div>
-
-            <div class="list-content-summary">
-              {{ .Params.Summary }}
-            </div>
-
-            <div>
-              {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-            </div>
-
-          </div>
-        </div>
-      {{ end }}
     </div>
   </div>
-
 {{ end }}
