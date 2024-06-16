@@ -173,8 +173,15 @@ footer {
   color: var(--text-invert);
 }
 
-.btn-naked {}
-.btn-naked:hover {}
+.btn-naked {
+  padding: 0.25 0;
+  cursor: pointer;
+}
+
+.btn-naked:hover {
+  text-decoration: underline var(--black) 1.5px;
+  text-underline-offset: 0.5rem;
+}
 
 /* Unused hover effect ------------- */
 /* for Button light and dark ------- */
