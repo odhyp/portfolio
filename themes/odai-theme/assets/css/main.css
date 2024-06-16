@@ -277,13 +277,38 @@ footer {
 }
 
 /* Page ---------------------------- */
-.page-heading {
-  max-width: 40rem;
-  margin-bottom: 4rem;
+.page-navigation {
+  background-color: pink;
+  margin-bottom: 1rem;
 }
 
-.page-heading h1 {
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.page-header-content {
+  min-width: 35rem;
+  max-width: 45rem;
+}
+
+.page-header-content h1 {
   font-weight: bold;
+}
+
+.page-header-cover {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.page-header-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.page-footer {
+  background-color: pink;
 }
 
 /* List Page ----------------------- */
