@@ -100,11 +100,10 @@ header {
 }
 
 main {
-  margin-top: 8rem;
+  height: fit-content;
 }
 
 footer {
-  margin-top: 4rem;
   background-color: var(--black);
   color: var(--text-invert);
 }
@@ -118,9 +117,14 @@ footer {
   max-width: 84rem;
 }
 
-.container-main {}
-.container-side {}
-.container-full {}
+.container-main {
+  padding-inline: 2rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+
+  /* 100 viewport height - (header min-height + container margin top + footer min-height) */
+  min-height: calc(100vh - (4rem + 8rem + 4rem));
+}
 
 .flex {
   display: flex;
