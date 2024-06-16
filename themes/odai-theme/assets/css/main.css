@@ -269,9 +269,10 @@ footer {
   scale: 1.1;
 }
 
-/* Home Page ----------------------- */
-.home-heading {
-  margin-right: 40%;
+/* Page ---------------------------- */
+.page-heading {
+  max-width: 40rem;
+  margin-bottom: 4rem;
 }
 
 /* List Page ----------------------- */
