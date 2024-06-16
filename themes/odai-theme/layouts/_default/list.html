@@ -24,17 +24,19 @@
           </div>
 
           <div class="list-content">
-            <div>
+            <div class="list-content-date">
               {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
               {{ $dateHuman := .Date | time.Format ":date_medium" }}
               <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
             </div>
 
-            <h2>
-              <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            </h2>
-
             <div>
+              <h2>
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+              </h2>
+            </div>
+
+            <div class="list-content-summary">
               {{ .Params.Summary }}
             </div>
 
