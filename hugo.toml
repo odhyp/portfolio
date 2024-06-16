@@ -1,4 +1,4 @@
-baseURL = 'https://odhyp.github.io/demo/'
+baseURL = 'https://odhyp.github.io/'
 languageCode = 'en-us'
 title = 'Odhy'
 theme = 'odai-theme'
