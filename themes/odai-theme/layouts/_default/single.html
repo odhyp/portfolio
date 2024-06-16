@@ -1,45 +1,86 @@
 {{ define "main" }}
 
-  {{ with .Resources.GetMatch "cover.*" }}
-    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-  {{ else }}
-    {{ with .Resources.GetMatch "*.png" }}
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-    {{ end }}
-  {{ end }}
+  <div class="container">
+    <div class="container-main">
 
-  <h1>{{ .Title }}</h1>
+      <div class="page-navigation">
+        <a class="btn-naked" onclick="history.back()">
+          <i class="btn-icon fa-solid fa-arrow-left-long"></i>Back
+        </a>
+      </div>
 
-  By: {{ .Params.author }}
-  <br>
-  
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_medium" }}
-  <time datetime="{{ $dateMachine }}">Published: {{ $dateHuman }}</time>
-  <br>
+      <div class="page-header">
+        <div class="page-header-cover">
+          {{ with .Resources.GetMatch "cover.*" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+          {{ else }}
+            {{ with .Resources.GetMatch "*.png" }}
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+            {{ end }}
+          {{ end }}
+        </div>
 
-  {{ with .GitInfo }}
-    <p>Last Modified: {{ .AuthorDate | time.Format ":date_medium" }}</p>
-    {{ .AuthorDate.Format "2006-01-02" }}
-    {{ .Subject }}
-  {{ else }}
-    <p>No GitInfo Available</p>
-  {{ end }}
+        <div class="page-header-content">
+          <div>
+            <h1>{{ .Title }}</h1>
+          </div>
 
-  {{ .ReadingTime }} min read
-  <br>
+          <div>
+            {{ .Params.Summary }}
+          </div>
 
-  <hr>
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+          <div>
+            By: {{ .Params.Author }}
+          </div>
 
-  {{ with .PrevInSection }}
-    <a class="previous" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
-  {{ end }}
-  {{ with .NextInSection }}
-    <a class="next" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
-  {{ end }}
+          <div>
+            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+            {{ $dateHuman := .Date | time.Format ":date_medium" }}
+            <time datetime="{{ $dateMachine }}">Published: {{ $dateHuman }}</time>
+          </div>
 
+          <div>
+            {{ .ReadingTime }} min read
+          </div>
+
+          <div>
+            {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+          </div>
+
+          <div>
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="separator">
+
+      <div class="single-base">
+        <div class="single-main">
+          {{ .Content }}
+        </div>
+
+        <div class="single-side">
+          This is single side
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <div class="card">
+          {{ with .PrevInSection }}
+            <a class="previous" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+          {{ end }}
+        </div>
+
+        <div class="card">
+          {{ with .NextInSection }}
+            <a class="next" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 {{ end }}

@@ -1,19 +1,61 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
 
-    {{ with .Resources.GetMatch "cover.*" }}
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-    {{ else }}
-      {{ with .Resources.GetMatch "*.png" }}
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-      {{ end }}
-    {{ end }}
-  
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Params.Summary }}
-    {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  {{ end }}
+  <div class="container">
+    <div class="container-main">
+      
+      <div class="page-header">
+        <div class="page-header-content">
+          <h1>{{ .Title }}</h1>
+          {{ .Content }}
+        </div>
+
+        <div class="page-header-cover"></div>
+      </div>
+
+      <hr class="separator">
+
+      <div class="grid">
+        {{ range .Pages }}
+          <div class="container-showcase">
+
+            <div class="list-cover">
+              {{ with .Resources.GetMatch "cover.*" }}
+                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+
+              {{ else }}
+                {{ with .Resources.GetMatch "*.png" }}
+                  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+                {{ end }}
+
+              {{ end }}
+            </div>
+
+            <div class="list-content">
+              <div class="list-content-date">
+                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{ $dateHuman := .Date | time.Format ":date_medium" }}
+                <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+              </div>
+
+              <div>
+                <h2>
+                  <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                </h2>
+              </div>
+
+              <div class="list-content-summary">
+                {{ .Params.Summary }}
+              </div>
+
+              <div>
+                {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+              </div>
+
+            </div>
+          </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
 {{ end }}

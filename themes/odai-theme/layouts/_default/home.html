@@ -1,9 +1,21 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-    {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  {{ end }}
+
+  <div class="container">
+    <div class="container-main">
+
+      <div class="page-header">
+        <div class="page-header-content">
+          {{ .Content }}
+          <a class="btn btn-light" href="projects/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
+          <a class="btn btn-dark" href="blogs/"><i class="btn-icon fa-solid fa-newspaper"></i>Read Blogs</a>
+        </div>
+
+        <div class="page-header-cover">
+          <img src="placeholder.png">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 {{ end }}
