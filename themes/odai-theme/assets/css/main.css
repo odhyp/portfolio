@@ -255,8 +255,10 @@ footer {
   scale: 1.1;
 }
 
-/* Page ---------------------------- */
-.page-heading {}
+/* Home Page ----------------------- */
+.home-heading {
+  margin-right: 40%;
+}
 
 /* List Page ----------------------- */
 /* Single Page --------------------- */
