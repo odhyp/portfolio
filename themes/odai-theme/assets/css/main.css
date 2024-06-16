@@ -309,6 +309,23 @@ footer {
 
 /* Single Page --------------------- */
 /* Taxonomy ------------------------ */
+.term-categories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.term-categories a {
+  padding: 0em 0.5em;
+  color: var(--text-main);
+  border: 1px solid var(--black);
+  border-radius: var(--border-radius);
+}
+
+.terms-tags {}
+.terms-tags a {}
+
 /* Footer -------------------------- */
 .footer-content {
   min-height: 4rem;
