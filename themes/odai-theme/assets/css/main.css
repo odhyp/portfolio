@@ -214,13 +214,20 @@ footer {
 .dropdown-content {
   display: none;
   position: absolute;
-  padding-top: 0.25rem;
+  padding: 0.5rem 0;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 0.25rem 0;
+.dropdown-content-menu {
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-transparent);
+  backdrop-filter: blur(0.5rem);
+  border-radius: var(--border-radius);
+}
+
+.dropdown-content-menu a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
 }
 
 .dropdown-menu:hover .dropdown-content {
