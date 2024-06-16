@@ -110,7 +110,8 @@ footer {
 /* Containers ---------------------- */
 .container {
   margin-inline: auto;
-  max-width: 80rem;
+  padding-inline: 2rem;
+  max-width: 84rem;
 }
 
 .container-main {}
