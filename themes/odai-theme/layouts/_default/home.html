@@ -8,6 +8,13 @@
           {{ .Content }}
           <a class="btn btn-light" href="/projects/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
           <a class="btn btn-dark" href="/blogs/"><i class="btn-icon fa-solid fa-newspaper"></i>Read Blogs</a>
+
+          <br>
+          <br>
+          <form action="/search" method="GET">
+              <input type="search" name="q" id="search-query" placeholder="Search....">
+              <button type="submit">Search</button>
+          </form>
         </div>
 
         <div class="page-header-cover">
