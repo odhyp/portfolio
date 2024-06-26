@@ -24,9 +24,13 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [ ] Add navigation tree in single page header
 - [ ] Add 404 page
 - [ ] Add more dummy contents (at least 7 pages each in projects and blogs)
+- [ ] Add breadcrumbs
+- [ ] Add pull request template
 
 ## Done/Implemented
 
+- [x] Move theme content to root directories
+- [x] Remove unused themes
 - [x] Fix list and single page containers
 - [x] Add title formatting and slug for archetypes
 - [x] Add estimated read time
