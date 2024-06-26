@@ -1,11 +1,15 @@
 baseURL = 'https://odhyp.github.io/'
 languageCode = 'en-us'
 title = 'Odhy'
-theme = 'odai-theme'
 
 # Author information
 [params]
   author = "Odhy Pradhana"
+  authorLink = "https://yourwebsite.com/"
+  description = "Portfolio and Blog website"
+  socialGithub = "https://github.com/odhyp"
+  socialTwitter = "https://twitter.com/name"
+  socialLinkedIn = "https://linkedin.com/in/name"
 
 # Hugo Module version requirement
 [module]
@@ -15,6 +19,27 @@ theme = 'odai-theme'
 
 # Git Info for Last Modify Date
 enableGitInfo = true
+
+# Site Menus
+[[menus.main]]
+name = 'Projects'
+pageRef = '/project'
+weight = 20
+
+[[menus.main]]
+name = 'Blogs'
+pageRef = '/blog'
+weight = 30
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tag'
+weight = 31
+
+[[menus.main]]
+name = 'Contact'
+pageRef = '/contact'
+weight = 40
 
 # Markup highlighting configuration
 [markup]
