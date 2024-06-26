@@ -6,16 +6,18 @@
 draft = true
 
 title = '{{ $pageTitle }}'
-date = {{ .Date }}
-author = '{{ .Site.Params.author }}'
 slug = '{{ $pageSlug }}'
+date = {{ .Date }}
+lastmod = {{ .Date }}
 
-categories = ['category1', 'category2']
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''
 
-project_url = ''
-source_code = ''
+author = '{{ .Site.Params.author }}'
+authorLink = '{{ .Site.Params.authorLink }}'
+
+sourceCode = ''
+projectUrl = ''
 +++
 
 ## Project Overview
