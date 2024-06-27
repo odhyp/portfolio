@@ -47,9 +47,7 @@
                 {{ .Params.Summary }}
               </div>
 
-              <div>
-                {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-              </div>
+              {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
             </div>
           </div>
