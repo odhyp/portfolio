@@ -1,0 +1,391 @@
+/*
+  Author : Odhy Pradhana
+  License: MIT License (2024-present)
+
+  Table of Contents
+  0. CSS Reset (by Josh W. Comeau, modified)
+  1. Custom Properties
+  2. Global Styles
+  3. Base Elements
+  4. Layout Components
+  5. Component-level Styles
+  6. Responsive Design
+  7. Utilities
+*/
+
+/* 0. CSS Reset ---------------------------------------- */
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 1. Custom Properties -------------------------------- */
+:root {
+  /* Colors */
+  --white: rgba(248, 248, 248, 1);
+  --black: rgba(51, 51, 51, 1);
+
+  --bg-full: rgba(248, 248, 248, 1);
+  --bg-transparent: rgba(248, 248, 248, 0.8);
+
+  --text-main: var(--black);
+  --text-invert: var(--white);
+  --text-dim: rgb(128, 128, 128);
+
+  /* Font Family */
+  --ff-mono: "JetBrains Mono", monospace;
+  --ff-sans: "Inter", sans-serif;
+
+  /* Other */
+  --base-spacing: 1rem;
+  --menu-spacing: 1.5rem;
+  --border-radius: 4px;
+}
+
+/* 2. Global Styles ------------------------------------ */
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-mono);
+  background-color: var(--bg-full);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 3. Base Elements ------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--base-spacing) 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 var(--base-spacing) 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+/* 4. Layout Components -------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-transparent);
+  backdrop-filter: blur(0.5rem);
+}
+
+main {
+  height: fit-content;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--text-invert);
+}
+
+/* 5. Component-level Styles --------------------------- */
+
+/* Containers ---------------------- */
+.container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 84rem;
+}
+
+.container-main {
+  padding-inline: 2rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+
+  /* 100 viewport height - (header min-height + container margin top + footer min-height) */
+  min-height: calc(100vh - (4rem + 8rem + 4rem));
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.container-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Buttons ------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+.btn:hover {
+  scale: 0.98;
+}
+
+.btn-icon {
+  margin-right: 1em;
+}
+
+.btn-light {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  color: var(--text-main);
+}
+
+.btn-dark {
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  color: var(--text-invert);
+}
+
+.btn-naked {
+  padding: 0.25 0;
+  cursor: pointer;
+}
+
+.btn-naked:hover {
+  text-decoration: underline var(--black) 1.5px;
+  text-underline-offset: 0.5rem;
+}
+
+/* Unused hover effect ------------- */
+/* for Button light and dark ------- */
+/*
+.btn-light:hover {
+  background-color: var(--black);
+  color: var(--text-invert);
+}
+
+.btn-dark:hover {
+  background-color: var(--white);
+  color: var(--text-main);
+}
+*/
+
+/* Lines --------------------------- */
+.separator {
+  margin: 2rem 0;
+  border: none;
+  border-top: 2px dashed lightgray;
+}
+
+/* Header -------------------------- */
+.header-content {
+  min-height: 4rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  transition: 0.2s ease-out;
+}
+
+.logo:hover {
+  scale: 1.1;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--menu-spacing);
+}
+
+.menu-item {
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: underline var(--black) 1.5px;
+  text-underline-offset: 0.5rem;
+}
+
+.dropdown-menu {}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-transparent);
+  backdrop-filter: blur(0.5rem);
+  border-radius: var(--border-radius);
+}
+
+.dropdown-content-menu a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+  transition: 0.2s ease-out;
+}
+
+.dropdown-menu:hover .dropdown-icon {
+  rotate: 180deg;
+}
+
+.header-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s ease-out;
+}
+
+.header-icon:hover {
+  scale: 1.1;
+}
+
+/* Page ---------------------------- */
+.page-navigation {
+  background-color: pink;
+  margin-bottom: 1rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.page-header-content {
+  min-width: 35rem;
+  max-width: 45rem;
+}
+
+.page-header-content h1 {
+  font-weight: bold;
+}
+
+.page-header-cover {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.page-header-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.page-footer {
+  background-color: pink;
+}
+
+/* List Page ----------------------- */
+.list-cover {
+  width: fit-content;
+  height: fit-content;
+}
+
+.list-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.list-content {
+  font-size: 0.9rem;
+}
+
+.list-content h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.list-content div {
+  padding: 0.25rem 0;
+}
+
+.list-content-date,
+.list-content-summary {
+  color: var(--text-dim);
+}
+
+/* Single Page --------------------- */
+.single-base {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.single-main {
+  min-width: 44rem;
+  width: 44rem;
+}
+
+.single-side {
+  flex-grow: 1;
+}
+
+/* Taxonomy ------------------------ */
+.term-categories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.term-categories a {
+  padding: 0em 0.5em;
+  color: var(--text-main);
+  border: 1px solid var(--black);
+  border-radius: var(--border-radius);
+}
+
+.terms-tags {}
+.terms-tags a {}
+
+/* Footer -------------------------- */
+.footer-content {
+  min-height: 4rem;
+}
+
+/* 6. Responsive Design -------------------------------- */
+
+/* 7. Utilities ---------------------------------------- */
