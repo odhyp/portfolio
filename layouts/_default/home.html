@@ -4,6 +4,16 @@
     <div class="container-main">
 
       <div class="page-header">
+
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <script src="/pagefind/pagefind-ui.js"></script>
+        <div id="search"></div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                new PagefindUI({ element: "#search", showSubResults: true });
+            });
+        </script>
+
         <div class="page-header-content">
           {{ .Content }}
           <a class="btn btn-light" href="/projects/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
