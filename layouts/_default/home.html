@@ -4,6 +4,12 @@
     <div class="container-main">
 
       <div class="page-header">
+        <form action="/search/" method="get" class="navbar-form navbar-right" role="search" _lpchecked="1">
+            <div class="form-group">
+                <input name="q" type="text" class="form-control" placeholder="Search">
+            </div>
+        </form>
+
         <div class="page-header-content">
           {{ .Content }}
           <a class="btn btn-light" href="/projects/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
