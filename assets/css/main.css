@@ -60,6 +60,8 @@ p, h1, h2, h3, h4, h5, h6 {
   --primary: ;
   --secondary: ;
   --accent: ;
+  --white: rgba(248, 248, 248, 1);
+  --black: rgba(51, 51, 51, 1);
 
   --bg-full: rgba(248, 248, 248, 1);
   --bg-transparent: rgba(248, 248, 248, 0.8);
