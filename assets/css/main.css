@@ -12,15 +12,12 @@
   6. Contact page
   7. List page
   8. Showcase page
-  9. Single Page
-  
-
+  9. Single Page  
 */
 
 /* --------------------------------------------------------
   0. CSS Reset (by Josh W. Comeau)
 -------------------------------------------------------- */
-
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -55,19 +52,64 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-
 /* --------------------------------------------------------
   1. Custom Properties
 -------------------------------------------------------- */
+:root {
+  /* Colors */
+  --primary: ;
+  --secondary: ;
+  --accent: ;
 
+  --bg-full: rgba(248, 248, 248, 1);
+  --bg-transparent: rgba(248, 248, 248, 0.8);
+
+  --text-main: rgba(51, 51, 51, 1);
+  --text-dim: rgb(128, 128, 128);
+
+  /* Font Family */
+  --ff-mono: "JetBrains Mono", monospace;
+  --ff-sans: "Inter", sans-serif;
+
+  /* Other */
+  --base-spacing: 1rem;
+  --menu-spacing: 1.5rem;
+  --border-radius: 4px;
+}
 /* --------------------------------------------------------
   2. Global Styles
 -------------------------------------------------------- */
+html {
+  font-size: 16px;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-mono);
+  color: var(--text-main);
+  background-color: var(--bg-full);
+}
 /* --------------------------------------------------------
   3. Base Elements and Components
 -------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--base-spacing) 0;
+  font-weight: bold;
+}
 
+p {
+  margin: 0 0 var(--base-spacing) 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+main {
+  height: fit-content;
+}
 /* --------------------------------------------------------
   4. Header and Footer
 -------------------------------------------------------- */
@@ -91,9 +133,3 @@ p, h1, h2, h3, h4, h5, h6 {
 /* --------------------------------------------------------
   9. Single Page
 -------------------------------------------------------- */
-
-/* Test ------------------------------------------------ */
-.container {
-  width: 44rem;
-  margin-inline: auto;
-}
