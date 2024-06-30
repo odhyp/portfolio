@@ -93,6 +93,10 @@ body {
 /* --------------------------------------------------------
   3. Base Elements and Components
 -------------------------------------------------------- */
+main {
+  height: fit-content;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 var(--base-spacing) 0;
   font-weight: bold;
@@ -107,8 +111,8 @@ a {
   color: var(--text-main);
 }
 
-main {
-  height: fit-content;
+strong {
+  color: var(--primary);
 }
 /* --------------------------------------------------------
   4. Header and Footer
