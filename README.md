@@ -4,6 +4,8 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 
 ## To-do/Plans
 
+- [ ] Add search function
+- [ ] Add search page
 - [ ] Fix post and sidebar container
 - [ ] Fix categories taxonomy styling
 - [ ] Fix article spacing
@@ -11,8 +13,6 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [ ] Fix custom properties
 - [ ] Fix contact page horizontal line
 - [ ] Add sidebar content using TOC
-- [ ] Add search function
-- [ ] Add search page
 - [ ] Add contact page layout
 - [ ] Add categories/tags layout
 - [ ] Add dark/light mode
@@ -23,12 +23,13 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [ ] Add code block styling
 - [ ] Add navigation tree in single page header
 - [ ] Add 404 page
-- [ ] Add more dummy contents (at least 7 pages each in projects and blogs)
 - [ ] Add breadcrumbs
 - [ ] Add pull request template
 
 ## Done/Implemented
 
+- [x] Add more dummy contents (at least 7 pages each in projects and blogs)
+- [x] Add issues template
 - [x] Move theme content to root directories
 - [x] Remove unused themes
 - [x] Fix list and single page containers
