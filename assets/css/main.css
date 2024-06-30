@@ -114,6 +114,54 @@ a {
 strong {
   color: var(--primary);
 }
+
+/* Buttons --------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--black);
+  border-radius: var(--border-radius);
+  transition: all 0.4s ease-out;
+}
+
+.btn-icon {
+  margin-right: 1rem;
+}
+
+.btn-naked {
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+
+.btn-naked:hover {
+  text-decoration: underline var(--black) 1.5px;
+  text-underline-offset: 0.5rem;
+}
+
+/* Buttons - Animations -------------------------------- */
+.btn-1 {
+  background: linear-gradient(to right, var(--black) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+}
+
+.btn-1:hover {
+  background-position: left;
+  color: var(--white);
+}
+
+.btn-2 {
+  background: linear-gradient(to left, var(--black) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  color: var(--white);
+}
+
+.btn-2:hover {
+  background-position: left;
+  color: var(--black);
+}
+
 /* --------------------------------------------------------
   4. Header and Footer
 -------------------------------------------------------- */
