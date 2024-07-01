@@ -12,8 +12,15 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
   <nav>
-    <ul>
+    <ul class="header__menu">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      <li class="header__line"></li>
+      <li>
+        <a class="header__icon" href="/search/"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </li>
+      <li>
+        <a class="header__icon" href="#"><i class="fa-solid fa-moon"></i></a>
+      </li>
     </ul>
   </nav>
 {{- end }}
@@ -34,7 +41,7 @@ Renders a menu for the given menu ID.
       {{- end }}
     {{- end }}
     <li>
-      <a
+      <a class="header__link"
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
