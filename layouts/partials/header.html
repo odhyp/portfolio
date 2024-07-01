@@ -2,6 +2,4 @@
   <a href="/">{{ site.Title }}</a>
 </div>
 
-<div class="header__content">
-  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-</div>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
