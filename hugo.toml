@@ -22,6 +22,11 @@ enableGitInfo = true
 
 # Site Menus
 [[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
 name = 'Projects'
 pageRef = '/project'
 weight = 20
