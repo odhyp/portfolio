@@ -1,13 +1,9 @@
-<div class="container">
-  <div class="flex header-content">
-    <div class="logo">
-      <a href="/">{{ site.Title }}</a>
-    </div>
+<div class="header__logo">
+  <a href="/">{{ site.Title }}</a>
+</div>
 
-    <div class="header-menu">
-      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-      <a class="header-icon" href="/search/"><i class="fa-solid fa-magnifying-glass"></i></a>
-      <a class="header-icon" href="#"><i class="fa-solid fa-moon"></i></a>
-    </div>
-  </div>
+<div class="header__content">
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  <a class="header__icon" href="/search/"><i class="fa-solid fa-magnifying-glass"></i></a>
+  <a class="header__icon" href="#"><i class="fa-solid fa-moon"></i></a>
 </div>
