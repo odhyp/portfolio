@@ -5,10 +5,7 @@
     </div>
 
     <div class="header-menu">
-      <a class="menu-item" href="/project/">Projects</a>
-      <a class="menu-item" href="/blog/">Blogs</a>
-      <a class="menu-item" href="/tags/">Tags</a>
-      <a class="menu-item" href="/contact/">Contact</a>      
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
       <a class="header-icon" href="/search/"><i class="fa-solid fa-magnifying-glass"></i></a>
       <a class="header-icon" href="#"><i class="fa-solid fa-moon"></i></a>
     </div>

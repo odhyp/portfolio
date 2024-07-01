@@ -33,7 +33,7 @@ weight = 30
 
 [[menus.main]]
 name = 'Tags'
-pageRef = '/tag'
+pageRef = '/tags'
 weight = 31
 
 [[menus.main]]
