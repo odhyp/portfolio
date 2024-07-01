@@ -28,6 +28,8 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 
 ## Done/Implemented
 
+- [x] Fix hard coded header menu
+- [x] Add menu partials
 - [x] Add search function
 - [x] Add search page
 - [x] Add more dummy contents (at least 7 pages each in projects and blogs)
@@ -41,7 +43,3 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [x] Add cover/highlight image for post front matter
 - [x] Add background and backdrop filter to separator
 - [x] Add post description/manual summary front matter
-
-### Notes
-
-- Remove menu.html functionality, header is hard coded
