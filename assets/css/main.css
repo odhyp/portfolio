@@ -15,6 +15,25 @@
   9. Single Page  
 */
 
+/* Responsive Breakpoints */
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+/*@media (min-width: 640px) {}*/
+
+/* md */
+/*@media (min-width: 768px) {}*/
+
+/* lg */
+/*@media (min-width: 1024px) {}*/
+
+/* xl */
+/*@media (min-width: 1280px) {}*/
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
+
 /* --------------------------------------------------------
   0. CSS Reset (by Josh W. Comeau)
 -------------------------------------------------------- */
@@ -72,6 +91,23 @@ p, h1, h2, h3, h4, h5, h6 {
   /* Font Family */
   --ff-mono: "JetBrains Mono", monospace;
   --ff-sans: "Inter", sans-serif;
+
+  /* Sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
 
   /* Other */
   --base-spacing: 1rem;
@@ -162,6 +198,59 @@ strong {
 .btn-2:hover {
   background-position: left;
   color: var(--black);
+}
+
+/* --------------------------------------------------------
+  4. Section and containers
+-------------------------------------------------------- */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 /* --------------------------------------------------------
