@@ -3,7 +3,6 @@
   License: MIT License (2024-present)
 
   Table of Contents
-  0. CSS Reset (by Josh W. Comeau, modified)
   1. Custom Properties
   2. Global Styles
   3. Base Elements
@@ -13,82 +12,9 @@
   7. Utilities
 */
 
-/* 0. CSS Reset ---------------------------------------- */
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-#root, #__next {
-  isolation: isolate;
-}
-
 /* 1. Custom Properties -------------------------------- */
-:root {
-  /* Colors */
-  --white: rgba(248, 248, 248, 1);
-  --black: rgba(51, 51, 51, 1);
-
-  --bg-full: rgba(248, 248, 248, 1);
-  --bg-transparent: rgba(248, 248, 248, 0.8);
-
-  --text-main: var(--black);
-  --text-invert: var(--white);
-  --text-dim: rgb(128, 128, 128);
-
-  /* Font Family */
-  --ff-mono: "JetBrains Mono", monospace;
-  --ff-sans: "Inter", sans-serif;
-
-  /* Other */
-  --base-spacing: 1rem;
-  --menu-spacing: 1.5rem;
-  --border-radius: 4px;
-}
-
 /* 2. Global Styles ------------------------------------ */
-html {
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--ff-mono);
-  background-color: var(--bg-full);
-  color: var(--text-main);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 /* 3. Base Elements ------------------------------------ */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 var(--base-spacing) 0;
-  font-weight: normal;
-}
-
-p {
-  margin: 0 0 var(--base-spacing) 0;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text-main);
-}
 
 /* 4. Layout Components -------------------------------- */
 header {
@@ -97,10 +23,6 @@ header {
   width: 100%;
   background-color: var(--bg-transparent);
   backdrop-filter: blur(0.5rem);
-}
-
-main {
-  height: fit-content;
 }
 
 footer {
@@ -145,43 +67,11 @@ footer {
 }
 
 /* Buttons ------------------------- */
-.btn {
-  display: inline-block;
-  padding: 0.5em 2em;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: 0.1s ease-in;
-}
 
-.btn:hover {
-  scale: 0.98;
-}
 
-.btn-icon {
-  margin-right: 1em;
-}
 
-.btn-light {
-  background-color: var(--white);
-  border: 2px solid var(--black);
-  color: var(--text-main);
-}
 
-.btn-dark {
-  background-color: var(--black);
-  border: 2px solid var(--black);
-  color: var(--text-invert);
-}
 
-.btn-naked {
-  padding: 0.25 0;
-  cursor: pointer;
-}
-
-.btn-naked:hover {
-  text-decoration: underline var(--black) 1.5px;
-  text-underline-offset: 0.5rem;
-}
 
 /* Unused hover effect ------------- */
 /* for Button light and dark ------- */

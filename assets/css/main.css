@@ -12,15 +12,12 @@
   6. Contact page
   7. List page
   8. Showcase page
-  9. Single Page
-  
-
+  9. Single Page  
 */
 
 /* --------------------------------------------------------
   0. CSS Reset (by Josh W. Comeau)
 -------------------------------------------------------- */
-
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -55,18 +52,117 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-
 /* --------------------------------------------------------
   1. Custom Properties
 -------------------------------------------------------- */
+:root {
+  /* Colors */
+  --primary: ;
+  --secondary: ;
+  --accent: ;
+  --white: rgba(248, 248, 248, 1);
+  --black: rgba(51, 51, 51, 1);
 
+  --bg-full: rgba(248, 248, 248, 1);
+  --bg-transparent: rgba(248, 248, 248, 0.8);
+
+  --text-main: rgba(51, 51, 51, 1);
+  --text-dim: rgb(128, 128, 128);
+
+  /* Font Family */
+  --ff-mono: "JetBrains Mono", monospace;
+  --ff-sans: "Inter", sans-serif;
+
+  /* Other */
+  --base-spacing: 1rem;
+  --menu-spacing: 1.5rem;
+  --border-radius: 4px;
+}
 /* --------------------------------------------------------
   2. Global Styles
 -------------------------------------------------------- */
+html {
+  font-size: 16px;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-mono);
+  color: var(--text-main);
+  background-color: var(--bg-full);
+}
 /* --------------------------------------------------------
   3. Base Elements and Components
 -------------------------------------------------------- */
+main {
+  height: fit-content;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--base-spacing) 0;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 var(--base-spacing) 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+strong {
+  color: var(--primary);
+}
+
+/* Buttons --------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--black);
+  border-radius: var(--border-radius);
+  transition: all 0.4s ease-out;
+}
+
+.btn-icon {
+  margin-right: 1rem;
+}
+
+.btn-naked {
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+
+.btn-naked:hover {
+  text-decoration: underline var(--black) 1.5px;
+  text-underline-offset: 0.5rem;
+}
+
+/* Buttons - Animations -------------------------------- */
+.btn-1 {
+  background: linear-gradient(to right, var(--black) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+}
+
+.btn-1:hover {
+  background-position: left;
+  color: var(--white);
+}
+
+.btn-2 {
+  background: linear-gradient(to left, var(--black) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  color: var(--white);
+}
+
+.btn-2:hover {
+  background-position: left;
+  color: var(--black);
+}
 
 /* --------------------------------------------------------
   4. Header and Footer
@@ -91,9 +187,3 @@ p, h1, h2, h3, h4, h5, h6 {
 /* --------------------------------------------------------
   9. Single Page
 -------------------------------------------------------- */
-
-/* Test ------------------------------------------------ */
-.container {
-  width: 44rem;
-  margin-inline: auto;
-}
