@@ -28,6 +28,7 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 
 ## Done/Implemented
 
+- [x] Add responsive header styling
 - [x] Fix hard coded header menu
 - [x] Add menu partials
 - [x] Add search function
