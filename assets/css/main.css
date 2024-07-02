@@ -269,8 +269,7 @@ strong {
 }
 
 .header__bars {
-  width: var(--size-2xl);
-  height: var(--size-2xl);
+  font-size: var(--size-1xl);
 }
 
 /* xs */
@@ -310,8 +309,7 @@ strong {
   }
 
   .header__icon {
-    width: var(--size-base);
-    height: var(--size-base);
+    font-size: var(--size-xs);
   }
 
   .header__icon:hover {}
@@ -328,8 +326,7 @@ strong {
   }
 
   .header__icon {
-    width: var(--size-xl);
-    height: var(--size-xl);
+    font-size: var(--size-sm);
   }
 }
 
@@ -343,8 +340,7 @@ strong {
   }
 
   .header__icon {
-    width: var(--size-2xl);
-    height: var(--size-2xl);
+    font-size: var(--size-base);
   }
 }
 
