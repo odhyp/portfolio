@@ -264,12 +264,31 @@ strong {
   padding-bottom: 2rem;
 }
 
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo__image {
+  width: var(--size-sm);
+  height: auto;
+}
+
+.logo__text {
+  font-size: var(--size-sm);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
 .header__menu {
   display: none;
 }
 
 .header__bars {
-  font-size: var(--size-xl);
+  font-size: var(--size-lg);
 }
 
 /* xs */
@@ -280,13 +299,6 @@ strong {
 
 /* md */
 @media (min-width: 768px) {
-  .header__logo {
-    font-size: var(--size-xs);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-  }
-
   .header__menu {
     display: flex;
     justify-content: center;
