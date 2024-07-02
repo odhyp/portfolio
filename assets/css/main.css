@@ -316,7 +316,7 @@ strong {
   .header__link:hover {}
 
   .header__line {
-    border-left: 3px solid var(--black);
+    border-left: 2px solid var(--black);
     padding-top: 1.5em;
   }
 
