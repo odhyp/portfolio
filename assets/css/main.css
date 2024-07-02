@@ -337,7 +337,18 @@ strong {
 /*@media (min-width: 1280px) {}*/
 
 /* 2xl */
-/*@media (min-width: 1536px) {}*/
+@media (min-width: 1536px) {
+  .header__link {
+    font-size: var(--size-base);
+    background-color: pink;
+  }
+
+  .header__icon {
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+    background-color: pink;
+  }
+}
 
 /* --------------------------------------------------------
   5. Home page
