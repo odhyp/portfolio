@@ -127,6 +127,9 @@ body {
   font-family: var(--ff-mono);
   color: var(--text-main);
   background-color: var(--bg-full);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 /* --------------------------------------------------------
   3. Base Elements and Components
