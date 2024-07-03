@@ -211,6 +211,10 @@ strong {
   padding-right: 1rem;
 }
 
+section {
+  margin-top: 4rem;
+}
+
 /* xs */
 @media (min-width: 475px) {
   .container {
@@ -240,6 +244,10 @@ strong {
     max-width: 1024px;
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  section {
+    margin-top: 8rem;
   }
 }
 
