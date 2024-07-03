@@ -399,6 +399,20 @@ section {
 /* --------------------------------------------------------
   5. Home page
 -------------------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  padding-inline: 4rem;
+  margin-bottom: 4rem;
+}
+
+.hero__content {}
 
 /* --------------------------------------------------------
   6. Contact page
