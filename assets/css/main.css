@@ -436,17 +436,90 @@ section {
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
 }
 
-.hero__image {
-  width: 100%;
+.hero__cover {
+  width: 50%;
   height: auto;
-  padding-inline: 4rem;
+  margin-bottom: 2rem;
+}
+
+.hero__content {
+  max-width: 44rem;
   margin-bottom: 4rem;
 }
 
-.hero__content {}
+.hero__content-text {
+  font-size: var(--size-xs);
+}
+
+.hero__content-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero__search {
+  display: none;
+}
+
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+/*@media (min-width: 640px) {}*/
+
+/* md */
+@media (min-width: 768px) {
+  .hero__content {
+    max-width: 40rem;
+  }
+
+  .hero__content-text {
+    font-size: var(--size-sm);
+  }
+
+  .hero__cover {
+    width: 55%;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .hero__content {
+    max-width: 30rem;
+  }
+
+  .hero__content-text {
+    font-size: var(--size-base);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .hero {
+    gap: 6rem;
+  }
+
+  .hero__content {
+    max-width: 40rem;
+  }
+
+  .hero__cover {
+    max-width: 40%;
+  }
+}
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
 
 /* --------------------------------------------------------
   6. Contact page
