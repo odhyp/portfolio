@@ -328,11 +328,11 @@ section {
     align-items: center;
     list-style: none;
     padding: 0;
-    gap: 2em;
+    gap: 1.5em;
   }
 
   .header__link {
-    font-size: var(--size-xs);
+    font-size: var(--size-sm);
     font-weight: 600;
   }
 
@@ -344,7 +344,7 @@ section {
   }
 
   .header__icon {
-    font-size: var(--size-xs);
+    font-size: var(--size-sm);
   }
 
   .header__icon:hover {}
@@ -357,19 +357,23 @@ section {
 /* lg */
 @media (min-width: 1024px) {
   .logo__image {
-    width: var(--size-base);
+    width: var(--size-lg);
   }
 
   .logo__text {
-    font-size: var(--size-base);
+    font-size: var(--size-lg);
+  }
+
+  .header__menu {
+    gap: 2em;
   }
 
   .header__link {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
   }
 
   .header__icon {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
   }
 }
 
