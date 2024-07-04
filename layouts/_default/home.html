@@ -1,39 +1,26 @@
 {{ define "main" }}
 
   <section class="hero container">
-    <img class="hero__image" src="placeholder.png" alt="Hero image!">
+    <img class="hero__cover" src="placeholder.png" alt="Hero image!">
 
     <div class="hero__content">
-      {{ .Content }}
-      <a class="btn btn-1" href="/project/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
-      <a class="btn btn-2" href="/blog/"><i class="btn-icon fa-solid fa-newspaper"></i>Read Blogs</a>
+      <div class="hero__content-text">
+        {{ .Content }}
+      </div>
 
+      <div class="hero__content-cta">
+        <a class="btn btn-1" href="/project/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
+        <a class="btn btn-2" href="/blog/"><i class="btn-icon fa-solid fa-newspaper"></i>Read Blogs</a>
+      </div>
+    </div>
+
+    <div class="hero__search">
       <form action="/search/" method="get" class="navbar-form navbar-right" role="search" _lpchecked="1">
           <div class="form-group">
               <input name="q" type="text" class="form-control" placeholder="Search">
           </div>
       </form>
     </div>
-  </section>
-
-  <section class="showcase container bg-dark">
-    <h1>This is second section</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </section>
-
-  <section class="showcase container">
-    <h1>This is third section</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
 
 {{ end }}
