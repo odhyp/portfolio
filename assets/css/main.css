@@ -159,6 +159,7 @@ strong {
 /* Buttons --------------------------------------------- */
 .btn {
   display: inline-block;
+  font-size: var(--size-xs);
   padding: 0.5em 2em;
   border: 2px solid var(--black);
   border-radius: var(--border-radius);
@@ -178,6 +179,32 @@ strong {
   text-decoration: underline var(--black) 1.5px;
   text-underline-offset: 0.5em;
 }
+
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+/*@media (min-width: 640px) {}*/
+
+/* md */
+@media (min-width: 768px) {
+  .btn {
+  font-size: var(--size-sm);
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .btn {
+  font-size: var(--size-base);
+  }
+}
+
+/* xl */
+/*@media (min-width: 1280px) {}*/
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
 
 /* Buttons - Animations -------------------------------- */
 .btn-1 {
