@@ -8,7 +8,7 @@ A website to learn HTML, CSS, Javascript, and Hugo.
     - [x] Base styling
     - [x] Header
     - [ ] Footer
-    - [ ] Home page
+    - [x] Home page
     - [ ] Contact page
     - [ ] Single page
     - [ ] List page
