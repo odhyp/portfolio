@@ -127,6 +127,9 @@ body {
   font-family: var(--ff-mono);
   color: var(--text-main);
   background-color: var(--bg-full);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 /* --------------------------------------------------------
   3. Base Elements and Components
@@ -156,25 +159,52 @@ strong {
 /* Buttons --------------------------------------------- */
 .btn {
   display: inline-block;
-  padding: 0.5rem 2rem;
+  font-size: var(--size-xs);
+  padding: 0.5em 2em;
   border: 2px solid var(--black);
   border-radius: var(--border-radius);
   transition: all 0.4s ease-out;
 }
 
 .btn-icon {
-  margin-right: 1rem;
+  margin-right: 1em;
 }
 
 .btn-naked {
-  padding: 0.25rem 0;
+  padding: 0.25em 0;
   cursor: pointer;
 }
 
 .btn-naked:hover {
   text-decoration: underline var(--black) 1.5px;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.5em;
 }
+
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+/*@media (min-width: 640px) {}*/
+
+/* md */
+@media (min-width: 768px) {
+  .btn {
+  font-size: var(--size-sm);
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .btn {
+  font-size: var(--size-base);
+  }
+}
+
+/* xl */
+/*@media (min-width: 1280px) {}*/
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
 
 /* Buttons - Animations -------------------------------- */
 .btn-1 {
@@ -325,11 +355,11 @@ section {
     align-items: center;
     list-style: none;
     padding: 0;
-    gap: 2em;
+    gap: 1.5em;
   }
 
   .header__link {
-    font-size: var(--size-xs);
+    font-size: var(--size-sm);
     font-weight: 600;
   }
 
@@ -341,7 +371,7 @@ section {
   }
 
   .header__icon {
-    font-size: var(--size-xs);
+    font-size: var(--size-sm);
   }
 
   .header__icon:hover {}
@@ -354,19 +384,23 @@ section {
 /* lg */
 @media (min-width: 1024px) {
   .logo__image {
-    width: var(--size-base);
+    width: var(--size-lg);
   }
 
   .logo__text {
-    font-size: var(--size-base);
+    font-size: var(--size-lg);
+  }
+
+  .header__menu {
+    gap: 2em;
   }
 
   .header__link {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
   }
 
   .header__icon {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
   }
 }
 
@@ -399,6 +433,93 @@ section {
 /* --------------------------------------------------------
   5. Home page
 -------------------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__cover {
+  width: 50%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.hero__content {
+  max-width: 44rem;
+  margin-bottom: 4rem;
+}
+
+.hero__content-text {
+  font-size: var(--size-xs);
+}
+
+.hero__content-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero__search {
+  display: none;
+}
+
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+/*@media (min-width: 640px) {}*/
+
+/* md */
+@media (min-width: 768px) {
+  .hero__content {
+    max-width: 40rem;
+  }
+
+  .hero__content-text {
+    font-size: var(--size-sm);
+  }
+
+  .hero__cover {
+    width: 55%;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .hero__content {
+    max-width: 30rem;
+  }
+
+  .hero__content-text {
+    font-size: var(--size-base);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .hero {
+    gap: 6rem;
+  }
+
+  .hero__content {
+    max-width: 40rem;
+  }
+
+  .hero__cover {
+    max-width: 40%;
+  }
+}
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
 
 /* --------------------------------------------------------
   6. Contact page

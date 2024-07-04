@@ -1,27 +1,26 @@
 {{ define "main" }}
 
-  <div class="container">
-    <div class="container-main">
+  <section class="hero container">
+    <img class="hero__cover" src="placeholder.png" alt="Hero image!">
 
-      <div class="page-header">
-        <form action="/search/" method="get" class="navbar-form navbar-right" role="search" _lpchecked="1">
-            <div class="form-group">
-                <input name="q" type="text" class="form-control" placeholder="Search">
-            </div>
-        </form>
-
-        <div class="page-header-content">
-          {{ .Content }}
-          <a class="btn btn-1" href="/project/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
-          <a class="btn btn-2" href="/blog/"><i class="btn-icon fa-solid fa-newspaper"></i>Read Blogs</a>
-        </div>
-
-        <div class="page-header-cover">
-          <img src="placeholder.png">
-        </div>
+    <div class="hero__content">
+      <div class="hero__content-text">
+        {{ .Content }}
       </div>
 
+      <div class="hero__content-cta">
+        <a class="btn btn-1" href="/project/"><i class="btn-icon fa-solid fa-code"></i>See Projects</a>
+        <a class="btn btn-2" href="/blog/"><i class="btn-icon fa-solid fa-newspaper"></i>Read Blogs</a>
+      </div>
     </div>
-  </div>
+
+    <div class="hero__search">
+      <form action="/search/" method="get" class="navbar-form navbar-right" role="search" _lpchecked="1">
+          <div class="form-group">
+              <input name="q" type="text" class="form-control" placeholder="Search">
+          </div>
+      </form>
+    </div>
+  </section>
 
 {{ end }}
