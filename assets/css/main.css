@@ -431,6 +431,47 @@ section {
 }
 
 /* --------------------------------------------------------
+  5. Footer
+-------------------------------------------------------- */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--size-xs);
+}
+
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+/*@media (min-width: 640px) {}*/
+
+/* md */
+@media (min-width: 768px) {
+  .footer {
+    font-size: var(--size-sm);
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .footer {
+    font-size: var(--size-base);
+  }
+}
+
+/* xl */
+/*@media (min-width: 1280px) {}*/
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
+
+/* --------------------------------------------------------
   5. Home page
 -------------------------------------------------------- */
 .hero {

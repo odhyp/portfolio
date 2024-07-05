@@ -7,7 +7,7 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [ ] Beautification :sparkles:
     - [x] Base styling
     - [x] Header
-    - [ ] Footer
+    - [x] Footer
     - [x] Home page
     - [ ] Contact page
     - [ ] Single page
