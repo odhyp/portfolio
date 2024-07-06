@@ -34,3 +34,7 @@ A website to learn HTML, CSS, Javascript, and Hugo.
     - [ ] Search result content
     
 - [ ] Add PR template?
+
+## Inspiration
+
+- Make tags section structured like [this](https://sylhare.github.io/Type-on-Strap/tags/) site and use tags menu icons instead.
