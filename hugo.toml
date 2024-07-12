@@ -22,11 +22,6 @@ enableGitInfo = true
 
 # Site Menus
 [[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
-
-[[menus.main]]
 name = 'Projects'
 pageRef = '/project'
 weight = 20
@@ -35,11 +30,6 @@ weight = 20
 name = 'Blogs'
 pageRef = '/blog'
 weight = 30
-
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 31
 
 [[menus.main]]
 name = 'Contact'
