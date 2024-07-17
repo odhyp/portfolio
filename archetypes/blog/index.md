@@ -5,19 +5,19 @@
 +++
 draft = true
 
-title = '{{ $pageTitle }}'
-slug = '{{ $pageSlug }}'
+title = "{{ $pageTitle }}"
+slug = "{{ $pageSlug }}"
 date = {{ .Date }}
 lastmod = {{ .Date }}
 
-tags = ['tag1', 'tag2', 'tag3']
-summary = ''
+tags = ["tag1", "tag2", "tag3"]
+summary = ""
 
-author = '{{ .Site.Params.author }}'
-authorLink = '{{ .Site.Params.authorLink }}'
+author = "{{ .Site.Params.author }}"
+authorLink = "{{ .Site.Params.authorLink }}"
 
-externalName = ''
-externalUrl = ''
+externalName = ""
+externalUrl = ""
 +++
 
 ## Introduction
