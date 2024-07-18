@@ -7,7 +7,7 @@ date = 2024-06-06T22:40:10+07:00
 lastmod = 2024-06-16T22:40:10+07:00
 
 tags = ['tag1', 'tag2', 'tag3']
-summary = ''
+summary = 'Just this one here. Chicken Licken, Goosey Loosey. I much rather.....'
 
 author = 'Odhy Pradhana'
 authorLink = 'https://yourwebsite.com/'
