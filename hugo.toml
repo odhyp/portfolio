@@ -20,22 +20,6 @@ title = 'Odhy'
 # Git Info for Last Modify Date
 enableGitInfo = true
 
-# Site Menus
-[[menus.main]]
-name = 'Projects'
-pageRef = '/project'
-weight = 20
-
-[[menus.main]]
-name = 'Blogs'
-pageRef = '/blog'
-weight = 30
-
-[[menus.main]]
-name = 'Contact'
-pageRef = '/contact'
-weight = 40
-
 # Markup highlighting configuration
 [markup]
   [markup.highlight]
