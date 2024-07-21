@@ -36,6 +36,3 @@ enableGitInfo = true
     noHl = false
     style = 'solarized-dark'
     tabWidth = 4
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
