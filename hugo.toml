@@ -34,5 +34,5 @@ enableGitInfo = true
     lineNumbersInTable = true
     noClasses = true
     noHl = false
-    style = 'solarized-dark'
+    style = "catppuccin-macchiato"
     tabWidth = 4
