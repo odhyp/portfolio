@@ -10,10 +10,14 @@
 
       <!-- Hero Content -->
       <div class="col-lg-6">
-        {{ .Content }}
+        <!-- Hero Text -->
+        <div class="hero__text">
+          {{ .Content }}
+        </div>
+        <!-- Hero CTA -->
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a class="btn btn-primary btn-lg px-4 me-md-2" href="/project">See Projects</a>
-          <a class="btn btn-outline-secondary btn-lg px-4" href="/blog">Read Blogs</a>
+          <a class="btn btn-primary px-4 me-md-2" href="/project">See Projects</a>
+          <a class="btn btn-outline-secondary px-4" href="/blog">Read Blogs</a>
         </div>
       </div>
     </div>
