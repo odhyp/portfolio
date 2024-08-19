@@ -1,59 +1,69 @@
 {{ define "main" }}
 
+
+<section class="projects">
   <div class="container">
-    <div class="container-main">
-      
-      <div class="page-header">
-        <div class="page-header-content">
-          <h1>{{ .Title }}</h1>
-          {{ .Content }}
-        </div>
-
-        <div class="page-header-cover"></div>
+    <div class="row flex-lg-row-reverse justify-content-center align-items-center g-5">
+      <!-- Project Image -->
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/placeholder.png" class="d-block mx-lg-auto img-fluid" alt="Project Image" width="500" height="" loading="lazy">
       </div>
 
-      <hr class="separator">
-
-      <div class="grid">
-        {{ range .Pages }}
-          <div class="container-showcase">
-
-            <div class="list-cover">
-              {{ with .Resources.GetMatch "cover.*" }}
-                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-
-              {{ else }}
-                {{ with .Resources.GetMatch "*.png" }}
-                  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-                {{ end }}
-
-              {{ end }}
-            </div>
-
-            <div class="list-content">
-              <div class="list-content-date">
-                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-                {{ $dateHuman := .Date | time.Format ":date_medium" }}
-                <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-              </div>
-
-              <div>
-                <h2>
-                  <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                </h2>
-              </div>
-
-              <div class="list-content-summary">
-                {{ .Params.Summary }}
-              </div>
-
-              {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
-            </div>
-          </div>
-        {{ end }}
+      <!-- Project Content -->
+      <div class="col-lg-6">
+        {{ .Content }}
       </div>
-
     </div>
   </div>
+</section>
+
+
+<section class="projects-showcase">
+  <div class="container">
+    <!-- Cards -->
+    <div class="row justify-content-center justify-content-md-start gy-5">
+      {{ range .Pages }}
+      <!-- Card Start -->
+      <div class="col-10 col-md-6 col-xl-4 d-flex">
+        <div class="card border-2 rounded shadow-sm flex-grow-1">
+          <!-- Card Image -->
+          <div class="position-relative">
+            <a href="{{ .RelPermalink }}">
+              <img src="/placeholder.png" class="d-block mx-lg-auto img-fluid rounded-top" alt="Showcase Image" width="" height="" loading="lazy">
+            </a>
+          </div>
+
+          <!-- Card Body -->
+          <div class="card-body px-4 py-3 d-flex flex-column gap-2">
+            <!-- Card Body Title -->
+            <h4 class="card-title mb-0">
+              <a class="text-decoration-none text-reset" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            </h4>
+
+            <!-- Card Body Date -->
+            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+            {{ $dateHuman := .Date | time.Format ":date_medium" }}
+            <span class="card-text fw-light text-dark text-opacity-50" datetime="{{ $dateMachine }}"><i class="bi bi-calendar me-2"></i>{{ $dateHuman }}</span>
+
+            <!-- Card Body Summary -->
+            <p class="card-text text-dark text-opacity-75 mb-0">{{ .Params.Summary }}</p>
+
+            <!-- Card Body Tags -->
+            <div class="mb-5">
+              {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+            </div>
+
+            <!-- Card Body CTA -->
+            <div class="mt-auto d-flex flex-column flex-lg-row gap-2">
+              <a class="btn btn-primary px-3" href="/project"><i class="bi bi-github me-2"></i>Source Code</a>
+              <a class="btn btn-outline-secondary px-3" href="/project"><i class="bi bi-play-circle me-2"></i>Live Preview</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      <!-- Cards End -->
+    </div>
+  </div>
+</section>
 {{ end }}
