@@ -1,6 +1,7 @@
 baseURL = 'https://odhyp.github.io/'
 languageCode = 'en-us'
 title = 'Odhy'
+theme = 'odai-theme'
 
 # Author information
 [params]
