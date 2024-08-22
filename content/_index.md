@@ -3,12 +3,10 @@ title = 'Home'
 draft = false
 +++
 
-# Hi! I'm Odhy.
+## A Python Developer who loves web automations, tackling Excel and PDFs—turning those boring 9-to-5 tasks into something manageable.
 
-## Welcome to my portfolio and blog website. I create & write about Python automations, music, and other things.
+Welcome to my portfolio and blog website. I mostly code in Python and get a kick out of building automations. I also dabble in front-end stuff with Hugo, JavaScript, and TailwindCSS—like this very website you're on. 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur.
+I write blogs! Just like all those great programmers out there. I share tips about Python libraries, front-end tricks, my take on music (which usually means talking about Radiohead), and bits of my personal life.
+
+Thanks for stopping by—feel free to explore, and hit me up if you’re into the same stuff or anything along those lines.
