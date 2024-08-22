@@ -2,13 +2,21 @@
 <html lang='{{ .Site.LanguageCode }}'>
 {{ partial "head.html" . }}
 
-<body class="flex flex-col min-h-screen bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<body class="flex flex-col min-h-dvh sm:min-h-screen bg-gray-950 text-gray-100">
+    <!-- DEV HELPER START -->
     {{- partial "dev/dev-tools.html" . -}}
-    {{- partial "header.html" . -}}
-    <main class="flex-1 grow mx-auto w-screen max-w-screen-2xl px-6 sm:px-7 xl:px-8 2xl:px-10 pt-4 sm:pt-16">
+    <!-- DEV HELPER END -->
+    <!-- HEADER START -->
+    {{- partial "header/announcements.html" . -}}
+    {{- partial "header/site-header.html" . -}}
+    <!-- HEADER END -->
+    <main class="flex-1 grow mx-auto w-screen max-w-3xl px-4 py-16 lg:pt-10">
         {{- block "main" . }}{{- end }}
     </main>
-    {{- partial "footer.html" . -}}
+    <!-- FOOTER START -->
+    {{- partial "footer/site-footer.html" . -}}
+    {{- partial "footer/scripts.html" . -}}
+    <!-- FOOTER END -->
 </body>
 
 </html>
