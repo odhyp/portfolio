@@ -1,20 +1,20 @@
 <header class="mx-auto w-screen max-w-3xl px-6 py-8">
     <nav class="flex items-center justify-between flex-wrap">
         <!-- HEADER LOGO START -->
-        <a href="{{ .Site.Home.Permalink }}" class="uppercase tracking-widest font-bold">
-            {{ .Site.Title }}
+        <a href="{{ .Site.Home.Permalink }}" class="">
+            <img class="w-[30px] xl:w-[50px]" src="/logo.png">
         </a>
         <!-- HEADER LOGO END -->
         <!-- HEADER NAVBAR START -->
         <ul class="flex flex-row font-semibold gap-x-5">
             <li>
-                <a href="/project" class="">Project</a>
+                <a class="hover:text-gray-300" href="/project">Project</a>
             </li>
             <li>
-                <a href="/blog" class="">Blog</a>
+                <a class="hover:text-gray-300" href="/blog">Blog</a>
             </li>
             <li>
-                <a href="/contact" class="">Contact</a>
+                <a class="hover:text-gray-300" href="/contact">Contact</a>
             </li>
         </ul>
         <!-- HEADER NAVBAR END -->
