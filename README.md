@@ -4,12 +4,12 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 
 ## To-do/Plans
 
-- [ ] Beautification :sparkles:
-    - [x] Base styling
-    - [x] Header
-    - [x] Footer
-    - [x] Home page
-    - [x] Contact page
+- [ ] Layouts :sparkles:
+    - [ ] Base page
+    - [ ] Header
+    - [ ] Footer
+    - [ ] Home page
+    - [ ] Contact page
     - [ ] Single page
     - [ ] List page
     - [ ] Showcase page
@@ -17,8 +17,8 @@ A website to learn HTML, CSS, Javascript, and Hugo.
     - [ ] 404 page
 
 - [ ] Page Components :house:
-    - [x] Animated button
-    - [x] Estimated read time
+    - [ ] Animated button
+    - [ ] Estimated read time
     - [ ] TOC
     - [ ] Share post button
     - [ ] Dark/light mode
@@ -33,4 +33,4 @@ A website to learn HTML, CSS, Javascript, and Hugo.
 - [ ] Broken Stuffs :wrench:
     - [ ] Search result content
     
-- [ ] Add PR template?
+- [ ] Add PR template
