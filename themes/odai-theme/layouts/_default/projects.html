@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="w-full max-w-full lg:px-8 prose prose-invert">
+    {{ .Content }}
+    <div class="flex flex-col gap-2 my-4">
+        {{ range .Pages }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
