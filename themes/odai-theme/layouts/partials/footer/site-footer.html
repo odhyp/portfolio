@@ -1,5 +1,29 @@
 <footer class="bottom-0 mx-auto w-screen max-w-3xl px-6 py-8">
-    <p class="text-center text-gray-400 text-sm">
-        Copyright &copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved
-    </p>
+    <div class="flex flex-row justify-between">
+        <!-- CREDITS START -->
+        <div class="text-gray-400 text-sm">
+            <p>Code and Design by
+                <a class="text-gray-200 font-semibold hover:text-gray-400" href="/contact">Odhy Pradhana</a>.
+            </p>
+            <p>Built with
+                <a class="text-gray-200 font-semibold hover:text-gray-400" href="https://gohugo.io/">Hugo</a>, and
+                <a class="text-gray-200 font-semibold hover:text-gray-400" href="https://tailwindcss.com/">TailwindCSS</a>.
+            </p>
+            <p>Deployed with
+                <a class="text-gray-200 font-semibold hover:text-gray-400" href="https://vercel.com/">Vercel</a>.
+            </p>
+        </div>
+        <!-- CREDITS END -->
+        <!-- COPYRIGHT START -->
+        <div class="flex flex-col items-end gap-2">
+            <p class="text-gray-400 text-sm">Copyright &copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.</p>
+            <div class="text-2xl flex gap-3">
+                <a class="" target="blank" href="{{ .Site.Params.socialGithub }}"><i class="fa-brands fa-github"></i></a>
+                <a class="" target="blank" href="{{ .Site.Params.socialTwitter }}"><i class="fa-brands fa-x-twitter"></i></a>
+                <a class="" target="blank" href="{{ .Site.Params.socialLinkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="" target="blank" href="mailto:{{ .Site.Params.socialEmail }}"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <!-- COPYRIGHT END -->
+    </div>
 </footer>
