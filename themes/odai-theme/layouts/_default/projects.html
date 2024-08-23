@@ -1,10 +1,28 @@
 {{ define "main" }}
-<div class="w-full max-w-full lg:px-8 prose prose-invert">
-    {{ .Content }}
-    <div class="flex flex-col gap-2 my-4">
-        {{ range .Pages }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ end }}
+<div class="w-full max-w-full lg:px-8">
+    <!-- CONTENT START -->
+    <div class="w-full max-w-prose prose prose-invert">
+        {{ .Content }}
     </div>
+    <!-- CONTENT END -->
+    <!-- SHOWCASE START -->
+    <div class="w-full max-w-full flex flex-col gap-8 md:gap-4 my-4">
+        <!-- PROJECT CARDS START -->
+        {{ range .Pages }}
+        <a href="{{ .Permalink }}" class="flex flex-col items-center bg-gray-900 rounded md:flex-row md:w-full md:max-w-full hover:bg-gray-800">
+            <!-- CARDS IMAGE START -->
+            <img class="object-cover w-full h-48 md:h-auto md:max-h-full md:w-48" src="https://placehold.co/800x400" alt="">
+            <!-- CARDS IMAGE END -->
+            <!-- CARDS CONTENT START -->
+            <div class="flex flex-col justify-between p-4">
+                <h5 class="mb-2 text-lg font-bold tracking-tight">{{ .Title }}</h5>
+                <p class="mb-3 text-gray-400">{{ .Summary }}</p>
+            </div>
+            <!-- CARDS CONTENT END -->
+        </a>
+        {{ end }}
+        <!-- PROJECT CARDS END -->
+    </div>
+    <!-- SHOWCASE END -->
 </div>
 {{ end }}
