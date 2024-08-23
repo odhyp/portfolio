@@ -4,13 +4,10 @@ title = 'Projects'
 draft = false
 +++
 
-## This is Project section
+## I create stuffs.
 
-### I am currently working on automating boring stuffs for daily office tasks using Python. I'm also interested in deep learning and any AI-related stuffs.
+I am currently working on [ASIK](https://github.com/odhyp/asik/), a Python GUI application to generate employee salary slip. My current plan is to create more GUI application and package them as a Python package in [PyPI](https://pypi.org/), at least for now.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+On the front-end side, I'm planning to make some simple stuffs like Pokédex, marketing website, etc.
+
+## My projects, so far:
