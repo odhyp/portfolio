@@ -1,20 +1,11 @@
 +++
-title = 'Blogs'
+layout = 'blog'
+title = 'Blog'
 draft = false
 +++
 
-## This is Blog section
+## I write stuffs.
 
-### I write stuffs about Python, HTML, CSS, Music, Gaming, and other interesting stuffs.
+I document all sorts of things—Python scripts and packages, front-end frameworks, my love for music, gaming adventures, bits of my personal life, and whatever else catches my eye. Whether it’s diving into code, geeking out over a new game, or just sharing a playlist I can’t stop listening to, you’ll find it all here.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+Hope you find something interesting—thanks for stopping by my blog!
