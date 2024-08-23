@@ -1,20 +1,26 @@
 # My Portfolio and Blog Website
 
-A website to learn HTML, CSS, Javascript, and Hugo.
+Built with Hugo, JavaScript, and TailwindCSS
+
+## Running Hugo on local connection
+
+```bash
+hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
+```
 
 ## To-do/Plans
 
 - [ ] Layouts :sparkles:
-    - [ ] Base page
-    - [ ] Header
-    - [ ] Footer
-    - [ ] Home page
+    - [x] Base page
+    - [x] Header
+    - [x] Footer
+    - [x] Home page
     - [ ] Contact page
     - [ ] Single page
     - [ ] List page
     - [ ] Showcase page
     - [ ] Search page
-    - [ ] 404 page
+    - [x] 404 page
 
 - [ ] Page Components :house:
     - [ ] Animated button
@@ -29,8 +35,6 @@ A website to learn HTML, CSS, Javascript, and Hugo.
     - [ ] Code block style
     - [ ] Code block copy button
     - [ ] Breadcrumbs
-    
-- [ ] Broken Stuffs :wrench:
-    - [ ] Search result content
-    
+        
+- [ ] Search result content
 - [ ] Add PR template
