@@ -3,8 +3,8 @@ draft = false
 
 title = 'This Is Sample Blog One'
 slug = 'this-is-sample-blog-one'
-date = 2024-01-01T22:33:34+07:00
-lastmod = 2024-06-01T22:33:34+07:00
+date = 2020-01-01
+lastmod = 2024-06-01
 
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''

@@ -3,8 +3,8 @@ draft = false
 
 title = 'This Is Special Sample Blog'
 slug = 'this-is-special-sample-blog'
-date = 2024-04-19T22:34:30+07:00
-lastmod = 2024-04-19T22:34:30+07:00
+date = 2024-04-19
+lastmod = 2024-04-19
 
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''

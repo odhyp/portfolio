@@ -1,10 +1,10 @@
 +++
 draft = false
 
-title = 'This Is Sample Blog Six'
+title = 'This Is Sample Blog Past Year Only'
 slug = 'this-is-sample-blog-six'
-date = 2024-06-06T22:34:14+07:00
-lastmod = 2024-06-06T22:34:14+07:00
+date = 2023-06-06
+lastmod = 2022-06-06
 
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''
