@@ -9,4 +9,4 @@ Welcome to my portfolio and blog website. I mostly code in Python and get a kick
 
 I write blogs! Just like all those great programmers out there. I share tips about Python libraries, front-end tricks, my take on music (which usually means talking about Radiohead), and bits of my personal life.
 
-Thanks for stopping by—feel free to explore, and hit me up if you’re into the same stuff or anything along those lines.
+Thanks for stopping by—feel free to explore, and hit me up if you’re into the same stuff or anything along those lines. 😎
