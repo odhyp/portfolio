@@ -9,8 +9,9 @@ theme = 'odai-theme'
   authorLink = "https://yourwebsite.com/"
   description = "Portfolio and Blog website"
   socialGithub = "https://github.com/odhyp"
-  socialTwitter = "https://twitter.com/name"
-  socialLinkedIn = "https://linkedin.com/in/name"
+  socialTwitter = "https://twitter.com/valgtreiz"
+  socialLinkedin = "https://linkedin.com/in/odhy-pradhana"
+  socialEmail = "pradhana.odhy@gmail.com"
 
 # Hugo Module version requirement
 [module]
