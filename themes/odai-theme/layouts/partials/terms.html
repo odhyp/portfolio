@@ -1,0 +1,22 @@
+{{- $page := .page }}
+{{- $taxonomy := .taxonomy }}
+{{- with $page.GetTerms $taxonomy }}
+{{- $terms := . }}
+{{- $total := len $terms }}
+{{- $label := (index $terms 0).Parent.LinkTitle }}
+<div class="">
+    <ul class="flex flex-row gap-1">
+        {{- range $index, $term := $terms }}
+        <li>
+            <a href="{{ $term.RelPermalink }}" class="text-gray-400 hover:text-green-400">{{ $term.LinkTitle }}</a>
+        </li>
+        <!-- Check if it's not the last item -->
+        {{- if ne (add $index 1) $total }}
+        <!-- CHILDREN SEPARATOR START -->
+        <li class="text-gray-400">,</li>
+        <!-- CHILDREN SEPARATOR END -->
+        {{- end }}
+        {{- end }}
+    </ul>
+</div>
+{{- end }}
