@@ -6,7 +6,7 @@ slug = 'this-is-sample-blog-two'
 date = 2024-02-02
 lastmod = 2024-06-02
 
-tags = ['tag1', 'tag2', 'tag3']
+tags = ['Hugo', 'TailwindCSS']
 summary = ''
 
 author = 'Odhy Pradhana'

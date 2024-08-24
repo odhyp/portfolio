@@ -6,7 +6,7 @@ slug = 'this-is-special-sample-blog'
 date = 2024-04-19
 lastmod = 2024-04-19
 
-tags = ['tag1', 'tag2', 'tag3']
+tags = ['Life', 'Photography']
 summary = ''
 
 author = 'Odhy Pradhana'
