@@ -26,3 +26,7 @@ enableGitInfo = true
 [markup]
   [markup.highlight]
     style = "catppuccin-macchiato"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
