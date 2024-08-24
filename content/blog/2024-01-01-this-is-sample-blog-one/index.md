@@ -6,6 +6,7 @@ slug = 'this-is-sample-blog-one'
 date = 2020-01-01
 lastmod = 2024-06-01
 
+categories = ['Python']
 tags = ['Python']
 summary = ''
 
