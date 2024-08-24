@@ -1,7 +1,7 @@
 +++
 draft = false
 
-title = 'This Is Special Sample Project'
+title = 'This Is Special Sample Project Because Its Long Title'
 slug = 'this-is-special-sample-project'
 date = 2024-04-19T22:40:25+07:00
 lastmod = 2024-06-19T22:40:25+07:00
