@@ -13,17 +13,20 @@
             {{ range (sort .Pages "Date" "desc") }}
             {{ $year := .Date.Format "2006" }}
             {{ if ne $year $currentYear }}
-            <div class="flex items-center sticky top-0">
+            <div class="flex items-center py-4 sticky top-0 bg-gray-950/25 backdrop-blur">
                 <hr class="flex-grow border-none border-gray-600">
                 <h2 class="font-semibold text-lg pl-4">{{ $year }}</h2>
             </div>
             {{ $currentYear = $year }}
             {{ end }}
-            <div class="flex flex-row items-center gap-4">
+            <div class="flex flex-row items-baseline gap-4">
                 <svg class="h-[15px] text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                 </svg>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <div class="flex flex-col">
+                    <a href="{{ .Permalink }}" class="hover:text-green-400">{{ .Title }}</a>
+                    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+                </div>
                 <hr class="flex-grow border-t border-dashed border-gray-700">
                 <p class="text-gray-400">{{ .Date.Format "January 2" }}</p>
             </div>
