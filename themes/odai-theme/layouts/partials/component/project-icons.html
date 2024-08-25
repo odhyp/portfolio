@@ -1,3 +1,6 @@
 {{- range .Page.Params.categories -}}
-<img class="w-8 h-8" src="https://cdn.simpleicons.org/{{ . | urlize }}" alt="{{ . }} icon" title="{{ . }}" style="margin-right: 8px;" />
+{{- $categoryURL := printf "/categories/%s/" (. | urlize) -}}
+<a class="pr-2" href="{{ $categoryURL }}" title="{{ . }}">
+    <img class="w-8 h-8" src="https://cdn.simpleicons.org/{{ . | urlize }}/FFFFFF" alt="{{ . }} icon" />
+</a>
 {{- end -}}
