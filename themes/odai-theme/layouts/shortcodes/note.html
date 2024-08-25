@@ -1,0 +1,5 @@
+<!-- SAMPLE SHORTCODE FOR DEV -->
+<div class="p-4 mb-4 text-sm rounded bg-gray-800">
+    <strong>{{ .Get "title" | default "Note" }}:</strong>
+    {{ .Inner | markdownify }}
+</div>
