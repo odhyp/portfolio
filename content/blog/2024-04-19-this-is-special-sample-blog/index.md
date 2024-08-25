@@ -6,6 +6,7 @@ slug = 'this-is-special-sample-blog'
 date = 2024-04-19
 lastmod = 2024-04-19
 
+categories = ['Life']
 tags = ['Life', 'Photography']
 summary = ''
 

@@ -6,7 +6,8 @@ slug = 'this-is-sample-blog-six'
 date = 2023-06-06
 lastmod = 2022-06-06
 
-tags = ['Python', 'Machine Learning', 'AI']
+categories = ['Life']
+tags = []
 summary = ''
 
 author = 'Odhy Pradhana'

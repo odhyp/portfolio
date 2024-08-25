@@ -1,12 +1,13 @@
 +++
 draft = false
 
-title = "Sample Blog With Shortcodes and Some Contents"
+title = "Exploring Python Libraries for Machine Learning: From Scikit-Learn to TensorFlow"
 slug = "sample-blog-generation"
 date = 2024-08-24
 lastmod = 2024-08-24
 
-tags = ["tag1"]
+categories = ['Hugo']
+tags = ["Hugo"]
 summary = ""
 
 author = "Odhy Pradhana"
@@ -31,3 +32,8 @@ These are some Hugo shortcodes example:
 
 ### Youtube Embed
 {{< youtube QMZiFubm39U >}}
+
+### My Custom Shortcodes - Note
+{{< note title="Tip" bg="#ffffff" >}}
+This is a helpful tip for your readers!
+{{< /note >}}

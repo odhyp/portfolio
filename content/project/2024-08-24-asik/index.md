@@ -2,15 +2,13 @@
 draft = false
 
 title = 'ASIK - Aplikasi Slip Gaji Elektronik'
-slug = 'this-is-sample-project-six'
-date = 2024-06-06T22:40:10+07:00
-lastmod = 2024-06-16T22:40:10+07:00
+slug = 'aplikasi-slip-gaji-elektronik'
+date = 2024-08-24
+lastmod = 2024-08-25
 
+categories = ["python", "pypi", "jinja", "pandas"]
 tags = ['web scraping', 'automation', 'Python']
-summary = 'Just this one here. Chicken Licken, Goosey Loosey. I much rather.....'
-
-author = 'Odhy Pradhana'
-authorLink = 'https://yourwebsite.com/'
+summary = 'A Python GUI Application to generate employee salary slip.'
 
 sourceCode = ''
 projectUrl = ''

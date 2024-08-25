@@ -6,6 +6,7 @@ slug = 'this-is-sample-blog-three'
 date = 2024-03-03
 lastmod = 2024-06-03
 
+categories = ['Python']
 tags = ['Python', 'Web Automation', 'Excel']
 summary = ''
 
