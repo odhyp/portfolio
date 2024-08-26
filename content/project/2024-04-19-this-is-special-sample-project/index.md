@@ -6,6 +6,7 @@ slug = 'this-is-special-sample-project'
 date = 2024-04-19T22:40:25+07:00
 lastmod = 2024-06-19T22:40:25+07:00
 
+categories = ['Python', 'Flask', 'HTML5', 'CSS3']
 tags = ['tag1', 'tag2', 'tag3']
 summary = 'Make tags section structured like this site and use tags menu icons instead.'
 

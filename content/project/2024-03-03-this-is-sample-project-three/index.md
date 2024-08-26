@@ -6,6 +6,7 @@ slug = 'this-is-sample-project-three'
 date = 2024-03-03T22:39:50+07:00
 lastmod = 2024-06-13T22:39:50+07:00
 
+categories = ['Python', 'Streamlit', 'Pandas']
 tags = ['tag1', 'tag2', 'tag3']
 summary = "This is the summary of sample project one. This is really happening, happening. Mobile chirping mobile chirping."
 

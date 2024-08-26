@@ -6,7 +6,7 @@ slug = 'this-is-sample-project-one'
 date = 2024-01-01T22:39:34+07:00
 lastmod = 2024-06-11T22:39:34+07:00
 
-categories = ['Python']
+categories = ['Python', 'Selenium', 'Scrapy']
 tags = ['tag1', 'tag2', 'tag3']
 summary = 'This is the summary of sample project one. Quite an interesting approach for this problem.'
 
