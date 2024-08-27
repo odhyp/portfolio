@@ -1,12 +1,12 @@
 <footer class="bottom-0 mx-auto w-screen max-w-3xl px-6 py-6">
     <div class="flex flex-col gap-2 md:flex-row justify-between items-center border-t border-gray-600 pt-6">
         <!-- COPYRIGHT START -->
-        <p class="text-gray-400 text-sm">&copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.</p>
+        <p class="text-gray-400 text-sm">&copy; {{ now.Year }} {{ .Site.Params.Author.fullname }}. All Rights Reserved.</p>
         <div class="text-2xl flex gap-3">
-            <a class="" target="blank" href="{{ .Site.Params.socialGithub }}"><i class="fa-brands fa-github"></i></a>
-            <a class="" target="blank" href="{{ .Site.Params.socialTwitter }}"><i class="fa-brands fa-x-twitter"></i></a>
-            <a class="" target="blank" href="{{ .Site.Params.socialLinkedin }}"><i class="fa-brands fa-linkedin"></i></a>
-            <a class="" target="blank" href="mailto:{{ .Site.Params.socialEmail }}"><i class="fa-solid fa-envelope"></i></a>
+            <a class="" target="blank" href="{{ .Site.Params.Social.github }}"><i class="fa-brands fa-github"></i></a>
+            <a class="" target="blank" href="{{ .Site.Params.Social.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="" target="blank" href="{{ .Site.Params.Social.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="" target="blank" href="mailto:{{ .Site.Params.Social.email }}"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <!-- COPYRIGHT END -->
     </div>
