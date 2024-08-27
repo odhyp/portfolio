@@ -9,6 +9,7 @@
     <!-- CONTENT START -->
     <article class="w-full max-w-full prose prose-invert">
         {{ .Content }}
+        {{.GitInfo | jsonify}}
     </article>
     <!-- CONTENT END -->
 </div>

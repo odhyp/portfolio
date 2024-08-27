@@ -3,6 +3,18 @@
     {{ .Title }}
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 </div>
+<div>
+    <h1>Git Info:</h1>
+    {{.GitInfo | jsonify}}
+    {{ with .GitInfo }}
+    {{ .AbbreviatedHash }}
+    {{ .AuthorDate.Format "2006-01-02" }}
+    {{ .AuthorEmail }}
+    {{ .AuthorName }}
+    {{ .CommitDate.Format "2006-01-02" }}
+    {{ .Subject }}
+    {{ end }}
+</div>
 <article class="w-full max-w-prose prose prose-invert mx-auto">
     {{ .Content }}
 </article>
