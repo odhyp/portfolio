@@ -7,8 +7,8 @@ draft = false
 
 title = "{{ $pageTitle }}"
 slug = "{{ $pageSlug }}"
-date = {{ .Date.Format "2006-01-02" }}
-lastmod = {{ .Date.Format "2006-01-02" }}
+date = {{ now.Format "2006-01-02" }}
+lastmod = {{ now.Format "2006-01-02" }}
 
 categories = ["category1", 'category2']
 tags = ["tag1", "tag2", "tag3"]
