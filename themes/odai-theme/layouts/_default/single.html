@@ -3,7 +3,7 @@
     {{ .Title }}
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 </div>
-<article class="w-full max-w-prose prose prose-invert">
+<article class="w-full max-w-prose prose prose-invert mx-auto">
     {{ .Content }}
 </article>
 {{ end }}
