@@ -3,21 +3,32 @@ languageCode = 'en-us'
 title = 'Odhy'
 theme = 'odai-theme'
 
-# Author information
-[params]
-  author = "Odhy Pradhana"
-  authorLink = "https://yourwebsite.com/"
+# Page custom parameters
+[Params]
   description = "Portfolio and Blog website"
-  socialGithub = "https://github.com/odhyp"
-  socialTwitter = "https://twitter.com/valgtreiz"
-  socialLinkedin = "https://linkedin.com/in/odhy-pradhana"
-  socialEmail = "pradhana.odhy@gmail.com"
 
-# Hugo Module version requirement
+# Author information
+[Params.Author]
+  fullname = "Odhy Pradhana"
+  shortname = "Odhy"
+  bio = "A Python Developer"
+  avatar = "https://i.pinimg.com/736x/49/3c/a1/493ca1e393a923bc04a1293f7ea76873.jpg"
+
+# Social account info
+[Params.Social]
+  email = "pradhana.odhy@gmail.com"
+  github = "https://github.com/odhyp"
+  linkedin = "https://linkedin.com/in/odhy-pradhana"
+  facebook = ""
+  twitter = "https://twitter.com/valgtreiz"
+  instagram = ""
+  medium = ""
+
+# Hugo Module version
 [module]
   [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+    extended = true
+    min = "0.133.1"
 
 # Git Info for Last Modify Date
 enableGitInfo = true
@@ -27,6 +38,7 @@ enableGitInfo = true
   [markup.highlight]
     style = "catppuccin-macchiato"
 
+# Custom taxonomies
 [taxonomies]
   category = "categories"
   tag = "tags"
