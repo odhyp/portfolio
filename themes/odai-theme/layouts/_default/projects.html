@@ -1,9 +1,7 @@
 {{ define "main" }}
 <div class="w-full max-w-full lg:px-8">
     <!-- CONTENT START -->
-    <div class="w-full max-w-prose prose prose-invert mx-auto">
-        {{ .Content }}
-    </div>
+    {{- partial "component/page-heading.html" . -}}
     <!-- CONTENT END -->
     <!-- SHOWCASE START -->
     <div class="w-full max-w-full flex flex-col gap-8 md:gap-4 my-4">
