@@ -3,27 +3,12 @@
     <!-- CONTENT START -->
     {{- partial "component/page-heading.html" . -}}
     <!-- CONTENT END -->
-    <!-- SHOWCASE START -->
-    <div class="w-full max-w-full flex flex-col gap-8 md:gap-4 my-4">
+    <!-- PROJECT LIST START -->
+    <div class="w-full max-w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 my-4 mt-16">
         <!-- PROJECT CARDS START -->
-        {{ range .Pages }}
-        <div class="flex flex-col gap-4 bg-gray-900 rounded p-4">
-            <!-- CARD IMAGE -->
-            <a href="{{ .Permalink }}">
-                <img class="h-48 md:h-64 w-full rounded object-cover transition-opacity hover:opacity-75" src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-            </a>
-            <!-- CARD CONTENT -->
-            <div class="flex flex-col gap-2">
-                <a class="text-xl font-bold hover:text-green-400" href="{{ .Permalink }}">{{ .Title }}</a>
-                <p class="text-neutral-400">{{ .Summary }}</p>
-                <div class="w-full max-w-full flex flex-row flex-wrap gap-2 items-center py-2">
-                    {{ partial "component/project-badge.html" . }}
-                </div>
-            </div>
-        </div>
-        {{ end }}
+        {{- partial "component/project-list.html" . -}}
         <!-- PROJECT CARDS END -->
     </div>
-    <!-- SHOWCASE END -->
+    <!-- PROJECT LIST END -->
 </div>
 {{ end }}
