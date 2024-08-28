@@ -14,6 +14,8 @@
         <!-- CONTENT END -->
     </div>
 
+
+
     <!-- FEATURED PROJECT SECTION START -->
     <div class="flex justify-center mt-32">
         <h2 class="text-2xl text-center font-bold">Featured Projects</h2>
@@ -33,5 +35,19 @@
         </a>
     </div>
     <!-- FEATURED PROJECT CTA END -->
+    <!-- FEATURED PROJECT SECTION END -->
+
+
+
+    <!-- PINNED BLOG SECTION START -->
+    <div class="flex justify-center mt-32">
+        <h2 class="text-2xl text-center font-bold">Pinned Blogs</h2>
+    </div>
+    <!-- PINNED BLOG LIST START -->
+    <div class="w-full max-w-full flex flex-col gap-4 my-8">
+        {{- partial "component/blog-featured.html" . -}}
+    </div>
+    <!-- PINNED BLOG LIST END -->
+    <!-- PINNED BLOG SECTION END -->
 </div>
 {{ end }}
