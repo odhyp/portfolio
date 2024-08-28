@@ -1,6 +1,7 @@
 +++
 draft = false
 
+featured = true
 title = 'This Is Sample Project Five'
 slug = 'this-is-sample-project-five'
 date = 2024-05-05T22:40:02+07:00

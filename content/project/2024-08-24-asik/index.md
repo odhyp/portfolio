@@ -1,6 +1,7 @@
 +++
 draft = false
 
+featured = true
 title = 'ASIK - '
 slug = 'aplikasi-slip-gaji-elektronik'
 date = 2024-08-24
