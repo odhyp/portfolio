@@ -1,6 +1,7 @@
 +++
 draft = false
 
+pinned = true
 title = 'This Is Sample Blog One'
 slug = 'this-is-sample-blog-one'
 date = 2020-01-01

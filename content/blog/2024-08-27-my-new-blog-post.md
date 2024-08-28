@@ -1,6 +1,7 @@
 +++
 draft = false
 
+pinned = true
 title = "My New Blog Post"
 slug = "my-new-blog-post"
 date = 2024-08-27

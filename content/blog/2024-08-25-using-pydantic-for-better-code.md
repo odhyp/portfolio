@@ -1,6 +1,7 @@
 +++
 draft = false
 
+pinned = true
 title = "Using Pydantic for Better Code"
 slug = "using-pydantic-for-better-code"
 date = 2024-08-25
