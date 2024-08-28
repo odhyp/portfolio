@@ -1,13 +1,38 @@
 {{ define "main" }}
-<div class="w-full max-w-prose mx-auto">
-    <!-- AUTHOR INFORMATION START -->
-    <div class="flex flex-row items-end mb-4">
-        <h1 class="text-3xl font-bold">Hi! I'm {{ .Site.Params.Author.shortname }}.</h1>
-        <img class="w-[100px] rounded-full border-2 ml-4" src="{{ .Site.Params.Author.avatar }}">
+<div class="w-full max-w-full mx-auto">
+    <!-- LANDING SECTION -->
+    <div class="w-full max-w-prose mx-auto">
+        <!-- AUTHOR INFORMATION START -->
+        <div class="flex flex-row items-end mb-4">
+            <h1 class="text-3xl font-bold">Hi! I'm {{ .Site.Params.Author.shortname }}.</h1>
+            <img class="w-[100px] rounded-full border-2 ml-4" src="{{ .Site.Params.Author.avatar }}">
+        </div>
+        <!-- AUTHOR INFORMATION END -->
+
+        <!-- CONTENT START -->
+        {{- partial "component/page-heading.html" . -}}
+        <!-- CONTENT END -->
     </div>
-    <!-- AUTHOR INFORMATION END -->
-    <!-- CONTENT START -->
-    {{- partial "component/page-heading.html" . -}}
-    <!-- CONTENT END -->
+
+    <!-- FEATURED PROJECT SECTION -->
+    <div class="w-full max-w-prose mx-auto mt-32">
+        <h2 class="text-2xl text-center font-bold">Featured Projects</h2>
+    </div>
+    <!-- FEATURED PROJECT LIST START -->
+    <div class="w-full max-w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 my-4">
+        <!-- PROJECT CARDS START -->
+        {{- partial "component/project-featured.html" . -}}
+        <!-- PROJECT CARDS END -->
+    </div>
+    <!-- FEATURED PROJECT CTA START -->
+    <div class="w-full max-w-prose mx-auto flex justify-center mt-8">
+        <a class="border rounded flex flex-row gap-2 items-center justify-between px-6 py-1" href="/project">
+            More Projects
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+        </a>
+    </div>
+    <!-- FEATURED PROJECT CTA END -->
 </div>
 {{ end }}
