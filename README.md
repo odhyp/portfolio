@@ -14,26 +14,20 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 
 ## To-do/Plans
 
-- [ ] Add PR template
-- [ ] Layouts :sparkles:
-    - [x] Base page
-    - [x] Header
-    - [x] Footer
-    - [x] Home page
-    - [x] Contact page
-    - [x] Single page
-    - [x] List page
-    - [x] Showcase page
-    - [ ] Search page
-    - [x] 404 page
-- [ ] Page Components :house:
+- [ ] Replace `Tags` in Categories page with `Categories` (use If Statement in `taxonomy.html`)
+- [ ] Create and simplify archetypes
+- [ ] Page Components
     - [ ] Back-to-top button
-    - [ ] TOC
-    - [ ] Breadcrumbs
-    - [x] Estimated read time
-    - [x] Share post button
     - [ ] Related post cards
-    - [x] Code block style
     - [ ] Code block copy button
-    - [ ] Animated button
-    - [ ] Shortcodes!
+    - [ ] Short Code block styling
+    - [ ] Breadcrumbs
+- [ ] Shortcodes
+    - [ ] Information
+    - [ ] Alerts
+    - [ ] Warning
+    - [ ] Danger
+    - [ ] Figure (image with caption)
+    - [ ] TOC
+    - [ ] Accordion
+- [ ] README or Docs for creating new content, using shortcodes, etc
