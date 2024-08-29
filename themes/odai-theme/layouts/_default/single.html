@@ -4,6 +4,14 @@
     <div class="w-full max-w-2xl mx-auto flex flex-col gap-4">
         <!-- POST TITLE -->
         <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+        <!-- POST TAGS -->
+        <div class="w-full max-w-full flex flex-row flex-wrap gap-2 items-center py-2">
+            {{ if eq .Type "project" }}
+                {{ partial "component/project-badge.html" . }}
+            {{ else if eq .Type "blog" }}
+                {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+            {{ end }}
+        </div>
         <!-- POST DATE -->
         <div class="flex flex-row gap-1 text-sm">
             <p class="text-gray-400">Posted</p>
@@ -13,13 +21,15 @@
             {{ .Lastmod.Format "Jan 2, 2006" }}
         </div>
         <!-- POST COVER IMAGE -->
-        <img class="w-full max-w-full h-auto mx-auto" src="https://placehold.co/1200x600">
+        <img class="w-full max-w-full h-auto mx-auto rounded" src="https://placehold.co/1200x600">
         <!-- POST AUTHOR AND ESTIMATE READING TIME -->
         <div class="flex flex-row justify-between text-sm">
+            <!-- POST AUTHOR -->
             <div class="flex flex-row gap-1">
                 <p class="text-gray-400">By</p>
                 <p>{{ .Site.Params.Author.fullname }}</p>
             </div>
+            <!-- POST ESTIMATE READING TIME -->
             <div class="flex flex-row gap-1">
                 <p>{{ printf "%d min" .ReadingTime }}</p>
                 <p class="text-gray-400">read</p>
@@ -32,35 +42,27 @@
         {{ .Content }}
     </article>
     <!-- POST CONTENT END -->
+    <!-- CHANGELOG START -->
+    <div class="w-full max-w-2xl mx-auto flex flex-col mt-8">
+        <p class="text-green-400">Page changelog:</p>
+        {{ with .GitInfo }}
+        <div class="flex flex-row gap-2 items-center text-neutral-400">
+            <p>{{ .CommitDate.Format "Jan 02, 2006" }} - {{ .Subject }}</p>
+        </div>
+        {{ end }}
+    </div>
+    <!-- CHANGELOG END -->
     <!-- POST FOOTER START -->
-    <div class="w-full max-w-2xl mx-auto flex flex-col gap-4 py-4">
+    <div class="w-full max-w-2xl mx-auto flex flex-col md:flex-row-reverse items-center md:justify-between gap-4 py-4 pb-2 border-b border-gray-600">
         <!-- POST SHARE BUTTON -->
         {{ partial "component/page-share.html" }}
-        <!-- POST TAGS -->
-        <div class="flex flex-row gap-2">
-            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-        </div>
         <!-- POST COPYRIGHT -->
-        <p class="text-sm text-gray-400 border-b pb-2 border-gray-400">
+        <p class="text-sm text-gray-400">
             This post is licensed under
             <a class="text-white font-semibold" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
             by the author.
         </p>
     </div>
     <!-- POST FOOTER END -->
-    <!-- CHANGELOG START -->
-    <div class="w-full max-w-2xl mx-auto flex flex-col gap-0">
-        <p>Changelog:</p>
-        {{ with .GitInfo }}
-        <div class="flex flex-row gap-2 items-center text-gray-400">
-            <p>{{ .CommitDate.Format "2006-01-02" }}</p>
-            <p>-</p>
-            <p>{{ .Subject }}</p>
-        </div>
-        {{ end }}
-    </div>
-    <!-- CHANGELOG END -->
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}">Sample</a>
-
 </div>
 {{ end }}
