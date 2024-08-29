@@ -2,6 +2,10 @@
 
 Built with Hugo, JavaScript, and TailwindCSS
 
+## Information
+
+Blog page is using `pinned` and `tags`, while Project page is `featured` and `categories`.
+
 ## Running Hugo on local connection
 
 ```bash
@@ -26,10 +30,10 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
     - [ ] Back-to-top button
     - [ ] TOC
     - [ ] Breadcrumbs
-    - [ ] Estimated read time
-    - [ ] Share post button
+    - [x] Estimated read time
+    - [x] Share post button
     - [ ] Related post cards
-    - [ ] Code block style
+    - [x] Code block style
     - [ ] Code block copy button
     - [ ] Animated button
     - [ ] Shortcodes!
