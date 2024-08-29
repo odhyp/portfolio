@@ -1,21 +1,59 @@
 {{ define "main" }}
-<div>
-    {{ .Title }}
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+<div class="w-full max-w-full flex flex-col gap-4 items-center lg:px-8">
+    <!-- POST HEADING START -->
+    <div class="w-full max-w-prose mx-auto flex flex-col gap-4">
+        <!-- POST TITLE -->
+        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+        <!-- POST DATE -->
+        <div class="flex flex-row gap-1 text-sm">
+            <p class="text-gray-400">Posted</p>
+            {{ .Date.Format "Jan 2, 2006" }}
+            <p class="px-2">•</p>
+            <p class="text-gray-400">Updated</p>
+            {{ .Lastmod.Format "Jan 2, 2006" }}
+        </div>
+        <!-- POST COVER IMAGE -->
+        <img class="w-full max-w-full h-auto mx-auto" src="https://placehold.co/1200x600">
+        <!-- POST TAGS AND ESTIMATE READING TIME -->
+        <div class="flex flex-row justify-between text-sm">
+            <div class="flex flex-row gap-2">
+                <p>Tags:</p>
+                {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+            </div>
+            <div class="flex flex-row gap-1">
+                <p>{{ printf "%d min" .ReadingTime }}</p>
+                <p class="text-gray-400">read</p>
+            </div>
+        </div>
+    </div>
+    <!-- POST HEADING END -->
+    <!-- POST CONTENT START -->
+    <article class="w-full max-w-prose prose prose-invert mx-auto mt-8">
+        {{ .Content }}
+    </article>
+    <!-- POST CONTENT END -->
+    <!-- POST FOOTER START -->
+    <div class="w-full max-w-prose mx-auto">
+        <p class="text-sm text-gray-400">
+            This post is licensed under
+            <a class="text-white font-semibold" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+            by the author.
+        </p>
+    </div>
+    <!-- POST FOOTER END -->
+    <!-- CHANGELOG START -->
+    <div class="w-full max-w-prose mx-auto flex flex-col gap-4">
+        <p>Changelog:</p>
+        {{ with .GitInfo }}
+        <div class="flex flex-row gap-2 items-center text-gray-400">
+            <p>{{ .CommitDate.Format "2006-01-02" }}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+            </svg>
+            <p>{{ .Subject }}</p>
+        </div>
+        {{ end }}
+    </div>
+    <!-- CHANGELOG END -->
 </div>
-<div>
-    <h1>Git Info:</h1>
-    {{.GitInfo | jsonify}}
-    {{ with .GitInfo }}
-    {{ .AbbreviatedHash }}
-    {{ .AuthorDate.Format "2006-01-02" }}
-    {{ .AuthorEmail }}
-    {{ .AuthorName }}
-    {{ .CommitDate.Format "2006-01-02" }}
-    {{ .Subject }}
-    {{ end }}
-</div>
-<article class="w-full max-w-prose prose prose-invert mx-auto">
-    {{ .Content }}
-</article>
 {{ end }}
