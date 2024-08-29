@@ -1,14 +1,16 @@
 {{ define "main" }}
-<div class="flex flex-col justify-center items-center py-16 gap-4">
-    <h1 class="font-bold text-8xl">404</h1>
-    <h2 class="font-semibold text-4xl">Oh no, you're lost :(</h2>
-    <a href="/" class="mt-16">
-        <button class="align-middle font-bold text-center transition-all border border-solid rounded px-8 py-4 hover:bg-gray-700 flex items-center gap-3">
-            Save me!
+<div class="w-full max-w-full mx-auto">
+    <div class="w-full max-w-prose mx-auto flex flex-col gap-2 items-center sm:text-justify">
+        <h1 class="font-bold text-4xl">Uh-oh.</h1>
+        <h2 class="font-normal text-xl">It looks like you're lost!</h2>
+        <img class="w-48 max-w-48 h-auto mt-4" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExam00b3lqOGNvcnhoanVvbGJ3czltYXV1ajF0anRwdXd1N3FxdmkzciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GRk3GLfzduq1NtfGt5/giphy.gif">
+        <a class="italic text-sm text-neutral-400" href="https://giphy.com/gifs/BlackRosesPlayingCards-cat-meme-surprise-GRk3GLfzduq1NtfGt5">via GIPHY</a>
+        <a class="rounded flex flex-row gap-2 items-center justify-between px-6 py-2 mt-4 bg-gray-900 hover:bg-gray-800" href="/blog">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
             </svg>
-        </button>
-    </a>
+            Back to home
+        </a>
+    </div>
 </div>
 {{ end }}
