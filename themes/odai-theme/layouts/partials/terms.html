@@ -4,17 +4,9 @@
 {{- $terms := . }}
 {{- $total := len $terms }}
 {{- $label := (index $terms 0).Parent.LinkTitle }}
-<ul class="flex flex-row gap-1">
+<div class="block">
     {{- range $index, $term := $terms }}
-    <li>
-        <a href="{{ $term.RelPermalink }}" class="text-sm text-neutral-400 hover:text-green-400">{{ $term.LinkTitle }}</a>
-    </li>
-    <!-- Check if it's not the last item -->
-    {{- if ne (add $index 1) $total }}
-    <!-- CHILDREN SEPARATOR START -->
-    <li class="text-neutral-400">,</li>
-    <!-- CHILDREN SEPARATOR END -->
+    <a href="{{ $term.RelPermalink }}" class="text-sm pr-1 text-neutral-400 hover:text-green-400">#{{ $term.LinkTitle }}</a>
     {{- end }}
-    {{- end }}
-</ul>
+</div>
 {{- end }}
