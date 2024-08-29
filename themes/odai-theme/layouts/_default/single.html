@@ -14,11 +14,11 @@
         </div>
         <!-- POST COVER IMAGE -->
         <img class="w-full max-w-full h-auto mx-auto" src="https://placehold.co/1200x600">
-        <!-- POST TAGS AND ESTIMATE READING TIME -->
+        <!-- POST AUTHOR AND ESTIMATE READING TIME -->
         <div class="flex flex-row justify-between text-sm">
-            <div class="flex flex-row gap-2">
-                <p>Tags:</p>
-                {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+            <div class="flex flex-row gap-1">
+                <p class="text-gray-400">By</p>
+                <p>{{ .Site.Params.Author.fullname }}</p>
             </div>
             <div class="flex flex-row gap-1">
                 <p>{{ printf "%d min" .ReadingTime }}</p>
@@ -33,8 +33,15 @@
     </article>
     <!-- POST CONTENT END -->
     <!-- POST FOOTER START -->
-    <div class="w-full max-w-prose mx-auto">
-        <p class="text-sm text-gray-400">
+    <div class="w-full max-w-prose mx-auto flex flex-col gap-4 py-4">
+        <!-- POST SHARE BUTTON -->
+        {{ partial "component/page-share.html" }}
+        <!-- POST TAGS -->
+        <div class="flex flex-row gap-2">
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        </div>
+        <!-- POST COPYRIGHT -->
+        <p class="text-sm text-gray-400 border-b pb-2 border-gray-400">
             This post is licensed under
             <a class="text-white font-semibold" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
             by the author.
@@ -42,18 +49,18 @@
     </div>
     <!-- POST FOOTER END -->
     <!-- CHANGELOG START -->
-    <div class="w-full max-w-prose mx-auto flex flex-col gap-4">
+    <div class="w-full max-w-prose mx-auto flex flex-col gap-0">
         <p>Changelog:</p>
         {{ with .GitInfo }}
         <div class="flex flex-row gap-2 items-center text-gray-400">
             <p>{{ .CommitDate.Format "2006-01-02" }}</p>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-              <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
-            </svg>
+            <p>-</p>
             <p>{{ .Subject }}</p>
         </div>
         {{ end }}
     </div>
     <!-- CHANGELOG END -->
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}">Sample</a>
+
 </div>
 {{ end }}
