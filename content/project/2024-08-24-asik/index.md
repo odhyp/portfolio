@@ -1,21 +1,12 @@
 +++
 draft = false
-
 featured = true
 title = 'ASIK - '
 slug = 'aplikasi-slip-gaji-elektronik'
 date = 2024-08-24
-lastmod = 2024-08-25
-
-categories = ['Python', 'PyPI', 'Tkinter', 'Jinja', 'Pandas']
-tags = ['web scraping', 'automation', 'Python']
+categories = ['Python', 'PyPI', 'Tkinter', 'Jinja', 'Pandas', 'GithubActions']
 summary = 'A Python GUI Application to generate employee salary slip.'
-
-sourceCode = ''
-projectUrl = ''
 +++
-
-## Project Overview
 
 ASIK is a Python GUI Application that generates employee monthly salary slip.
 
