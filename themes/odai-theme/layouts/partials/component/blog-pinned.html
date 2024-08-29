@@ -8,8 +8,8 @@
             <a href="{{ .Permalink }}" class="hover:text-green-400">{{ .Title }}</a>
         </div>
         <hr class="min-w-6 flex-grow border-t border-dashed border-gray-700">
-        <p class="shrink-0 md:hidden text-gray-400">{{ .Date.Format "Jan 2006" }}</p>
-        <p class="shrink-0 hidden md:block text-gray-400">{{ .Date.Format "January 2, 2006" }}</p>
+        <p class="shrink-0 md:hidden text-gray-400">{{ .Lastmod.Format "Jan 2006" }}</p>
+        <p class="shrink-0 hidden md:block text-gray-400">{{ .Lastmod.Format "January 2, 2006" }}</p>
     </div>
     {{ end }}
 {{ end }}
