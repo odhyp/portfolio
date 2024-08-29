@@ -8,7 +8,15 @@ module.exports = {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: "75ch",
+          },
+        },
+      })
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
