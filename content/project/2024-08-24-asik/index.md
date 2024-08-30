@@ -116,10 +116,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Odhy Pradhana - pradhana.odhy@gmail.com
 
-[![gmail][gmail-shield]][gmail-url]
-[![linkedin][linkedin-shield]][linkedin-url]
-[![twitter][twitter-shield]][twitter-url]
-
 
 
 ## Acknowledgements
