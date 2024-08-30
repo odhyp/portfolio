@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="w-full max-w-full flex flex-col gap-4 items-center lg:px-8">
     <!-- POST HEADING START -->
-    <div class="w-full max-w-2xl mx-auto flex flex-col gap-4">
+    <div class="w-full max-w-2xl mx-auto flex flex-col gap-2 md:gap-4">
         <!-- POST TITLE -->
         <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
         <!-- POST TAGS -->
@@ -12,39 +12,39 @@
                 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
             {{ end }}
         </div>
-        <!-- POST DATE -->
-        <div class="flex flex-row gap-1 text-sm">
-            <p class="text-gray-400">Posted</p>
-            {{ .Date.Format "Jan 2, 2006" }}
-            <p class="px-2">•</p>
-            <p class="text-gray-400">Updated</p>
-            {{ .Lastmod.Format "Jan 2, 2006" }}
-        </div>
-        <!-- POST COVER IMAGE -->
-        <img class="w-full max-w-full h-auto mx-auto rounded" src="{{ .Params.Cover }}">
-        <!-- POST AUTHOR AND ESTIMATE READING TIME -->
-        <div class="flex flex-row justify-between text-sm">
-            <!-- POST AUTHOR -->
-            <div class="flex flex-row gap-1">
-                <p class="text-gray-400">By</p>
-                <p>{{ .Site.Params.Author.fullname }}</p>
+        <!-- POST INFORMATION -->
+        <div class="flex flex-row justify-between items-end">
+            <!-- POST DATE -->
+            <div class="flex flex-col sm:flex-row gap-1 text-sm">
+                <div class="flex flex-row gap-1">
+                    <p class="text-gray-400">Posted</p>
+                    {{ .Date.Format "Jan 2, 2006" }}
+                </div>
+                <p class="hidden sm:block px-2">•</p>
+                <div class="flex flex-row gap-1">
+                    <p class="text-gray-400">Updated</p>
+                    {{ .Lastmod.Format "Jan 2, 2006" }}
+                </div>
             </div>
             <!-- POST ESTIMATE READING TIME -->
-            <div class="flex flex-row gap-1">
+            <div class="flex flex-row gap-1 text-sm">
                 <p>{{ printf "%d min" .ReadingTime }}</p>
                 <p class="text-gray-400">read</p>
             </div>
         </div>
+        <!-- POST COVER IMAGE -->
+        <img class="w-full max-w-full h-auto mx-auto rounded" src="{{ .Params.Cover }}" alt="{{ .Title }} Cover" onerror="this.style.display='none';">
+        <hr class="mt-2 md:mt-0 border-1 border-t border-gray-600">
     </div>
     <!-- POST HEADING END -->
     <!-- POST CONTENT START -->
-    <article class="w-full max-w-2xl prose prose-invert mx-auto mt-8">
+    <article class="w-full max-w-2xl prose prose-invert mx-auto mt-4">
         {{ .Content }}
     </article>
     <!-- POST CONTENT END -->
     <!-- CHANGELOG START -->
     <div class="w-full max-w-2xl mx-auto flex flex-col mt-8">
-        <p class="text-green-400">Page changelog:</p>
+        <p class="text-green-400">Latest update:</p>
         {{ with .GitInfo }}
         <div class="flex flex-row gap-2 items-center text-neutral-400">
             <p>{{ .CommitDate.Format "Jan 02, 2006" }} - {{ .Subject }}</p>
@@ -64,5 +64,31 @@
         </p>
     </div>
     <!-- POST FOOTER END -->
+    <!-- FURTHER READING CARD START -->
+    <div class="w-full max-w-2xl mx-auto mb-8">
+        <p class="font-semibold mb-3">Further Reading</p>
+        <div class="flex flex-col sm:flex-row items-start gap-2">
+            {{ $related := .Site.RegularPages.Related . | first 3 }}
+            {{ if gt (len $related) 0 }}
+                {{ range $related }}
+                <a class="flex flex-col flex-1 gap-1 bg-gray-900 rounded p-4 w-full sm:h-40 md:h-56 transition-opacity hover:opacity-80" href="{{ .RelPermalink }}">
+                    <p class="text-gray-400 text-sm font-light">{{ .Date.Format "Jan 2, 2006" }}</p>
+                    <p class="line-clamp-2 md:line-clamp-3">{{ .LinkTitle }}</p>
+                    <p class="text-gray-400 line-clamp-2 md:line-clamp-4 text-sm">{{ .Summary }}</p>
+                </a>
+                {{ end }}
+            {{ else }}
+                <div class="w-full max-w-full border rounded px-4 py-4">
+                    <p>No related posts available.</p>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+    <!-- FURTHER READING CARD END -->
+
+    <!-- GISCUS -->
+    <div class="w-full max-w-2xl mx-auto">
+        {{- partial "giscus.html" . -}}
+    </div>
 </div>
 {{ end }}
