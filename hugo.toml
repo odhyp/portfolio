@@ -7,6 +7,8 @@ enableGitInfo = true
 # Page custom parameters
 [Params]
   description = "Portfolio and Blog website"
+  disableComments = false
+  giscusTheme = "dark"
 
 # Author information
 [Params.Author]
