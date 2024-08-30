@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-4 bg-gray-900 rounded p-4">
         <!-- CARD IMAGE -->
         <a href="{{ .Permalink }}">
-            <img class="h-48 md:h-52 w-full rounded object-cover transition-opacity hover:opacity-75" loading="lazy" src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <img class="h-48 md:h-52 w-full rounded object-cover transition-opacity hover:opacity-75" loading="lazy" src="{{ .Params.Cover }}" alt="{{ .Title }} Cover">
         </a>
         <!-- CARD CONTENT -->
         <div class="flex flex-col gap-2">
