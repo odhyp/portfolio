@@ -14,14 +14,13 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 
 ## To-do/Plans
 
-- [ ] Fix share buttons url
 - [ ] Replace `Tags` in Categories page with `Categories` (use If Statement in `taxonomy.html`)
-- [x] Create and simplify archetypes
 - [ ] Page Components
     - [ ] Back-to-top button
-    - [x] Related post cards
-    - [ ] Code block copy button
     - [ ] Short Code block styling
+    - [ ] Add copy button for code block
+    - [x] Related post cards
+    - [x] Add copy button and copied tooltip for share button
 - [ ] Shortcodes
     - [ ] Information
     - [ ] Alerts
@@ -29,3 +28,5 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
     - [ ] Danger
     - [ ] Figure (image with caption)
 - [ ] README or Docs for creating new content, using shortcodes, etc
+- [x] Fix share buttons url
+- [x] Create and simplify archetypes
