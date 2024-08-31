@@ -1,4 +1,5 @@
 +++
-title = 'Category'
+layout = 'categories'
+title = 'Categories'
 draft = false
 +++

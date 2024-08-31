@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="w-full max-w-full lg:px-8">
+    <div class="w-full max-w-2xl mx-auto text-center">
+        <h2 class="font-semibold text-2xl">{{ .Title }}</h2>
+    </div>
+    <!-- CATEGORY LIST START -->
+    <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-2 my-4 mt-8">
+        {{ $sortedPages := .Pages.ByTitle }}
+        {{ range $sortedPages }}
+        <a class="flex flex-row justify-between items-center p-4 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">
+            <!-- CATEGORY BADGE -->
+            <div class="flex flex-row items-center gap-4">
+                <img id="{{ .Title }}-icon" class="w-6 h-6 max-w-6 max-h-6" src="https://cdn.simpleicons.org/{{ .Title | lower }}/4ADE80" alt="{{ .Title }} icon" onerror="this.style.display='none'; document.getElementById('{{ .Title }}-fallback').classList.remove('hidden');">
+                <i id="{{ .Title }}-fallback" class="hidden text-green-400 w-6 h-6 max-w-6 max-h-6 fa-solid fa-code"></i>
+                <p class="font-semibold">{{ .Title }}</p>
+            </div>
+            <p>
+                {{ $count := len .Pages }}
+                {{ $count }} {{ if eq $count 1 }}project{{ else }}projects{{ end }}
+            </p>
+        </a>
+        {{ end }}
+    </div>
+    <!-- CATEGORY LIST END -->
+</div>
+{{ end }}
