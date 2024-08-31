@@ -5,6 +5,7 @@
 +++
 draft = true
 featured = false
+disableComments = false
 title = "{{ $pageTitle }}"
 slug = "{{ $pageSlug }}"
 date = {{ now.Format "2006-01-02" }}
