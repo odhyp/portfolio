@@ -15,16 +15,9 @@
         <!-- POST INFORMATION -->
         <div class="flex flex-row justify-between items-end">
             <!-- POST DATE -->
-            <div class="flex flex-col sm:flex-row gap-1 text-sm">
-                <div class="flex flex-row gap-1">
-                    <p class="text-gray-400">Posted</p>
-                    {{ .Date.Format "Jan 2, 2006" }}
-                </div>
-                <p class="hidden sm:block px-2">•</p>
-                <div class="flex flex-row gap-1">
-                    <p class="text-gray-400">Updated</p>
-                    {{ .Lastmod.Format "Jan 2, 2006" }}
-                </div>
+            <div class="flex flex-row gap-1 text-sm">
+                <p class="text-gray-400">Posted</p>
+                {{ .Date.Format "Jan 2, 2006" }}
             </div>
             <!-- POST ESTIMATE READING TIME -->
             <div class="flex flex-row gap-1 text-sm">
@@ -44,7 +37,7 @@
     <!-- POST CONTENT END -->
     <!-- CHANGELOG START -->
     <div class="w-full max-w-2xl mx-auto flex flex-col mt-8">
-        <p class="text-green-400">Latest update:</p>
+        <p class="text-green-400">Page update:</p>
         {{ with .GitInfo }}
         <div class="flex flex-row gap-2 items-center text-neutral-400">
             <p>{{ .CommitDate.Format "Jan 02, 2006" }} - {{ .Subject }}</p>
@@ -67,18 +60,18 @@
     <!-- FURTHER READING CARD START -->
     <div class="w-full max-w-2xl mx-auto mb-8">
         <p class="font-semibold mb-3">Further Reading</p>
-        <div class="flex flex-col sm:flex-row items-start gap-2">
-            {{ $related := .Site.RegularPages.Related . | first 3 }}
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {{ $related := .Site.RegularPages.Related . | first 2 }}
             {{ if gt (len $related) 0 }}
                 {{ range $related }}
-                <a class="flex flex-col flex-1 gap-1 bg-gray-900 rounded p-4 w-full sm:h-40 md:h-56 transition-opacity hover:opacity-80" href="{{ .RelPermalink }}">
+                <a class="flex flex-col gap-1 bg-gray-900 rounded p-4 transition-opacity hover:opacity-80" href="{{ .RelPermalink }}">
                     <p class="text-gray-400 text-sm font-light">{{ .Date.Format "Jan 2, 2006" }}</p>
-                    <p class="line-clamp-2 md:line-clamp-3">{{ .LinkTitle }}</p>
-                    <p class="text-gray-400 line-clamp-2 md:line-clamp-4 text-sm">{{ .Summary }}</p>
+                    <p class="line-clamp-2">{{ .LinkTitle }}</p>
+                    <p class="text-gray-400 line-clamp-2 md:line-clamp-3 text-sm">{{ .Summary }}</p>
                 </a>
                 {{ end }}
             {{ else }}
-                <div class="w-full max-w-full border rounded px-4 py-4">
+                <div class="flex flex-row items-center justify-center bg-gray-900 text-gray-400 text-sm rounded p-4 col-span-1 sm:col-span-2 md:col-span-3">
                     <p>No related posts available.</p>
                 </div>
             {{ end }}
