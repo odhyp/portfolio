@@ -15,13 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
             try {
                 document.execCommand('copy');
+                
                 // Show tooltip
-                tooltip.classList.remove('hidden');
-                tooltip.classList.add('absolute');
+                tooltip.classList.remove('opacity-0', 'invisible');
+                tooltip.classList.add('opacity-100', 'visible');
+                
                 // Hide tooltip after 1.5 seconds
                 setTimeout(() => {
-                    tooltip.classList.remove('absolute');
-                    tooltip.classList.add('hidden');
+                    tooltip.classList.remove('opacity-100', 'visible');
+                    tooltip.classList.add('opacity-0', 'invisible');
                 }, 1500);
             } catch (err) {
                 console.error('Failed to copy URL: ', err);
