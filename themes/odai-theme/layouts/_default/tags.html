@@ -4,7 +4,7 @@
         <h2 class="font-bold text-2xl">{{ .Title }}</h2>
     </div>
     <!-- TAGS LIST START -->
-    <div class="w-full max-w-full grid grid-cols-3 gap-2 my-4 mt-8">
+    <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-3 gap-2 my-4 mt-16">
         {{ range sort .Pages "Title" }}
         <div class="col-start-2">
             <a class="flex flex-row justify-between items-center px-4 py-1 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">

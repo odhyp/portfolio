@@ -16,13 +16,13 @@
 
     <!-- If page Type is Categories, use project-list. Else, use blog-list -->
     {{ if eq .Type "categories" }}
-        <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-4 my-4 mt-8">
+        <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-4 my-4 mt-16">
             <!-- TAXONOMY PROJECT LIST START -->
             {{- partial "component/project-list.html" . -}}
             <!-- TAXONOMY PROJECT LIST END -->
         </div>
     {{ else }}
-        <div class="w-full max-w-full my-4 mt-8">
+        <div class="w-full max-w-full my-4 mt-16">
             <!-- TAXONOMY BLOG LIST START -->
             {{- partial "component/blog-list.html" . -}}
             <!-- TAXONOMY BLOG LIST END -->
