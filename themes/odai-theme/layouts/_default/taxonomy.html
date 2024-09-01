@@ -1,7 +1,12 @@
 {{ define "main" }}
-<div class="w-full max-w-full lg:px-8">
-    <div class="w-full max-w-2xl mx-auto text-center">
-        <h2 class="font-semibold text-2xl">{{ .Title }}</h2>
+<div class="w-full max-w-full mx-auto">
+    <div class="w-full max-w-2xl mx-auto">
+        <div class="flex flex-row justify-center items-center gap-4">
+            <div class="size-8">
+                {{ partial "component/project-icon.html" . }}
+            </div>
+            <h2 class="font-bold text-2xl">{{ .Title }}</h2>
+        </div>
     </div>
 
     <!-- If page Type is Categories, use project-list. Else, use blog-list -->

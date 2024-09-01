@@ -9,7 +9,9 @@
         <a class="flex flex-row justify-between items-center p-4 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">
             <!-- CATEGORY BADGE -->
             <div class="flex flex-row items-center gap-4">
-                {{ partial "component/project-icon.html" . }}
+                <div class="size-6">
+                    {{ partial "component/project-icon.html" . }}
+                </div>
                 <p class="font-semibold">{{ .Title }}</p>
             </div>
             <p class="text-gray-400">
