@@ -1,6 +1,2 @@
-{{- range .Page.Params.categories -}}
-{{- $categoryURL := printf "/categories/%s/" (. | urlize) -}}
-<a href="{{ $categoryURL }}" title="{{ . }}">
-    <img class="w-8 h-8 transition-opacity hover:opacity-75" src="https://cdn.simpleicons.org/{{ . | urlize }}/FFFFFF" alt="{{ . }} icon" />
-</a>
-{{- end -}}
+<img id="{{ .Title }}-icon" class="w-6 h-6 max-w-6 max-h-6" src="https://cdn.simpleicons.org/{{ .Title | lower }}/4ADE80" alt="{{ .Title }} icon" onerror="this.style.display='none'; document.getElementById('{{ .Title }}-fallback').classList.remove('hidden');">
+<i id="{{ .Title }}-fallback" class="hidden text-green-400 w-6 h-6 max-w-6 max-h-6 fa-solid fa-code"></i>
