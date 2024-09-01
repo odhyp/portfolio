@@ -10,7 +10,7 @@
             <a class="flex flex-row justify-between items-center px-4 py-4 sm:py-3 md:py-2 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">
                 <div class="flex flex-row gap-2">
                     <p class="text-green-400">#</p>
-                    <p>{{ .Title }}</p>
+                    <p class="font-semibold">{{ .Title }}</p>
                 </div>
                 <p class="text-gray-400">
                     {{ $count := len .Pages }}
