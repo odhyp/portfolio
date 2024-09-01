@@ -18,11 +18,10 @@ Blog page is using `pinned` and `tags`, while Project page is `featured` and `ca
 
 ## To-do/Plans
 
-- [ ] Change header nav menu hover color to green-400 for consistency
-- [ ] Change project-badge icon color to green-400 (matching the categories page)
-- [ ] Add tags page layout (sorted alphabetically with page count)
-- [ ] Add blog-list layout for tags taxonomy
-- [ ] Add project-list layout for categories taxonomy
+- [x] Change header nav menu hover color to green-400 for consistency
+- [x] Add tags page layout (sorted alphabetically with page count)
+- [x] Add blog-list layout for tags taxonomy
+- [x] Add project-list layout for categories taxonomy
 - [ ] Add fallback for project list cards image if the project doesn't have cover image (replace with a placeholder text image of "My Project")
 - [ ] Add `Source Code` and `Live/Demo` for project page (add front-matter parameter for project archetypes and existing!)
 - [ ] Add tooltip for share button
