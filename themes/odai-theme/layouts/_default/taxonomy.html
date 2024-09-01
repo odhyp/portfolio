@@ -1,10 +1,15 @@
 {{ define "main" }}
 <div class="w-full max-w-full mx-auto">
     <div class="w-full max-w-2xl mx-auto">
-        <div class="flex flex-row justify-center items-center gap-4">
-            <div class="size-8">
-                {{ partial "component/project-icon.html" . }}
-            </div>
+        <div class="flex flex-row justify-center items-center gap-2">
+            <!-- If page Type is Categories, use project-icon image. Else, use hashtag instead -->
+            {{ if eq .Type "categories" }}
+                <div class="size-8">
+                    {{ partial "component/project-icon.html" . }}
+                </div>
+            {{ else }}
+                <p class="text-2xl text-green-400">#</p>
+            {{ end }}
             <h2 class="font-bold text-2xl">{{ .Title }}</h2>
         </div>
     </div>
