@@ -5,8 +5,7 @@
     </div>
     <!-- CATEGORY LIST START -->
     <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-2 my-4 mt-8">
-        {{ $sortedPages := .Pages.ByTitle }}
-        {{ range $sortedPages }}
+        {{ range sort .Pages "Title" }}
         <a class="flex flex-row justify-between items-center p-4 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">
             <!-- CATEGORY BADGE -->
             <div class="flex flex-row items-center gap-4">
