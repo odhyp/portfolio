@@ -13,7 +13,7 @@
                 <i id="{{ .Title }}-fallback" class="hidden text-green-400 w-6 h-6 max-w-6 max-h-6 fa-solid fa-code"></i>
                 <p class="font-semibold">{{ .Title }}</p>
             </div>
-            <p>
+            <p class="text-gray-400">
                 {{ $count := len .Pages }}
                 {{ $count }} {{ if eq $count 1 }}project{{ else }}projects{{ end }}
             </p>
