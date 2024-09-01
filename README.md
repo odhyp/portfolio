@@ -24,7 +24,7 @@ Blog page is using `pinned` and `tags`, while Project page is `featured` and `ca
 - [x] Add project-list layout for categories taxonomy
 - [x] Add fallback for project list cards image if the project doesn't have cover image (replace with a placeholder text image of "My Project")
 - [x] Fix tags page item layout
-- [ ] Add `Source Code` and `Live/Demo` for project page (add front-matter parameter for project archetypes and existing!)
+- [x] Add `Source Code` and `Live/Demo` for project page (add front-matter parameter for project archetypes and existing!)
 - [ ] Add tooltip for share button
 - [ ] Page Components
     - [ ] Back-to-top button

@@ -27,7 +27,36 @@
         </div>
         <!-- POST COVER IMAGE -->
         <img class="w-full max-w-full h-auto mx-auto rounded" src="{{ .Params.Cover }}" alt="{{ .Title }} Cover" onerror="this.style.display='none';">
-        <hr class="mt-2 md:mt-0 border-1 border-t border-gray-600">
+        <!-- POST PROJECT SOURCE CODE AND LIVE PREVIEW -->
+        {{ if eq .Type "project" }}
+        <div class="flex flex-row flex-wrap items-center gap-2 text-sm">
+            <!-- SOURCE CODE CARD -->
+            {{ with .Params.codeUrl }}
+            <a class="flex flex-row flex-1 shrink-0 justify-center items-center gap-2 px-3 py-2 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ . }}" target="_blank">
+                <i class="size-5 text-green-400 fa-brands fa-github"></i>
+                <p class="text-semibold">Repository</p>
+            </a>
+            {{ end }}
+
+            <!-- LIVE PREVIEW CARD -->
+            {{ with .Params.liveUrl }}
+            <a class="flex flex-row flex-1 justify-center items-center gap-2 px-3 py-2 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ . }}" target="_blank">
+                <i class="size-4 text-green-400 fa-solid fa-up-right-from-square"></i>
+                <p class="text-semibold">Website</p>
+            </a>
+            {{ end }}
+
+            <!-- DOCUMENTATION CARD -->
+            {{ with .Params.docsUrl }}
+            <a class="flex flex-row flex-1 justify-center items-center gap-2 px-3 py-2 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ . }}" target="_blank">
+                <i class="size-4 text-green-400 fa-solid fa-book-bookmark"></i>
+                <p class="text-semibold">Docs</p>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+        <!-- POST HEADING SEPARATOR -->
+        <hr class="border-1 border-t border-gray-600">
     </div>
     <!-- POST HEADING END -->
     <!-- POST CONTENT START -->
