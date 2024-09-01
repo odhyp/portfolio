@@ -2,7 +2,7 @@
 <div class="flex flex-col gap-4 bg-gray-900 rounded p-4">
     <!-- CARD IMAGE -->
     <a href="{{ .Permalink }}">
-        <img class="h-48 md:h-52 w-full rounded object-cover transition-opacity hover:opacity-75" loading="lazy" src="{{ .Params.Cover }}" alt="{{ .Title }} Cover">
+        <img class="h-48 md:h-52 w-full rounded object-cover transition-opacity hover:opacity-75" loading="lazy" src="{{ .Params.Cover }}" alt="{{ .Title }} Cover" onerror="this.onerror=null;this.src='https://placehold.co/1200x600?text=No+Image+Available';">
     </a>
     <!-- CARD CONTENT -->
     <div class="flex flex-col gap-2">
