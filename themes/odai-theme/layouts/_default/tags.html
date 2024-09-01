@@ -4,10 +4,10 @@
         <h2 class="font-bold text-2xl">{{ .Title }}</h2>
     </div>
     <!-- TAGS LIST START -->
-    <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-3 gap-2 my-4 mt-16">
+    <div class="w-full max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 my-4 mt-16">
         {{ range sort .Pages "Title" }}
-        <div class="col-start-2">
-            <a class="flex flex-row justify-between items-center px-4 py-1 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">
+        <div class="">
+            <a class="flex flex-row justify-between items-center px-4 py-4 sm:py-3 md:py-2 rounded bg-gray-900 transition-opacity hover:opacity-75" href="{{ .RelPermalink }}" title="{{ .Title }}">
                 <div class="flex flex-row gap-2">
                     <p class="text-green-400">#</p>
                     <p>{{ .Title }}</p>
