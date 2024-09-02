@@ -1,1 +1,69 @@
 <script src="https://kit.fontawesome.com/e44be926e1.js" crossorigin="anonymous"></script>
+
+{{ if (findRE "pre.*?" .Content 1) }}
+<script>
+    (function() {
+        'use strict';
+      
+        if(!document.queryCommandSupported('copy')) {
+          return;
+        }
+      
+        function flashCopyMessage(el, msg) {
+          el.textContent = msg;
+          setTimeout(function() {
+            el.textContent = "Copy";
+          }, 1000);
+        }
+      
+        function selectText(node) {
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(node);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          return selection;
+        }
+      
+        function addCopyButton(containerEl) {
+          var copyBtn = document.createElement("button");
+          copyBtn.className = "highlight-copy-btn";
+          copyBtn.textContent = "Copy";
+
+          // Copy Button Styling
+          copyBtn.classList.add('absolute', 'right-0', 'top-0');
+          copyBtn.classList.add('py-1', 'w-16', 'rounded-md', 'bg-green-400');
+          copyBtn.classList.add('text-xs', 'font-semibold', 'text-gray-900');
+          // copyBtn.classList.add('bg-[#24273a]', 'text-green-400');
+      
+          var codeEl = containerEl.firstElementChild;
+          copyBtn.addEventListener('click', function() {
+            try {
+              var selection = selectText(codeEl);
+              document.execCommand('copy');
+              selection.removeAllRanges();
+      
+              flashCopyMessage(copyBtn, 'Copied!')
+            } catch(e) {
+              console && console.log(e);
+              flashCopyMessage(copyBtn, 'Failed :\'(')
+            }
+          });
+      
+          containerEl.appendChild(copyBtn);
+        }
+      
+        // Add copy button to code blocks
+        // Get all elements with the 'highlight' class
+        var highlightBlocks = document.getElementsByClassName('highlight');
+
+        // Loop through each element and add 'relative' class
+        for (let highlightBlock of highlightBlocks) {
+            highlightBlock.classList.add('relative');
+        }
+
+        Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+      })();
+    
+</script>
+{{ end  }}
