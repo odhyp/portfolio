@@ -6,16 +6,41 @@
         </a>
         <!-- HEADER LOGO END -->
         <!-- HEADER NAVBAR START -->
-        <ul class="flex flex-row font-semibold gap-6 md:gap-8">
-            <li>
-                <a class="py-3 hover:text-green-400" href="/project">Project</a>
+        <ul class="flex flex-row items-center font-semibold gap-6 md:gap-8">
+            <!-- PROJECT DROPDOWN -->
+            <li class="relative">
+                <button id="dropdownButtonProject" class="flex flex-row gap-1 items-center py-3 hover:text-green-400 focus:text-green-400">
+                    Project
+                    <i class="size-3 sm:size-4 mb-1 fa-solid fa-sort-down"></i>
+                </button>
+                <ul id="dropdownMenuProject" class="absolute -top-80 opacity-0 transform scale-95 left-1/2 -translate-x-1/2 px-4 py-2 bg-gray-900 rounded-lg shadow-lg transition-all duration-300 ease-in">
+                    <li class="py-2">
+                        <a class="hover:text-green-400 whitespace-nowrap" href="/project">All Projects</a>
+                    </li>
+                    <li class="py-2">
+                        <a class="hover:text-green-400 whitespace-nowrap" href="/categories">By Categories</a>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <a class="py-3 hover:text-green-400" href="/blog">Blog</a>
+
+            <!-- BLOG DROPDOWN -->
+            <li class="relative">
+                <button id="dropdownButtonBlog" class="flex flex-row gap-1 items-center py-3 hover:text-green-400 focus:text-green-400">
+                    Blog
+                    <i class="size-3 sm:size-4 mb-1 fa-solid fa-sort-down"></i>
+                </button>
+                <ul id="dropdownMenuBlog" class="absolute -top-80 opacity-0 transform scale-95 left-1/2 -translate-x-1/2 px-4 py-2 bg-gray-900 rounded-lg shadow-lg transition-all duration-300 ease-in">
+                    <li class="py-2">
+                        <a class="hover:text-green-400 whitespace-nowrap" href="/project">All Post</a>
+                    </li>
+                    <li class="py-2">
+                        <a class="hover:text-green-400 whitespace-nowrap" href="/categories">By Tags</a>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <a class="py-3 hover:text-green-400" href="/contact">Contact</a>
-            </li>
+
+            <!-- CONTACT BUTTON -->
+            <li><a class="py-3 hover:text-green-400" href="/contact">Contact</a></li>
         </ul>
         <!-- HEADER NAVBAR END -->
     </nav>

@@ -54,4 +54,26 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: "smooth"
         });
     });
+
+    // MENU DROPDOWN with ANIMATION for Multiple Dropdowns
+    const dropdowns = [
+        { buttonId: "dropdownButtonProject", menuId: "dropdownMenuProject" },
+        { buttonId: "dropdownButtonBlog", menuId: "dropdownMenuBlog" }
+    ];
+
+    dropdowns.forEach(dropdown => {
+        const dropdownButton = document.getElementById(dropdown.buttonId);
+        const dropdownMenu = document.getElementById(dropdown.menuId);
+
+        dropdownButton.addEventListener("click", function () {
+            dropdownMenu.classList.remove("-top-80", "opacity-0", "transform", "scale-95");
+        });
+
+        document.addEventListener("click", function (event) {
+            const isClickInside = dropdownButton.contains(event.target) || dropdownMenu.contains(event.target);
+            if (!isClickInside) {
+                dropdownMenu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
+            }
+        });
+    });
 });
