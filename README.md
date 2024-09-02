@@ -18,13 +18,10 @@ Blog page is using `pinned` and `tags`, while Project page is `featured` and `ca
 
 ## To-do/Plans
 
-- [ ] Add header nav menu dropdown for Categories and Tags
-- [ ] Add project list and blog list pagination
-- [ ] Add tooltip for share button
 - [ ] Page Components
+    - [ ] Short Code block styling (e.g. `function name`)
     - [x] Back-to-top button
-    - [ ] Short Code block styling
-    - [ ] Add copy button for code block
+    - [x] Add copy button for code block
 - [ ] Shortcodes
     - [ ] Information
     - [ ] Alerts
@@ -39,5 +36,6 @@ Blog page is using `pinned` and `tags`, while Project page is `featured` and `ca
 
 - [ ] Increase site width (breaking change)
 - [ ] Change color theme or implement light/dark mode
+- [ ] Add project list and blog list pagination
 - [ ] Add search functionality
 - [ ] More animations!
