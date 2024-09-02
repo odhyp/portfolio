@@ -61,18 +61,20 @@ document.addEventListener('DOMContentLoaded', function() {
         { buttonId: "dropdownButtonBlog", menuId: "dropdownMenuBlog" }
     ];
 
-    dropdowns.forEach(dropdown => {
-        const dropdownButton = document.getElementById(dropdown.buttonId);
-        const dropdownMenu = document.getElementById(dropdown.menuId);
+    dropdowns.forEach(({ buttonId, menuId }) => {
+        const button = document.getElementById(buttonId);
+        const menu = document.getElementById(menuId);
 
-        dropdownButton.addEventListener("click", function () {
-            dropdownMenu.classList.remove("-top-80", "opacity-0", "transform", "scale-95");
+        button.addEventListener("click", function () {
+            menu.classList.toggle("-top-80");
+            menu.classList.toggle("opacity-0");
+            menu.classList.toggle("transform");
+            menu.classList.toggle("scale-95");
         });
 
         document.addEventListener("click", function (event) {
-            const isClickInside = dropdownButton.contains(event.target) || dropdownMenu.contains(event.target);
-            if (!isClickInside) {
-                dropdownMenu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
+            if (!button.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
             }
         });
     });
