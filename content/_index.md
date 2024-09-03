@@ -3,8 +3,4 @@ title = 'Home'
 draft = false
 +++
 
-## Python Developer with a Passion for Automation
-
-Welcome to my portfolio and blog! I code in Python, automate tasks, and simplify 9-to-5 routines. I also work on front-end projects with Hugo, JavaScript, and TailwindCSS. My blog covers Python tips, front-end tricks, music (mostly Radiohead), and bits of my personal life.
-
-Thanks for stopping by—explore and reach out if you're into the same stuff. 😎
+Welcome to my portfolio and blog! I’m a Python developer passionate about automating tasks to make everyday life easier. I also enjoy working on front-end projects as a fun side endeavor. On my blog, you’ll find Python tips, automation insights, and a glimpse into my personal journey. Thanks for visiting—feel free to reach out if you’d like to connect! 😎
