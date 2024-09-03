@@ -2,6 +2,15 @@
 
 Built with Hugo, JavaScript, and TailwindCSS
 
+
+
+## To-do/Plans
+
+- [ ] Add contact page content
+- [ ] Add profile image
+
+
+
 ## Information
 
 ### Running site on local connection
@@ -26,9 +35,7 @@ The deadline for submission is approaching fast.
 {{< /warning >}}
 ```
 
-## To-do/Plans
 
-- [ ] README or Docs for creating new content, using shortcodes, etc
 
 ## Future Plans
 
