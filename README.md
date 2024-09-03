@@ -8,11 +8,6 @@ Built with Hugo, JavaScript, and TailwindCSS
 
 - [ ] Add contact page content
 - [ ] Add profile image
-- [ ] Change scrollbar design
-- [ ] Change code block copy button design
-- [ ] Decrease "Page Update" content font size
-- [ ] Rewrite project cards, set line clamp for title, summary, and category badges
-
 
 ## Information
 
