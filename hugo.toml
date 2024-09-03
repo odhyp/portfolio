@@ -20,10 +20,10 @@ enableGitInfo = true
 # Social account info
 [Params.Social]
   email = "pradhana.odhy@gmail.com"
-  github = "https://github.com/odhyp"
-  linkedin = "https://linkedin.com/in/odhy-pradhana"
+  github = "odhyp"
+  linkedin = "odhy-pradhana"
   facebook = ""
-  twitter = "https://twitter.com/valgtreiz"
+  twitter = ""
   instagram = ""
   medium = ""
 
