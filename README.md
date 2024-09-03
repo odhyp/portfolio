@@ -9,6 +9,7 @@ Built with Hugo, JavaScript, and TailwindCSS
 - [ ] Fix header nav menu dropdown to show on hover
 - [ ] Add contact page content
 - [ ] Add profile image
+- [ ] Utilize/remove site announcements in header layout
 
 ## Information
 
