@@ -12,4 +12,13 @@
     pre {
         @apply bg-gray-900 !important;
     }
+
+    code {
+        @apply bg-gray-900 rounded p-1;
+    }
+
+    code::before,
+    code::after {
+        @apply hidden;
+    }
 }
