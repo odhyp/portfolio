@@ -6,6 +6,7 @@ Built with Hugo, JavaScript, and TailwindCSS
 
 ## To-do/Plans
 
+- [ ] Fix header nav menu dropdown to show on hover
 - [ ] Add contact page content
 - [ ] Add profile image
 
