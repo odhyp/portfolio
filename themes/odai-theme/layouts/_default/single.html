@@ -69,7 +69,7 @@
         <p class="text-green-400">Page update:</p>
         {{ with .GitInfo }}
         <div class="flex flex-row gap-2 items-center text-neutral-400">
-            <p>{{ .CommitDate.Format "Jan 02, 2006" }} - {{ .Subject }}</p>
+            <p class="text-sm">{{ .CommitDate.Format "Jan 02, 2006" }} - {{ .Subject }}</p>
         </div>
         {{ end }}
     </div>
