@@ -8,7 +8,15 @@ module.exports = {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-gold': '#C0990F',
+        'custom-blue': '#1C2168',
+      },
+      fontFamily: {
+        sitka: ['Sitka', 'serif']
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
