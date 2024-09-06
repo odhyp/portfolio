@@ -33,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // BACK TO TOP BUTTON
     // Get the button
-    var backToTopButton = document.getElementById("backToTop");
+    const backToTopButton = document.getElementById("backToTop");
     
+    if (backToTopButton) {
     // When the user scrolls down 100px from the top of the document, show the button
     window.onscroll = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -54,6 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: "smooth"
         });
     });
+    } else {
+        console.error('Back to Top button not found.');
+    }
+
 
     // MENU DROPDOWN with ANIMATION for Multiple Dropdowns
     const dropdowns = [
