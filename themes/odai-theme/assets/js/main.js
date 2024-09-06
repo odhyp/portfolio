@@ -36,25 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById("backToTop");
     
     if (backToTopButton) {
-    // When the user scrolls down 100px from the top of the document, show the button
-    window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopButton.classList.remove("translate-y-40");
-        backToTopButton.classList.add("translate-y-0");
-    }
-    else {
-        backToTopButton.classList.remove("translate-y-0");
-        backToTopButton.classList.add("translate-y-40");
-    }
-    };
-    
-    // When the user clicks on the button, scroll to the top of the document
-    backToTopButton.addEventListener("click", function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopButton.classList.remove("translate-y-40");
+            backToTopButton.classList.add("translate-y-0");
+        }
+        else {
+            backToTopButton.classList.remove("translate-y-0");
+            backToTopButton.classList.add("translate-y-40");
+        }
+        };
+        
+        // When the user clicks on the button, scroll to the top of the document
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
     } else {
         console.error('Back to Top button not found.');
     }
