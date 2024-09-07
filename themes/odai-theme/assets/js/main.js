@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const button = document.getElementById(buttonId);
         const menu = document.getElementById(menuId);
 
+        // Click functionality
         button.addEventListener("click", function () {
             menu.classList.toggle("-top-80");
             menu.classList.toggle("opacity-0");
@@ -77,6 +78,28 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.toggle("scale-95");
         });
 
+        // Hover functionality
+        button.addEventListener("mouseenter", function () {
+            menu.classList.remove("-top-80", "opacity-0", "transform", "scale-95");
+        });
+
+        button.addEventListener("mouseleave", function () {
+            setTimeout(() => {
+                if (!menu.matches(':hover')) {
+                    menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
+                }
+            }, 200);
+        });
+
+        menu.addEventListener("mouseleave", function () {
+            setTimeout(() => {
+                if (!button.matches(':hover')) {
+                    menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
+                }
+            }, 200);
+        });
+
+        // Click outside to close
         document.addEventListener("click", function (event) {
             if (!button.contains(event.target) && !menu.contains(event.target)) {
                 menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
