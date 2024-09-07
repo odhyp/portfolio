@@ -5,6 +5,12 @@
 @tailwind utilities;
 @tailwind variants;
 
+html,
+body,
+:root {
+    height: 100%
+}
+
 /* Site Specific */
 /* put site specific css styles here using the @layer directive */
 /* see https://tailwindcss.com/docs/functions-and-directives#layer */
