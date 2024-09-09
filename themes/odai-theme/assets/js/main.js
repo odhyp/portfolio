@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Handle form submission
     const form = document.forms['wishesForm'];
     const sendButton = form.querySelector('button[type="submit"]'); // Select the Send button
+    const errorMessage = form.querySelector('#error-message'); // Select the error message element
 
     form.addEventListener("submit", async function(event) {
         event.preventDefault(); // Prevent the form from submitting the traditional way
@@ -250,12 +251,16 @@ document.addEventListener("DOMContentLoaded", function() {
             attendance = false;
         }
         
-        if (!name || !wishes || attendance === null ) {
-            alert("Please fill in all fields.");
+        // Check if all fields are filled
+        if (!name || !wishes || attendance === null) {
+            errorMessage.classList.remove('hidden'); // Show the error message
             sendButton.disabled = false; // Re-enable the button if validation fails
             return;
         }
         
+        // Hide the error message if validation is successful
+        errorMessage.classList.add('hidden');
+
         const data = {
             name,
             wishes,
