@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="no-scrollbar">
 {{ partial "head.html" . }}
 
 <script>
@@ -31,7 +31,7 @@
     }
 </script>
 
-<body class="bg-cover bg-center" style="background-image: url('/wedding/body.jpg');">
+<body class="bg-cover bg-center no-scrollbar" style="background-image: url('/wedding/body.jpg');">
     <!-- DEV HELPER START -->
     {{- partial "dev/dev-tools-styling.html" . -}}
     <!-- DEV HELPER END -->
