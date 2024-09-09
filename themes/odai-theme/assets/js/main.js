@@ -228,10 +228,14 @@ getWishes();
 document.addEventListener("DOMContentLoaded", function() {
     // Handle form submission
     const form = document.forms['wishesForm'];
-    
+    const sendButton = form.querySelector('button[type="submit"]'); // Select the Send button
+
     form.addEventListener("submit", async function(event) {
         event.preventDefault(); // Prevent the form from submitting the traditional way
-        
+
+        // Disable the send button to prevent double submissions
+        sendButton.disabled = true;
+
         // Get the name and wishes from the input fields
         const name = form.querySelector('input[placeholder="Name"]').value;
         const wishes = form.querySelector('textarea[placeholder="Wishes"]').value;
@@ -247,7 +251,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         if (!name || !wishes || attendance === null ) {
-            alert("Please fill in both fields.");
+            alert("Please fill in all fields.");
+            sendButton.disabled = false; // Re-enable the button if validation fails
             return;
         }
         
@@ -259,18 +264,25 @@ document.addEventListener("DOMContentLoaded", function() {
         
         const apiUrl = 'https://wedding-invitation-be.vercel.app/api/wishes';
         
-        await fetch(apiUrl, {
-            method: 'POST', // Specify the method
-            headers: {
-                'Content-Type': 'application/json' // Set the content type to JSON
-            },
-            body: JSON.stringify(data)
-        });
+        try {
+            await fetch(apiUrl, {
+                method: 'POST', // Specify the method
+                headers: {
+                    'Content-Type': 'application/json' // Set the content type to JSON
+                },
+                body: JSON.stringify(data)
+            });
 
-        // Clear the form inputs
-        form.reset();
+            // Clear the form inputs
+            form.reset();
 
-        // Run fetch
-        getWishes();
+            // Fetch and display the updated wishes
+            getWishes();
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        } finally {
+            // Re-enable the send button after the request is completed
+            sendButton.disabled = false;
+        }
     });
 });
