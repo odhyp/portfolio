@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Get the name and wishes from the input fields
         const name = form.querySelector('input[placeholder="Name"]').value;
-        const wishes = form.querySelector('input[placeholder="Wishes"]').value;
+        const wishes = form.querySelector('textarea[placeholder="Wishes"]').value;
         const attendanceYes = form.querySelector('input[id="attendance-yes"]').checked;
         const attendanceNo = form.querySelector('input[id="attendance-no"]').checked;
         
