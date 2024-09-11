@@ -6,10 +6,11 @@ Built with Hugo, JavaScript, and TailwindCSS
 
 ## To-do/Plans
 
-- [x] Fix header nav menu dropdown to show on hover
 - [ ] Add contact page content
 - [ ] Add profile image
+- [ ] Fix header menu hover function in mobile
 - [ ] Utilize/remove site announcements in header layout
+- [ ] Update project cards layout/style
 
 ## Information
 
