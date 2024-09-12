@@ -64,7 +64,6 @@
                         <p class="text-xs text-custom-blue">Canon in D - Pachelbel (by Kassia)</p>
                     </button>
                     <audio id="audioPlayer" src="/wedding/music.mp3" loop></audio>
-                    <p class="text-xs text-custom-blue text-opacity-80 italic">You can click the images to enlarge them!</p>
                 </section>
                 <!-- AUDIO PLAYER END -->
 
@@ -224,8 +223,9 @@
 
                 <!-- WISHES FORM SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-8 my-8">
-                    <div class="text-sm text-custom-blue">
-                        <h3 class="text-2xl font-bold">Best Wishes</h3>
+                    <div class="text-custom-blue text-center">
+                        <h3 class="text-2xl font-bold mb-4">Best Wishes</h3>
+                        <p class="text-xs">We'd love to hear from you! Leave your heartfelt message and let us know if you'll be celebrating with us.</p>
                     </div>
                     <form class="w-full flex flex-col gap-4 p-6 text-sm text-custom-blue border-2 border-custom-blue rounded" name="wishesForm" onsubmit="return validateForm()" method="post">
                         <!-- POST Wishes -->
@@ -249,7 +249,7 @@
                         <p class="text-xs"></p>
 
                         <!-- GET Wishes -->
-                        <div id="data-container" class="w-full flex flex-col gap-3 h-80 overflow-scroll"></div>
+                        <div id="data-container" class="w-full flex flex-col gap-3 h-60 overflow-scroll"></div>
                     </form>
                 </section>
                 <!-- WISHES FORM SECTION END -->
@@ -271,13 +271,13 @@
                     <h3 class="text-2xl text-custom-gold font-semibold">Dear {{ .Title }},</h3>
                     <div class="flex flex-col text-center">
                         <p class="text-sm leading-snug">Thank you for sharing in our joy and for being a part of this unforgettable moment in our lives.</p>
-                        <p class="text-xs font-bold italic">Enji & Odi</p>
+                        <p class="text-xs font-bold italic mt-2">Enji & Odi</p>
                     </div>
                 </section>
                 <!-- CLOSING SECTION END -->
 
                 <!-- FOOTER START -->
-                <section class="flex flex-col justify-center items-center gap-4 pb-16 my-8">
+                <section class="flex flex-col justify-center items-center gap-4 pb-12 mt-8">
                     <div class="text-sm text-center text-custom-blue text-opacity-80 space-y-1">
                         <p>
                             Design by
@@ -327,7 +327,7 @@
             <!-- MAIN CONTENT END -->
 
             <!-- SIDE EMBELISHMENT START -->
-            <div class="min-h-full bg-contain bg-left-top bg-repeat-y" style="background-image: url('/wedding/detail-side.png');"></div>
+            <div class="min-h-full bg-contain bg-left-top bg-repeat-y" style="background-image: url('/wedding/detail-side.svg');"></div>
             <!-- SIDE EMBELISHMENT END -->
         </div>
     </main>
