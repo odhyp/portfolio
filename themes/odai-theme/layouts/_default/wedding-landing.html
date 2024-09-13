@@ -4,28 +4,29 @@
 
 <body>
     <!-- DEV HELPER START -->
-    <!-- {{- partial "dev/dev-tools-styling.html" . -}} -->
+    {{- partial "dev/dev-tools-styling.html" . -}}
     <!-- DEV HELPER END -->
 
     <!-- FULL WIDTH AND HEIGHT PAGE, NO HEADER AND FOOTER FOR LANDING -->
     <main class="h-dvh sm:h-screen overflow-hidden font-sitka">
         <div class="h-full w-full flex justify-center items-center bg-cover bg-center" style="background-image: url('/wedding/background.jpg');">
             <div class="relative flex flex-col justify-center items-center gap-16">
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
-                <div class="flex flex-col justify-center items-center gap-6">
-                    <h2 class="text-3xl font-bold text-center text-custom-blue">{{ .Title }},</h2>
-                    <h2 class="text-xl text-center text-custom-blue leading-tight">You are invited<br>to The Wedding of</h2>
-                    <h1 class="text-4xl uppercase text-custom-gold font-bold drop-shadow-md">Anggi & Odhy</h1>
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <div class="flex flex-col justify-center items-center gap-6 lg:gap-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-custom-blue">{{ .Title }},</h2>
+                    <h2 class="text-xl md:text-2xl lg:text-3xl text-center text-custom-blue leading-tight">You are invited<br>to The Wedding of</h2>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl uppercase text-custom-gold font-bold drop-shadow-md">Anggi & Odhy</h1>
                 </div>
-                <a class="bg-custom-blue text-white px-6 py-2 rounded-full shadow-xl transition-transform duration-500 ease-out hover:scale-95" href="{{ .RelPermalink }}/details">Open Invitation</a>
+                <a class="animate-bounce md:text-lg bg-custom-blue text-white px-6 py-2 rounded-full shadow-xl transition-transform duration-500 ease-out hover:scale-95" href="{{ .RelPermalink }}/details">Open Invitation</a>
 
                 <!-- LANDING PATTERN IMAGES START -->
                 <!-- Either use bg-cover with bg-bottom/bg-top or use bg-contain but adjust the height manually on smaller screen -->
-                <div class="md:hidden fixed w-full h-20 bg-cover bg-bottom bg-repeat-x -top-2" style="background-image: url('/wedding/landing-h.png');"></div>
-                <div class="md:hidden fixed w-full h-20 bg-cover bg-bottom bg-repeat-x -bottom-2 rotate-180" style="background-image: url('/wedding/landing-h.png');"></div>
+                <div class="md:hidden fixed w-full h-20 bg-cover sm:bg-contain bg-bottom bg-repeat-x -top-2" style="background-image: url('/wedding/landing-h.png');"></div>
+                <div class="md:hidden fixed w-full h-20 bg-cover sm:bg-contain bg-bottom bg-repeat-x -bottom-2 rotate-180" style="background-image: url('/wedding/landing-h.png');"></div>
                 
                 <!-- For larger screen -->
-                <!-- Soon -->
+                <div class="hidden md:block fixed w-32 lg:w-36 xl:w-40 h-full bg-cover bg-right bg-repeat-x -left-2" style="background-image: url('/wedding/landing-v.png');"></div>
+                <div class="hidden md:block fixed w-32 lg:w-36 xl:w-40 h-full bg-cover bg-right bg-repeat-x -right-2 rotate-180" style="background-image: url('/wedding/landing-v.png');"></div>
                 <!-- LANDING PATTERN IMAGES END -->
             </div>
         </div>
