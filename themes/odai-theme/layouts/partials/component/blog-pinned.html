@@ -8,7 +8,7 @@
 
         <!-- BLOG TITLE AND TAGS -->
         <div class="flex flex-col">
-            <a class="hover:text-green-400" href="{{ .Permalink }}">{{ .Title }}</a>
+            <a class="hover:text-green-400" href="{{ .RelPermalink }}">{{ .Title }}</a>
             <div class="flex flex-row flex-wrap gap-x-2">
                 <p class="text-sm text-gray-400 md:hidden">{{ .Lastmod.Format "Jan 02, 2006" }}</p>
                 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
