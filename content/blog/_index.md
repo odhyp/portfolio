@@ -1,7 +1,6 @@
 +++
 layout = 'blog'
 title = 'Blog'
-draft = false
 +++
 
 ## I write stuffs.

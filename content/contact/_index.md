@@ -1,14 +1,15 @@
 +++
 title = 'Contact'
 layout = 'contact'
-draft = false
 +++
 
 ## I do stuffs.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Feel free to reach out if you have any questions, ideas, or just want to connect. I’m currently busy and __not available__ for new work opportunities, but I’m open to discussing ideas and making connections.
+
+You can contact me through:
+- [Email](mailto:pradhana.odhy@gmail.com)
+- [Github](https://github.com/odhyp)
+- [Instagram](https://www.instagram.com/odhypradhana/)
+
+I’ll get back to you as soon as I can.
