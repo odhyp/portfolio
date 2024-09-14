@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
         { buttonId: "dropdownButtonBlog", menuId: "dropdownMenuBlog" }
     ];
 
+    // Check if the device is touch-enabled (for mobile detection)
+    const isTouchDevice = window.matchMedia("(hover: none)").matches;
+
     dropdowns.forEach(({ buttonId, menuId }) => {
         const button = document.getElementById(buttonId);
         const menu = document.getElementById(menuId);
@@ -80,26 +83,28 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.toggle("scale-95");
         });
 
-        // Hover functionality
-        button.addEventListener("mouseenter", function () {
-            menu.classList.remove("-top-80", "opacity-0", "transform", "scale-95");
-        });
+        // Hover functionality, only enabled if not a touch device
+        if (!isTouchDevice) {
+            button.addEventListener("mouseenter", function () {
+                menu.classList.remove("-top-80", "opacity-0", "transform", "scale-95");
+            });
 
-        button.addEventListener("mouseleave", function () {
-            setTimeout(() => {
-                if (!menu.matches(':hover')) {
-                    menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
-                }
-            }, 200);
-        });
+            button.addEventListener("mouseleave", function () {
+                setTimeout(() => {
+                    if (!menu.matches(':hover')) {
+                        menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
+                    }
+                }, 200);
+            });
 
-        menu.addEventListener("mouseleave", function () {
-            setTimeout(() => {
-                if (!button.matches(':hover')) {
-                    menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
-                }
-            }, 200);
-        });
+            menu.addEventListener("mouseleave", function () {
+                setTimeout(() => {
+                    if (!button.matches(':hover')) {
+                        menu.classList.add("-top-80", "opacity-0", "transform", "scale-95");
+                    }
+                }, 200);
+            });
+        }
 
         // Click outside to close
         document.addEventListener("click", function (event) {
