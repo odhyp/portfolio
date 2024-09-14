@@ -4,14 +4,6 @@ Built with Hugo, JavaScript, and TailwindCSS
 
 
 
-## To-do/Plans
-
-- [ ] Add contact page content
-- [ ] Add profile image
-- [ ] Fix header menu hover function in mobile
-- [ ] Utilize/remove site announcements in header layout
-- [ ] Update project cards layout/style
-
 ## Information
 
 ### Running site on local connection
@@ -40,6 +32,8 @@ The deadline for submission is approaching fast.
 
 ## Future Plans
 
+- [ ] Utilize/remove site announcements in header layout
+- [ ] Update project cards layout/style
 - [ ] Increase site width (breaking change)
 - [ ] Change color theme or implement light/dark mode
 - [ ] Add Shortcodes for image with caption and image gallery with slider
