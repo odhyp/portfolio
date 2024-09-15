@@ -5,7 +5,6 @@ module.exports = {
     "./content/**/layouts/**/*.html",
     "./layouts/**/*.html",
     "./content/**/*.html",
-    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
