@@ -15,6 +15,20 @@ module.exports = {
       fontFamily: {
         sitka: ['Sitka', 'serif']
       },
+      animation: {
+        'marquee-x': 'marquee-x 5s linear infinite',
+        'marquee-y': 'marquee-y 5s linear infinite',
+      },
+      keyframes: {
+        'marquee-x': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-y': {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+      },
     },
   },
   plugins: [
