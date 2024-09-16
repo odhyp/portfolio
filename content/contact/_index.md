@@ -5,7 +5,7 @@ layout = 'contact'
 
 ## I do stuffs.
 
-Feel free to reach out if you have any questions, ideas, or just want to connect. I’m currently busy and __not available__ for new work opportunities, but I’m open to discussing ideas and making connections.
+Feel free to reach out if you have any questions, ideas, or just want to connect. I’m currently busy and **not available** for new work opportunities, but I’m open to discussing ideas and making connections.
 
 You can contact me through:
 - [Email](mailto:pradhana.odhy@gmail.com)
