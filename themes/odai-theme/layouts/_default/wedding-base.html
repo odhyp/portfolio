@@ -3,13 +3,49 @@
 {{ partial "head.html" . }}
 
 <body>
-    <!-- DEV HELPER START -->
-    {{- partial "dev/dev-tools.html" . -}}
-    <!-- DEV HELPER END -->
+    <!-- FULL WIDTH AND HEIGHT PAGE, NO HEADER AND FOOTER FOR LANDING -->
+    <main class="h-dvh sm:h-screen overflow-hidden font-sitka">
+        <div class="h-full w-full flex justify-center items-center bg-cover bg-center" style="background-image: url('/wedding/background.jpg');">
+            <div class="relative flex flex-col justify-center items-center gap-16">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <div class="flex flex-col justify-center items-center gap-2 lg:gap-6">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-custom-blue font-bold drop-shadow-md">The Wedding of</h2>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl uppercase text-custom-gold font-bold drop-shadow-md">Anggi & Odhy</h1>
+                </div>
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
-    <header></header>
-    <main></main>
-    <footer></footer>
+                <!-- LANDING PATTERN IMAGES START -->
+                <!-- TOP AND BOTTOM -->
+                <div class="md:hidden fixed w-full h-32 overflow-hidden -top-1">
+                    <div class="flex animate-marquee-x w-[200%]">
+                        <div class="w-[100%] h-40 bg-[url('/wedding/landing-h.png')] bg-contain bg-top bg-no-repeat"></div>
+                        <div class="w-[100%] h-40 bg-[url('/wedding/landing-h.png')] bg-contain bg-top bg-no-repeat"></div>
+                    </div>
+                </div>
+                <div class="md:hidden fixed w-full h-32 overflow-hidden -bottom-1 rotate-180">
+                    <div class="flex animate-marquee-x w-[200%]">
+                        <div class="w-[100%] h-40 bg-[url('/wedding/landing-h.png')] bg-contain bg-top bg-no-repeat"></div>
+                        <div class="w-[100%] h-40 bg-[url('/wedding/landing-h.png')] bg-contain bg-top bg-no-repeat"></div>
+                    </div>
+                </div>
+
+                <!-- LEFT AND RIGHT -->
+                <div class="hidden md:block fixed w-32 h-full overflow-hidden -left-1">
+                    <div class="flex flex-col animate-marquee-y h-[200%]">
+                        <div class="w-auto h-[100%] bg-[url('/wedding/landing-v.png')] bg-contain bg-left bg-no-repeat"></div>
+                        <div class="w-auto h-[100%] bg-[url('/wedding/landing-v.png')] bg-contain bg-left bg-no-repeat"></div>
+                    </div>
+                </div>
+                <div class="hidden md:block fixed w-32 h-full overflow-hidden -right-1 rotate-180">
+                    <div class="flex flex-col animate-marquee-y h-[200%]">
+                        <div class="w-auto h-[100%] bg-[url('/wedding/landing-v.png')] bg-contain bg-left bg-no-repeat"></div>
+                        <div class="w-auto h-[100%] bg-[url('/wedding/landing-v.png')] bg-contain bg-left bg-no-repeat"></div>
+                    </div>
+                </div>
+                <!-- LANDING PATTERN IMAGES END -->
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
