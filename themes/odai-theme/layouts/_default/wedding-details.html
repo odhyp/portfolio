@@ -48,7 +48,9 @@
 
             <!-- MAIN CONTENT START -->
             <!-- I use gap-8 because the logo image has margin-y -->
-            <div class="relative col-span-11 flex flex-col justify-center items-center gap-8 pt-8 px-4">
+            <div class="relative col-span-11 flex flex-col justify-center items-center gap-8 md:gap-16 pt-8 px-4 md:px-12 lg:px-16">
+                <!-- #################### START HERE! #################### -->
+
                 <!-- INSTRUCTION PAGE? BLANK PAGE WITH A&O TEXT? -->
                 <div class="hidden"></div>
                 
@@ -61,18 +63,17 @@
                         <svg id="pauseIcon" class="size-3 text-custom-blue hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z" clip-rule="evenodd" />
                         </svg>
-                        <p class="text-xs text-custom-blue">Canon in D - Pachelbel (by Kassia)</p>
+                        <p class="text-xs md:text-sm xl:text-base text-custom-blue drop-shadow-sm">Canon in D - Pachelbel (by Kassia)</p>
                     </button>
                     <audio id="audioPlayer" src="/wedding/music.mp3" loop></audio>
                 </section>
                 <!-- AUDIO PLAYER END -->
 
-                <!-- START HERE! -->
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
                 <!-- OPENING SECTION START -->
-                <section class="flex flex-col justify-center items-center gap-12 my-8">
-                    <div class="w-full grid grid-cols-2 items-center gap-4">
+                <section class="flex flex-col justify-center items-center gap-12 md:gap-16 xl:gap-20 my-8">
+                    <div class="w-full grid grid-cols-2 items-center gap-4 lg:gap-8">
                         <div class="w-full h-auto overflow-hidden shadow-md">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic1.png" alt="" loading="lazy">
                         </div>
@@ -80,9 +81,9 @@
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic2.png" alt="" loading="lazy">
                         </div>
                     </div>
-                    <div class="w-full max-w-lg text-center text-sm">
-                        <p class="text-custom-blue italic">And it is among His sign that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</p>
-                        <p class="text-custom-gold">QS Ar-Rum : 21</p>
+                    <div class="w-full max-w-lg text-center text-sm md:text-base xl:text-lg">
+                        <p class="text-custom-blue italic drop-shadow-sm">And it is among His sign that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</p>
+                        <p class="text-custom-gold drop-shadow-sm">QS Ar-Rum : 21</p>
                     </div>
                     <div class="w-full h-auto overflow-hidden shadow-md">
                         <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic3.jpg" alt="" loading="lazy">
@@ -90,10 +91,10 @@
                 </section>
                 <!-- OPENING SECTION END -->
 
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
                 <!-- BRIDE AND GROOM SECTION START -->
-                <section class="flex flex-col justify-center items-center gap-12 my-8">
+                <section class="flex flex-col justify-center items-center gap-12 md:gap-16 xl:gap-20 my-8">
                     <!-- Bride and Groom Name -->
                     <div class="flex flex-col items-center text-center gap-4 text-custom-blue">
                         <p>Together with the family,</p>
@@ -146,18 +147,18 @@
                 </section>
                 <!-- BRIDE AND GROOM SECTION END -->
 
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
                 <!-- QUOTES SECTION START -->
-                <section class="flex flex-col justify-center items-center gap-12 my-8">
+                <section class="flex flex-col justify-center items-center gap-12 md:gap-16 xl:gap-20 my-8">
                     <div class="grid grid-cols-6 gap-2 items-center">
                         <div class="col-span-4 overflow-hidden shadow-md">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic4.jpg" alt="" loading="lazy">
                         </div>
-                        <p class="col-span-2 text-xs italic text-custom-blue">"Through endless skies, my heart does roam...</p>
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-custom-blue">"Through endless skies, my heart does roam...</p>
                     </div>
                     <div class="grid grid-cols-6 gap-2 items-center">
-                        <p class="col-span-2 text-xs italic text-right text-custom-blue">...in search of light to guide me home.</p>
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-right text-custom-blue">...in search of light to guide me home.</p>
                         <div class="col-span-4 overflow-hidden shadow-md">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic5.jpg" alt="" loading="lazy">
                         </div>
@@ -166,10 +167,10 @@
                         <div class="col-span-4 overflow-hidden shadow-md">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic6.jpg" alt="" loading="lazy">
                         </div>
-                        <p class="col-span-2 text-xs italic text-custom-blue">Yet none compares, no brighter gleam...</p>
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-custom-blue">Yet none compares, no brighter gleam...</p>
                     </div>
                     <div class="grid grid-cols-6 gap-2 items-center">
-                        <p class="col-span-2 text-xs italic text-right text-custom-blue">...than the one that fills my waking dream."</p>
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-right text-custom-blue">...than the one that fills my waking dream."</p>
                         <div class="col-span-4 overflow-hidden shadow-md">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic7.jpg" alt="" loading="lazy">
                         </div>
@@ -178,10 +179,10 @@
                 </section>
                 <!-- QUOTES SECTION END -->
 
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
                 <!-- GIFT SECTION START -->
-                <section class="flex flex-col justify-center items-center gap-8 my-8">
+                <section class="flex flex-col justify-center items-center gap-8 md:gap-12 xl:gap-16 my-8">
                     <div class="w-full max-w-lg flex flex-col items-center gap-4 text-custom-blue">
                         <h3 class="text-2xl font-bold">Wedding Gifts</h3>
                         <p class="text-sm text-center">
@@ -218,7 +219,7 @@
                 </section>
                 <!-- GIFT SECTION END -->
 
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
 
                 <!-- WISHES FORM SECTION START -->
@@ -254,17 +255,52 @@
                 </section>
                 <!-- WISHES FORM SECTION END -->
 
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
 
                 <!-- GALLERY SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-4 text-custom-blue my-8">
                     <div class="text-center">
                         <h3 class="text-2xl font-bold">Our Best Moments</h3>
                     </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s1.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-1 overflow-hidden h-44">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s2.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s3.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s4.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s5.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s6.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s7.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s8.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s9.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-2 overflow-hidden">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s10.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="row-span-1 overflow-hidden h-44">
+                            <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s11.jpg" alt="" loading="lazy">
+                        </div>
+                    </div>
                 </section>
                 <!-- GALLERY SECTION END -->
 
-                <img class="size-10" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
                 
                 <!-- CLOSING SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-4 text-custom-blue my-8">
