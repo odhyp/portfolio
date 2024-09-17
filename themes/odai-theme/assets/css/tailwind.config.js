@@ -16,8 +16,8 @@ module.exports = {
         sitka: ['Sitka', 'serif']
       },
       animation: {
-        'marquee-x': 'marquee-x 5s linear infinite',
-        'marquee-y': 'marquee-y 5s linear infinite',
+        'marquee-x': 'marquee-x 20s linear infinite',
+        'marquee-y': 'marquee-y 20s linear infinite',
       },
       keyframes: {
         'marquee-x': {
