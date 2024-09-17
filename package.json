@@ -1,5 +1,5 @@
 {
-  "name": "sample-site",
+  "name": "my-portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,8 +7,8 @@
   },
   "keywords": [],
   "author": "Odhy",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "description": "My portfolio and blog website",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.x",
     "@tailwindcss/forms": "^0.x",
