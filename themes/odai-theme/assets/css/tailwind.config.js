@@ -16,15 +16,25 @@ module.exports = {
         sitka: ['Sitka', 'serif']
       },
       animation: {
-        'marquee-x': 'marquee-x 20s linear infinite',
-        'marquee-y': 'marquee-y 20s linear infinite',
+        'marquee-lr': 'marquee-lr 20s linear infinite',
+        'marquee-rl': 'marquee-rl 20s linear infinite',
+        'marquee-tb': 'marquee-tb 20s linear infinite',
+        'marquee-bt': 'marquee-bt 20s linear infinite',
       },
       keyframes: {
-        'marquee-x': {
+        'marquee-lr': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        'marquee-rl': {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
         },
-        'marquee-y': {
+        'marquee-tb': {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+        'marquee-bt': {
           '0%': { transform: 'translateY(0%)' },
           '100%': { transform: 'translateY(-50%)' },
         },

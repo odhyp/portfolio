@@ -32,10 +32,6 @@
 </script>
 
 <body class="bg-cover bg-center no-scrollbar" style="background-image: url('/wedding/body.jpg');">
-    <!-- DEV HELPER START -->
-    {{- partial "dev/dev-tools-styling.html" . -}}
-    <!-- DEV HELPER END -->
-
     <!-- DETAILS PAGE -->
     <main class="font-sitka overflow-x-hidden w-screen sm:max-w-screen-lg mx-auto">
         <div class="min-h-full w-full grid grid-cols-12 justify-start items-start gap-0 bg-contain bg-center bg-repeat" style="background-image: url('/wedding/background.jpg');">
@@ -50,12 +46,8 @@
             <!-- I use gap-8 because the logo image has margin-y -->
             <div class="relative col-span-11 flex flex-col justify-center items-center gap-8 md:gap-16 pt-8 px-4 md:px-12 lg:px-16">
                 <!-- #################### START HERE! #################### -->
-
-                <!-- INSTRUCTION PAGE? BLANK PAGE WITH A&O TEXT? -->
-                <div class="hidden"></div>
-                
                 <!-- AUDIO PLAYER START -->
-                <section class="flex flex-col justify-center items-center gap-4">
+                <section class="flex flex-col justify-center items-center gap-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
                     <button id="playPauseBtn" class="flex flex-row items-center gap-2 px-3 py-2">
                         <svg id="playIcon" class="size-3 text-custom-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -69,11 +61,13 @@
                 </section>
                 <!-- AUDIO PLAYER END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <!-- AOS DELAY START -->
+                <!-- Adding delay because the section is right on screen load, start from 1600ms -->
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up" data-aos-delay="1600">
 
                 <!-- OPENING SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-12 md:gap-16 xl:gap-20 my-8">
-                    <div class="w-full grid grid-cols-2 items-center gap-4 lg:gap-8">
+                    <div class="w-full grid grid-cols-2 items-center gap-4 lg:gap-8" data-aos="fade-up" data-aos-delay="1800">
                         <div class="w-full h-auto overflow-hidden shadow-md">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic1.png" alt="" loading="lazy">
                         </div>
@@ -82,38 +76,39 @@
                         </div>
                     </div>
                     <div class="w-full max-w-lg text-center text-sm md:text-base xl:text-lg">
-                        <p class="text-custom-blue italic drop-shadow-sm">And it is among His sign that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</p>
-                        <p class="text-custom-gold drop-shadow-sm">QS Ar-Rum : 21</p>
+                        <p class="text-custom-blue italic drop-shadow-sm" data-aos="fade-up" data-aos-delay="2000">And it is among His sign that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</p>
+                        <p class="text-custom-gold drop-shadow-sm" data-aos="fade-up" data-aos-delay="2000">QS Ar-Rum : 21</p>
                     </div>
-                    <div class="w-full h-auto overflow-hidden shadow-md">
+                    <div class="w-full h-auto overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="2200">
                         <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic3.jpg" alt="" loading="lazy">
                     </div>
                 </section>
                 <!-- OPENING SECTION END -->
+                <!-- AOS DELAY END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up">
 
                 <!-- BRIDE AND GROOM SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-12 md:gap-16 xl:gap-20 my-8">
                     <!-- Bride and Groom Name -->
                     <div class="flex flex-col items-center text-center gap-4 text-custom-blue">
-                        <p>Together with the family,</p>
-                        <div>
+                        <p data-aos="fade-up">Together with the family,</p>
+                        <div data-aos="fade-up">
                             <h2 class="text-xl font-bold">Anggi Permata Sukma Lembayung</h2>
                             <p class="text-sm italic">The daughter of Mr. Agung Heriyanto<br>& Mrs. Enny Prihjantini</p>
                         </div>
-                        <p class="text-custom-gold italic">and</p>
-                        <div>
+                        <p class="text-custom-gold italic" data-aos="fade-up">and</p>
+                        <div data-aos="fade-up">
                             <h2 class="text-xl font-bold">Odhy Pradhana</h2>
                             <p class="text-sm italic">The son of the late Mr. Teguh Hariadi (Alm.)<br>& Mrs. Tutik Andayani<br>and the stepson of Mr. Muhammad Mutohar<br></p>
                         </div>
                     </div>
 
-                    <p class="w-full max-w-lg text-center text-custom-blue leading-tight">We'd like to request the pleasure of your company on our wedding day that will be held on:</p>
+                    <p class="w-full max-w-lg text-center text-custom-blue leading-tight" data-aos="fade-up">We'd like to request the pleasure of your company on our wedding day that will be held on:</p>
 
                     <!-- Time, date, and venue -->
                     <div class="flex flex-col items-center text-center gap-12 text-custom-blue">
-                        <div class="flex flex-col items-center gap-1 text-custom-blue">
+                        <div class="flex flex-col items-center gap-1 text-custom-blue" data-aos="fade-up">
                             <h3 class="text-3xl font-bold text-custom-gold">Wedding Ceremony</h3>
                             <p>Saturday, October 5<sup>th</sup> 2024</p>
                             <p class="font-bold text-lg">10.00 - 12.00</p>
@@ -122,7 +117,7 @@
                                 <p>Kota Madiun</p>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center gap-1 text-custom-blue">
+                        <div class="flex flex-col items-center gap-1 text-custom-blue" data-aos="fade-up">
                             <h3 class="text-3xl font-bold text-custom-gold">Wedding Reception</h3>
                             <p>Sunday, October 6<sup>th</sup> 2024</p>
                             <p class="font-bold text-lg">10.00 - 12.00</p>
@@ -134,7 +129,7 @@
                     </div>
 
                     <!-- Google Maps Embed -->
-                    <div class="flex justify-center items-center border-2 border-custom-blue rounded">
+                    <div class="flex justify-center items-center border-2 border-custom-blue rounded" data-aos="zoom-in">
                         <iframe 
                             class="w-full h-full"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.4578209924334!2d111.51729887480293!3d-7.6338133754977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79be5e36c45629%3A0xac4a2a0bebb63693!2sGedung%20Serba%20Guna%20Tri%20Dharma!5e0!3m2!1sen!2sid!4v1725515386014!5m2!1sen!2sid" 
@@ -147,51 +142,51 @@
                 </section>
                 <!-- BRIDE AND GROOM SECTION END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up">
 
                 <!-- QUOTES SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-12 md:gap-16 xl:gap-20 my-8">
                     <div class="grid grid-cols-6 gap-2 items-center">
-                        <div class="col-span-4 overflow-hidden shadow-md">
+                        <div class="col-span-4 overflow-hidden shadow-md" data-aos="fade-right">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic4.jpg" alt="" loading="lazy">
                         </div>
-                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-custom-blue">"Through endless skies, my heart does roam...</p>
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-custom-blue" data-aos="fade-left">"Through endless skies, my heart does roam...</p>
                     </div>
                     <div class="grid grid-cols-6 gap-2 items-center">
-                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-right text-custom-blue">...in search of light to guide me home.</p>
-                        <div class="col-span-4 overflow-hidden shadow-md">
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-right text-custom-blue" data-aos="fade-right">...in search of light to guide me home.</p>
+                        <div class="col-span-4 overflow-hidden shadow-md" data-aos="fade-left">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic5.jpg" alt="" loading="lazy">
                         </div>
                     </div>
                     <div class="grid grid-cols-6 gap-2 items-center">
-                        <div class="col-span-4 overflow-hidden shadow-md">
+                        <div class="col-span-4 overflow-hidden shadow-md" data-aos="fade-right">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic6.jpg" alt="" loading="lazy">
                         </div>
-                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-custom-blue">Yet none compares, no brighter gleam...</p>
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-custom-blue" data-aos="fade-left">Yet none compares, no brighter gleam...</p>
                     </div>
                     <div class="grid grid-cols-6 gap-2 items-center">
-                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-right text-custom-blue">...than the one that fills my waking dream."</p>
-                        <div class="col-span-4 overflow-hidden shadow-md">
+                        <p class="col-span-2 text-xs md:text-sm lg:text-base italic text-right text-custom-blue" data-aos="fade-right">...than the one that fills my waking dream."</p>
+                        <div class="col-span-4 overflow-hidden shadow-md" data-aos="fade-left">
                             <img class="modal-trigger w-full h-full object-cover rounded-sm cursor-pointer" src="/wedding/pic7.jpg" alt="" loading="lazy">
                         </div>
                     </div>
-                    <p class="text-sm italic text-center text-custom-blue">So many stars in the sky I see,<br>but no star is as beautiful as thee.</p>
+                    <p class="text-sm italic text-center text-custom-blue" data-aos="fade-up">So many stars in the sky I see,<br>but no star is as beautiful as thee.</p>
                 </section>
                 <!-- QUOTES SECTION END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up">
 
                 <!-- GIFT SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-8 md:gap-12 xl:gap-16 my-8">
                     <div class="w-full max-w-lg flex flex-col items-center gap-4 text-custom-blue">
-                        <h3 class="text-2xl font-bold">Wedding Gifts</h3>
-                        <p class="text-sm text-center">
+                        <h3 class="text-2xl font-bold" data-aos="fade-up">Wedding Gifts</h3>
+                        <p class="text-sm text-center" data-aos="fade-up">
                             Your presence and well wishes are the best wedding gifts we could ask for! 
                             However, if you'd like to express your excitement with a gift, feel free to contact us for our address. 
                             If you'd prefer to give a cash gift, here are our bank account details:
                         </p>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-4 text-custom-blue">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-4 text-custom-blue" data-aos="zoom-in">
                         <!-- Anggi -->
                         <button onclick="copyToClipboard('1771782324')" class="flex flex-col items-center border-2 border-custom-blue px-8 py-4 rounded-lg">
                             <div class="flex flex-col items-center gap-2">
@@ -219,16 +214,16 @@
                 </section>
                 <!-- GIFT SECTION END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up">
 
 
                 <!-- WISHES FORM SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-8 my-8">
                     <div class="text-custom-blue text-center">
-                        <h3 class="text-2xl font-bold mb-4">Best Wishes</h3>
-                        <p class="text-xs">We'd love to hear from you! Leave your heartfelt message and let us know if you'll be celebrating with us.</p>
+                        <h3 class="text-2xl font-bold mb-4" data-aos="fade-up">Best Wishes</h3>
+                        <p class="text-xs" data-aos="fade-up">We'd love to hear from you! Leave your heartfelt message and let us know if you'll be celebrating with us.</p>
                     </div>
-                    <form class="w-full flex flex-col gap-4 p-6 text-sm text-custom-blue border-2 border-custom-blue rounded" name="wishesForm" onsubmit="return validateForm()" method="post">
+                    <form class="w-full flex flex-col gap-4 p-6 text-sm text-custom-blue border-2 border-custom-blue rounded" name="wishesForm" onsubmit="return validateForm()" method="post" data-aos="fade-up">
                         <!-- POST Wishes -->
                         <input class="text-sm border-custom-blue rounded" placeholder="Name" type="text"></input>
                         <textarea class="text-sm border-custom-blue rounded" placeholder="Wishes" type="text" rows="4"></textarea>
@@ -255,57 +250,57 @@
                 </section>
                 <!-- WISHES FORM SECTION END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up">
 
                 <!-- GALLERY SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-4 text-custom-blue my-8">
                     <div class="text-center">
-                        <h3 class="text-2xl font-bold">Our Best Moments</h3>
+                        <h3 class="text-2xl font-bold" data-aos="fade-up">Our Best Moments</h3>
                     </div>
                     <div class="grid grid-cols-2 gap-2">
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s1.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-1 overflow-hidden h-44">
+                        <div class="row-span-1 overflow-hidden h-44" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s2.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s3.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s4.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s5.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s6.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s7.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s8.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s9.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-2 overflow-hidden">
+                        <div class="row-span-2 overflow-hidden" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s10.jpg" alt="" loading="lazy">
                         </div>
-                        <div class="row-span-1 overflow-hidden h-44">
+                        <div class="row-span-1 overflow-hidden h-44" data-aos="zoom-in">
                             <img class="modal-trigger w-full h-full object-cover rounded cursor-pointer" src="/sample/s11.jpg" alt="" loading="lazy">
                         </div>
                     </div>
                 </section>
                 <!-- GALLERY SECTION END -->
 
-                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy">
+                <img class="size-10 md:size-12 xl:size-14" src="/wedding/logo.svg" alt="" loading="lazy" data-aos="fade-up">
                 
                 <!-- CLOSING SECTION START -->
                 <section class="flex flex-col justify-center items-center gap-4 text-custom-blue my-8">
-                    <h3 class="text-2xl text-custom-gold font-semibold">Dear {{ .Title }},</h3>
-                    <div class="flex flex-col text-center">
+                    <h3 class="text-2xl text-custom-gold font-semibold" data-aos="fade-up">Dear {{ .Title }},</h3>
+                    <div class="flex flex-col text-center" data-aos="fade-up">
                         <p class="text-sm leading-snug">Thank you for sharing in our joy and for being a part of this unforgettable moment in our lives.</p>
                         <p class="text-xs font-bold italic mt-2">Enji & Odi</p>
                     </div>
@@ -313,7 +308,7 @@
                 <!-- CLOSING SECTION END -->
 
                 <!-- FOOTER START -->
-                <section class="flex flex-col justify-center items-center gap-4 pb-12 mt-8">
+                <section class="flex flex-col justify-center items-center gap-4 pb-12 mt-8" data-aos="zoom-in" data-aos-delay="500">
                     <div class="text-sm text-center text-custom-blue text-opacity-80 space-y-1">
                         <p>
                             Design by
@@ -336,6 +331,16 @@
                         </p>
 
                         <p>
+                            API by
+                            <a class="font-semibold" href="https://alfalakhie-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                Firdig Alfalakhi
+                                <svg class="size-3 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </p>
+
+                        <p>
                             Music by
                             <a class="font-semibold" href="https://www.youtube.com/watch?v=6jSLH9CDPPQ" target="_blank" rel="noopener noreferrer">
                                 Kassia
@@ -344,17 +349,6 @@
                                 </svg>
                             </a>
                         </p>
-
-                        <!--
-                        <p>
-                            API by
-                            <a class="font-semibold" href="https://alfalakhie-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">
-                                Firdig Alfalakhi
-                                <svg class="size-3 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </p> -->
                     </div>
                     <p class="mt-8 text-sm text-custom-blue opacity-80">&copy; {{ now.Year }} {{ .Site.Params.Author.fullname }}. All Rights Reserved.</p>
                 </section>
@@ -363,10 +357,19 @@
             <!-- MAIN CONTENT END -->
 
             <!-- SIDE EMBELISHMENT START -->
-            <div class="min-h-full bg-contain bg-left-top bg-repeat-y" style="background-image: url('/wedding/detail-side.svg');"></div>
+            <div class="min-h-full bg-contain bg-left-top bg-repeat-y" style="background-image: url('/wedding/detail-side.svg');" data-aos="fade-left" data-aos-duration="300" data-aos-delay="500"></div>
             <!-- SIDE EMBELISHMENT END -->
         </div>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      AOS.init({
+        duration: 750, // values from 0 to 3000, with step 50ms
+        easing: 'ease-in', // default easing for AOS animations
+      });
+    </script>
 </body>
 
 </html>
