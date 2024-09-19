@@ -15,7 +15,7 @@ enableGitInfo = true
   fullname = "Odhy Pradhana"
   shortname = "Odhy"
   bio = "A Python Developer"
-  avatar = "img/avatar.jpeg"
+  avatar = "https://avatars.githubusercontent.com/u/78688788?v=4"
 
 # Social account info
 [Params.Social]
