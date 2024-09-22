@@ -2,8 +2,6 @@
 
 Built with Hugo, JavaScript, and TailwindCSS
 
-
-
 ## Information
 
 ### Running site on local connection
@@ -27,8 +25,6 @@ Your information here. Maybe something useful for the readers.
 The deadline for submission is approaching fast.
 {{< /warning >}}
 ```
-
-
 
 ## Future Plans
 
