@@ -1,5 +1,5 @@
 +++
 layout = "wedding-details"
-title = "Ari"
+title = "Ammar"
 +++
     
