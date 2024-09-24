@@ -19,14 +19,14 @@ def generate_invitation(guest_names_file, output_dir):
 
         # Generate _index.md content
         index_content = f"""+++
-layout = "wedding-landing"
+layout = "undangan-landing"
 title = "{name}"
 +++
     """
 
         # Generate details.md content
         details_content = f"""+++
-layout = "wedding-details"
+layout = "undangan-details"
 title = "{name}"
 +++
     """
@@ -49,7 +49,10 @@ title = "{name}"
 
 
 if __name__ == "__main__":
-    GUEST_NAMES_FILE = "guest.txt"
-    OUTPUT_DIR = "content/wedding-invitation/"
+    # GUEST_NAMES_FILE = "guest.txt"
+    # OUTPUT_DIR = "content/wedding-invitation/"
+
+    GUEST_NAMES_FILE = "tamu.txt"
+    OUTPUT_DIR = "content/undangan-pernikahan/"
 
     generate_invitation(GUEST_NAMES_FILE, OUTPUT_DIR)
