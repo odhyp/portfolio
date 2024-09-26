@@ -1,5 +1,5 @@
 +++
 layout = "undangan-landing"
-title = "Rudiatmo"
+title = "Rudiatno"
 +++
     

@@ -1,5 +1,5 @@
 +++
 layout = "undangan-details"
-title = "Rudiatmo"
+title = "Rudiatno"
 +++
     
