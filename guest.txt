@@ -103,12 +103,6 @@ Elsa
 Luqman
 Ilham
 Aulia
-Sagitta
-Tika
-Tesar
-Ammar
-Aan
-Bagoes
 Sagita
 Ika
 Hasan
@@ -118,3 +112,4 @@ Affan
 Arif
 Mama Hety
 Fahmi and Ila
+Robin
