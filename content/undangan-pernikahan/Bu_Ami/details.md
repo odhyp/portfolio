@@ -1,5 +1,5 @@
 +++
 layout = "undangan-details"
-title = "Bu Arni"
+title = "Bu Ami"
 +++
     
