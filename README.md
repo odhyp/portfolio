@@ -10,6 +10,20 @@ Built with Hugo, JavaScript, and TailwindCSS
 hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
 ```
 
+### Generate page using archetypes
+
+1. New Blog
+
+   ```bash
+   hugo new --kind blog blog/2024-10-27-my-first-post.md
+   ```
+
+2. New Project
+
+   ```bash
+   hugo new --kind project project/2024-10-27-my-first-project.md
+   ```
+
 ### Self note
 
 Blog page is using `pinned` and `tags`, while Project page is `featured` and `categories`.
@@ -29,10 +43,6 @@ The deadline for submission is approaching fast.
 ## Future Plans
 
 - [ ] Utilize/remove site announcements in header layout
-- [ ] Update project cards layout/style
-- [ ] Increase site width (breaking change)
-- [ ] Change color theme or implement light/dark mode
 - [ ] Add Shortcodes for image with caption and image gallery with slider
 - [ ] Add project list and blog list pagination
 - [ ] Add search functionality
-- [ ] More animations!
