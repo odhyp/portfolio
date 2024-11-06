@@ -1,7 +1,6 @@
 baseURL = 'https://odhyp.com/'
 languageCode = 'en-us'
 title = 'Odhy'
-theme = 'odai-theme'
 enableGitInfo = true
 
 # Page custom parameters
