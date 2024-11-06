@@ -3,29 +3,6 @@ languageCode = 'en-us'
 title = 'Odhy'
 enableGitInfo = true
 
-# Page custom parameters
-[Params]
-  description = "Portfolio and Blog website"
-  disableComments = false
-  giscusTheme = "dark"
-
-# Author information
-[Params.Author]
-  fullname = "Odhy Pradhana"
-  shortname = "Odhy"
-  bio = "A Python Developer"
-  avatar = "https://avatars.githubusercontent.com/u/78688788?v=4"
-
-# Social account info
-[Params.Social]
-  email = "pradhana.odhy@gmail.com"
-  github = "odhyp"
-  linkedin = "odhy-pradhana"
-  facebook = ""
-  twitter = ""
-  instagram = ""
-  medium = ""
-
 # Hugo Module version
 [module]
   [module.hugoVersion]
@@ -37,8 +14,3 @@ enableGitInfo = true
   [markup.highlight]
     style = "monokai"
     tabWidth = 4
-
-# Custom taxonomies
-[taxonomies]
-  category = "categories"
-  tag = "tags"
