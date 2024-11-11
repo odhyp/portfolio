@@ -1,10 +1,9 @@
-{{- $page := .page }}
-{{- $taxonomy := .taxonomy }}
-{{- with $page.GetTerms $taxonomy }}
-{{- $terms := . }}
-{{- $total := len $terms }}
-{{- $label := (index $terms 0).Parent.LinkTitle }}
-    {{- range $index, $term := $terms }}
-    <a href="{{ $term.RelPermalink }}" class="text-sm text-neutral-400 hover:text-green-400">#{{ $term.LinkTitle }}</a>
-    {{- end }}
+{{- $page := .page }} {{- $taxonomy := .taxonomy }} {{- with $page.GetTerms
+$taxonomy }} {{- $terms := . }} {{- $total := len $terms }} {{- $label := (index
+$terms 0).Parent.LinkTitle }}
+<!-- TERM ITEM START -->
+{{- range $index, $term := $terms }}
+<a href="{{ $term.RelPermalink }}" class="">#{{ $term.LinkTitle }}</a>
+{{- end }}
+<!-- TERM ITEM END -->
 {{- end }}
