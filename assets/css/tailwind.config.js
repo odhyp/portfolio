@@ -9,7 +9,18 @@ module.exports = {
     "./static/**/*.html", // Include static HTML if you have them
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      backgroundImage: {
+        noise: "url('/img/noise.png')",
+      },
+      backgroundPosition: {
+        zero: "0 0",
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
