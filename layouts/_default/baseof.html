@@ -6,19 +6,44 @@
   {{- partial "dev/dev-tools.html" . -}}
   <!-- DEV HELPER END -->
 
-  <body class="flex min-h-dvh flex-col sm:min-h-screen">
-    <!-- HEADER START -->
-    {{- partial "header/header.html" . -}}
-    <!-- HEADER END -->
+  <body
+    class="mx-auto flex min-h-dvh w-full max-w-screen-xl flex-col sm:min-h-screen"
+  >
+    <div class="grid flex-1 grow grid-cols-4">
+      <!-- SIDEBAR START -->
+      <aside
+        class="col-span-1 mx-auto w-full max-w-full border-2 border-dashed border-red-800"
+      >
+        {{ if eq .Type "single" }}
+        <!-- SIDEBAR - SINGLE START -->
+        {{ partial "sidebar/sidebar-single.html" . }}
+        <!-- SIDEBAR - SINGLE END -->
 
-    <!-- MAIN START -->
-    <main class="mx-auto w-screen max-w-4xl flex-1 grow px-6 py-16">
-      {{- block "main" . }}{{- end }}
-    </main>
-    <!-- MAIN END -->
+        {{ else if eq .Type "list" }}
+        <!-- SIDEBAR LIST START -->
+        {{ partial "sidebar/sidebar-list.html" . }}
+        <!-- SIDEBAR LIST END -->
+
+        {{ else }}
+        <!-- SIDEBAR DEFAULT START -->
+        {{ partial "sidebar/sidebar-default.html" . }}
+        <!-- SIDEBAR DEFAULT END -->
+
+        {{ end }}
+      </aside>
+      <!-- SIDEBAR END -->
+
+      <!-- MAIN START -->
+      <main
+        class="col-span-3 mx-auto w-full max-w-full border-2 border-dashed border-green-700"
+      >
+        {{- block "main" . }}{{- end }}
+      </main>
+      <!-- MAIN END -->
+    </div>
 
     <!-- FOOTER START -->
-    {{- partial "footer/footer.html" . -}}
+    {{- partial "footer.html" . -}}
     <!-- FOOTER END -->
   </body>
 </html>
