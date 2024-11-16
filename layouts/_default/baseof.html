@@ -8,18 +8,24 @@
   {{- partial "dev/dev-tools.html" . -}}
 
   <body
-    class="flex min-h-dvh flex-col bg-white text-zinc-700 sm:min-h-screen dark:bg-zinc-900 dark:text-white"
+    class="mx-auto flex min-h-dvh w-full max-w-full flex-col bg-white text-zinc-700 sm:min-h-screen dark:bg-zinc-900 dark:text-white"
   >
     <!-- HEADER START -->
-    {{- partial "header.html" . -}}
+    <header class="mx-auto w-full max-w-full border border-x-0 border-b-black">
+      {{- partial "header.html" . -}}
+    </header>
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main class="flex-1 grow">{{- block "main" . -}}{{ end }}</main>
+    <main class="mx-auto w-full max-w-screen-xl flex-1 grow p-4">
+      {{- block "main" . -}}{{ end }}
+    </main>
     <!-- MAIN END -->
 
     <!-- FOOTER START -->
-    {{- partial "footer.html" . -}}
+    <footer class="mx-auto w-full max-w-full border border-x-0 border-t-black">
+      {{- partial "footer.html" . -}}
+    </footer>
     <!-- FOOTER END -->
   </body>
 </html>
