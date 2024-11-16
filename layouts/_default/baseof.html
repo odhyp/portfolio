@@ -1,49 +1,25 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
+  <!-- HEAD START -->
   {{ partial "head.html" . }}
+  <!-- HEAD END -->
 
   <!-- DEV HELPER START -->
   {{- partial "dev/dev-tools.html" . -}}
-  <!-- DEV HELPER END -->
 
-  <body class="mx-auto min-h-dvh w-full max-w-screen-2xl sm:min-h-screen">
-    <div class="relative flex">
-      <!-- SIDEBAR START -->
-      <aside class="sticky top-0 max-h-screen w-2/5">
-        {{ if eq .Type "single" }}
-        <!-- SIDEBAR - SINGLE START -->
-        {{ partial "sidebar/sidebar-single.html" . }}
-        <!-- SIDEBAR - SINGLE END -->
+  <body
+    class="flex min-h-dvh flex-col bg-white text-zinc-700 sm:min-h-screen dark:bg-zinc-900 dark:text-white"
+  >
+    <!-- HEADER START -->
+    {{- partial "header.html" . -}}
+    <!-- HEADER END -->
 
-        {{ else if eq .Type "list" }}
-        <!-- SIDEBAR LIST START -->
-        {{ partial "sidebar/sidebar-list.html" . }}
-        <!-- SIDEBAR LIST END -->
+    <!-- MAIN START -->
+    <main class="flex-1 grow">{{- block "main" . -}}{{ end }}</main>
+    <!-- MAIN END -->
 
-        {{ else }}
-        <!-- SIDEBAR DEFAULT START -->
-        {{ partial "sidebar/sidebar-default.html" . }}
-        <!-- SIDEBAR DEFAULT END -->
-
-        {{ end }}
-      </aside>
-      <!-- SIDEBAR END -->
-
-      <!-- MAIN START -->
-      <main class="flex min-h-dvh w-3/5 flex-col sm:min-h-screen">
-        <!-- HEADER START -->
-        {{- partial "header.html" . -}}
-        <!-- HEADER END -->
-
-        <!-- CONTENT START -->
-        <div class="flex-1 grow">{{- block "main" . }}{{- end }}</div>
-        <!-- CONTENT END -->
-
-        <!-- FOOTER START -->
-        {{- partial "footer.html" . -}}
-        <!-- FOOTER END -->
-      </main>
-      <!-- MAIN END -->
-    </div>
+    <!-- FOOTER START -->
+    {{- partial "footer.html" . -}}
+    <!-- FOOTER END -->
   </body>
 </html>
