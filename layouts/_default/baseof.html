@@ -5,7 +5,7 @@
   <!-- HEAD END -->
 
   <!-- DEV HELPER START -->
-  {{- partial "dev/dev-tools.html" . -}}
+  <!-- {{- partial "dev/dev-tools.html" . -}} -->
   <!-- DEV HELPER END -->
 
   <body
@@ -14,13 +14,14 @@
     <!-- HEADER START -->
     <header
       class="bg-noise bg-zero fixed top-0 mx-auto w-full max-w-full border-b border-zinc-200 bg-white bg-[length:200px_200px] dark:border-zinc-700 dark:bg-zinc-900"
+      main
     >
       {{- partial "header.html" . -}}
     </header>
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main class="mx-auto mt-24 w-full max-w-screen-xl flex-1 grow p-4">
+    <main class="mx-auto mb-16 mt-32 w-full max-w-screen-xl flex-1 grow p-6">
       {{- block "main" . -}}{{ end }}
     </main>
     <!-- MAIN END -->
