@@ -28,7 +28,7 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 
 Blog page is using `pinned` and `tags`, while Project page is `featured` and `categories`.
 
-Using shortcodes:
+### Using shortcodes:
 
 ```md
 {{< info title="" >}}
@@ -42,7 +42,9 @@ The deadline for submission is approaching fast.
 
 ## Future Plans
 
-- [ ] Utilize/remove site announcements in header layout
-- [ ] Add Shortcodes for image with caption and image gallery with slider
-- [ ] Add project list and blog list pagination
 - [ ] Add search functionality
+- [ ] Utilize site announcements
+- [ ] Add shortcodes
+  - [ ] Image with caption
+  - [ ] Image gallery
+- [ ] Add pagination
