@@ -59,16 +59,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const openMenu = () => {
     mobileNav.classList.remove("hidden");
     setTimeout(() => {
-      mobileNav.classList.remove("opacity-0");
+      mobileNav.classList.remove("translate-x-[200%]");
+      mobileNav.classList.add("translate-x-full");
     }, 50);
   };
 
   // CLOSE BUTTON
   const closeMenu = () => {
-    mobileNav.classList.add("opacity-0");
+    mobileNav.classList.remove("translate-x-full");
+    mobileNav.classList.add("translate-x-[200%]");
     setTimeout(() => {
       mobileNav.classList.add("hidden");
-    }, 50);
+    }, 200);
   };
 
   // OPEN AND CLOSE EVENTS
@@ -84,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         closeMenu();
         setTimeout(() => {
           window.location.href = targetUrl;
-        }, 50);
+        }, 200);
       });
     });
   }
