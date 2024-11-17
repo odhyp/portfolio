@@ -47,3 +47,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // Apply the correct theme on page load
   initTheme();
 });
+
+// HAMBURGER MENU
+document.addEventListener("DOMContentLoaded", () => {
+  const menuOpenButton = document.getElementById("menu-open");
+  const menuCloseButton = document.getElementById("menu-close");
+  const mobileNav = document.getElementById("mobile-nav");
+  const menuLinks = document.querySelectorAll("#mobile-nav-menu a");
+
+  // OPEN BUTTON
+  const openMenu = () => {
+    mobileNav.classList.remove("hidden");
+    setTimeout(() => {
+      mobileNav.classList.remove("opacity-0");
+    }, 50);
+  };
+
+  // CLOSE BUTTON
+  const closeMenu = () => {
+    mobileNav.classList.add("opacity-0");
+    setTimeout(() => {
+      mobileNav.classList.add("hidden");
+    }, 50);
+  };
+
+  // OPEN AND CLOSE EVENTS
+  menuOpenButton.addEventListener("click", openMenu);
+  menuCloseButton.addEventListener("click", closeMenu);
+
+  // HANDLE CLICKS ON MENU LINKS
+  if (menuLinks.length > 0) {
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetUrl = link.getAttribute("href");
+        closeMenu();
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 50);
+      });
+    });
+  }
+});
