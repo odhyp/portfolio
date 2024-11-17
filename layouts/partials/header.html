@@ -106,6 +106,7 @@
         class="rounded border border-zinc-300 bg-zinc-100/40 p-2 md:hidden dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
         aria-label="Open Menu"
       >
+        <!-- OPEN HAMBURGER MENU ICON -->
         <svg
           id="menu-open-icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -130,6 +131,48 @@
   <!-- NAV MENU END -->
 </nav>
 
-<!-- MOBILE MENU START -->
-<nav class="hidden"></nav>
-<!-- MOBILE MENU END -->
+<!-- HAMBURGER MENU START -->
+<nav
+  id="mobile-nav"
+  class="group fixed inset-0 hidden opacity-0 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
+>
+  <!-- HAMBURGER HEADER START -->
+  <div class="flex justify-end p-4">
+    <!-- CLOSE HAMBURGER MENU ICON -->
+    <button
+      id="menu-close"
+      class="rounded-full border border-zinc-300 bg-zinc-100/40 p-2 transition duration-700 md:hidden dark:border-zinc-700 dark:bg-zinc-800/40"
+      aria-label="Close Menu"
+    >
+      <svg
+        id="menu-close-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-5"
+      >
+        <title>Menu Close</title>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
+  <!-- HAMBURGER HEADER END -->
+
+  <!-- HAMBURGER MENU START-->
+  <div
+    id="mobile-nav-menu"
+    class="flex flex-col items-end gap-y-4 pr-6 font-semibold"
+  >
+    <a class="" href="/">Home</a>
+    <a class="" href="/blog">Blog</a>
+    <a class="" href="/project">Projects</a>
+    <a class="" href="/about">About</a>
+  </div>
+  <!-- HAMBURGER MENU END -->
+</nav>
