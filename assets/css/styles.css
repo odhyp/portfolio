@@ -22,6 +22,24 @@ body,
 }
 
 @layer components {
+  /* Code Block */
+  td pre {
+    @apply my-0 !important;
+  }
+
+  pre {
+    @apply bg-noise bg-zero rounded border border-zinc-200 bg-zinc-900 bg-[length:200px_200px] p-4 dark:border-zinc-700 !important;
+  }
+
+  /* Inline Code */
+  code {
+    @apply rounded bg-zinc-200 p-1 dark:bg-zinc-700;
+  }
+
+  code::before,
+  code::after {
+    @apply hidden;
+  }
 }
 
 @layer utilities {
