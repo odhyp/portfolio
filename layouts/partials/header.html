@@ -14,31 +14,43 @@
   <!-- LOGO END -->
 
   <!-- NAV MENU START -->
-  <div class="flex items-center gap-x-4">
+  <div class="flex items-center gap-x-8">
     <!-- NAV MENU - DESKTOP START -->
     <!-- TODO: add styling and hover effects -->
-    <ul class="hidden md:flex md:items-center md:gap-x-8">
+    <ul class="hidden text-sm font-bold md:flex md:items-center md:gap-x-8">
       <li>
-        <a class="" href="/blog">Blog</a>
+        <a class="hover:text-green-900 dark:hover:text-green-400" href="/blog"
+          >Blog</a
+        >
       </li>
       <li>
-        <a class="" href="/project">Projects</a>
+        <a
+          class="hover:text-green-900 dark:hover:text-green-400"
+          href="/project"
+          >Projects</a
+        >
       </li>
       <li>
-        <a class="" href="/contact">Contact</a>
+        <a
+          class="hover:text-green-900 dark:hover:text-green-400"
+          href="/contact"
+          >Contact</a
+        >
       </li>
     </ul>
     <!-- NAV MENU - DESKTOP END -->
 
     <!-- FIXME: separator for menu and buttons -->
-    <div class="hidden h-6 w-1 border border-l-black"></div>
+    <div
+      class="hidden h-6 w-1 border-l-2 border-zinc-200 md:block dark:border-zinc-700"
+    ></div>
 
     <!-- NAV BUTTON START -->
     <div class="space-x-2">
       <!-- NAV BUTTON - SEARCH START -->
       <!-- TODO: add search functionality -->
       <button
-        class="rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+        class="group rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +58,7 @@
           viewBox="0 0 24 24"
           stroke-width="2"
           stroke="currentColor"
-          class="size-5"
+          class="size-5 group-hover:text-green-400"
         >
           <path
             stroke-linecap="round"
@@ -61,7 +73,7 @@
       <button
         type="button"
         id="theme-toggle"
-        class="rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+        class="group rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
         aria-label="Toggle Theme"
       >
         <!-- TURN TO DARK MODE -->
@@ -72,7 +84,7 @@
           viewBox="0 0 24 24"
           stroke-width="2"
           stroke="currentColor"
-          class="size-5"
+          class="size-5 group-hover:text-green-400"
         >
           <path
             stroke-linecap="round"
