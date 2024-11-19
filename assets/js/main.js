@@ -91,3 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// HEADER BOTTOM BORDER
+document.addEventListener("scroll", () => {
+  const scrollPoint = 20;
+  const pageHeader = document.getElementById("header");
+
+  if (window.scrollY > scrollPoint) {
+    pageHeader.classList.add("border-b");
+  } else {
+    pageHeader.classList.remove("border-b");
+  }
+});
