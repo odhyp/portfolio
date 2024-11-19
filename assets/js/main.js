@@ -98,8 +98,8 @@ document.addEventListener("scroll", () => {
   const pageHeader = document.getElementById("header");
 
   if (window.scrollY > scrollPoint) {
-    pageHeader.classList.add("border-b");
+    pageHeader.classList.add("border-b", "shadow");
   } else {
-    pageHeader.classList.remove("border-b");
+    pageHeader.classList.remove("border-b", "shadow");
   }
 });
