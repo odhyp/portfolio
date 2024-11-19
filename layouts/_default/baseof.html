@@ -33,5 +33,9 @@
       {{- partial "footer.html" . -}}
     </footer>
     <!-- FOOTER END -->
+
+    <!-- SINGLE PAGE POPUP NAV BAR START -->
+    {{ if .IsPage }} {{- partial "components/nav-popup.html" -}} {{ end }}
+    <!-- SINGLE PAGE POPUP NAV BAR END -->
   </body>
 </html>
