@@ -16,10 +16,9 @@
   <!-- NAV MENU START -->
   <div class="flex items-center gap-x-8">
     <!-- NAV MENU - DESKTOP START -->
-    <!-- TODO: add styling and hover effects -->
     <ul class="hidden text-sm font-bold md:flex md:items-center md:gap-x-8">
       <li>
-        <a class="hover:text-green-900 dark:hover:text-green-400" href="/blog"
+        <a class="hover:opacity-80 dark:hover:text-green-400" href="/blog"
           >Blog</a
         >
       </li>
@@ -40,9 +39,8 @@
     </ul>
     <!-- NAV MENU - DESKTOP END -->
 
-    <!-- FIXME: separator for menu and buttons -->
     <div
-      class="hidden h-6 w-1 border-l-2 border-zinc-200 md:block dark:border-zinc-700"
+      class="hidden h-6 w-1 border-l-2 border-zinc-300 md:block dark:border-zinc-700"
     ></div>
 
     <!-- NAV BUTTON START -->
@@ -50,7 +48,7 @@
       <!-- NAV BUTTON - SEARCH START -->
       <!-- TODO: add search functionality -->
       <button
-        class="group rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+        class="group rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/50 focus:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +56,7 @@
           viewBox="0 0 24 24"
           stroke-width="2"
           stroke="currentColor"
-          class="size-5 group-hover:text-green-400"
+          class="size-5 dark:group-hover:text-green-400 dark:group-focus:text-green-400"
         >
           <path
             stroke-linecap="round"
@@ -73,7 +71,7 @@
       <button
         type="button"
         id="theme-toggle"
-        class="group rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+        class="group rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/50 dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
         aria-label="Toggle Theme"
       >
         <!-- TURN TO DARK MODE -->
@@ -84,7 +82,7 @@
           viewBox="0 0 24 24"
           stroke-width="2"
           stroke="currentColor"
-          class="size-5 group-hover:text-green-400"
+          class="size-5 dark:group-hover:text-green-400"
         >
           <path
             stroke-linecap="round"
