@@ -48,3 +48,4 @@ The deadline for submission is approaching fast.
   - [ ] Image with caption
   - [ ] Image gallery
 - [ ] Add pagination
+- [ ] Add RSS Feed output, link to github profile with GithubActions
