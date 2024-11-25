@@ -3,7 +3,11 @@ $taxonomy }} {{- $terms := . }} {{- $total := len $terms }} {{- $label := (index
 $terms 0).Parent.LinkTitle }}
 <!-- TERM ITEM START -->
 {{- range $index, $term := $terms }}
-<a href="{{ $term.RelPermalink }}" class="">#{{ $term.LinkTitle }}</a>
+<a
+  href="{{ $term.RelPermalink }}"
+  class="text-sm lowercase opacity-50 hover:underline"
+  >#{{ $term.LinkTitle }}
+</a>
 {{- end }}
 <!-- TERM ITEM END -->
 {{- end }}
