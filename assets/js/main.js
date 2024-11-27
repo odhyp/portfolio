@@ -1,5 +1,16 @@
-// DARK/LIGHT MODE
+// LOAD ALL FUNCTION
 document.addEventListener("DOMContentLoaded", () => {
+  darkLightMode();
+  hamburgerMenu();
+});
+
+document.addEventListener("scroll", () => {
+  headerBottomBorder();
+  popupNavigation();
+});
+
+// ---------- DARK/LIGHT MODE START ---------- //
+function darkLightMode() {
   const themeToggleButton = document.getElementById("theme-toggle");
   const themeDarkIcon = document.getElementById("theme-toggle-dark");
   const themeLightIcon = document.getElementById("theme-toggle-light");
@@ -46,10 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Apply the correct theme on page load
   initTheme();
-});
+}
+// ---------- DARK/LIGHT MODE END ---------- //
 
-// HAMBURGER MENU
-document.addEventListener("DOMContentLoaded", () => {
+// ---------- HAMBURGER MENU START ---------- //
+function hamburgerMenu() {
   const menuOpenButton = document.getElementById("menu-open");
   const menuCloseButton = document.getElementById("menu-close");
   const mobileNav = document.getElementById("mobile-nav");
@@ -90,10 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-});
+}
+// ---------- HAMBURGER MENU END ---------- //
 
-// HEADER BOTTOM BORDER
-document.addEventListener("scroll", () => {
+// ---------- HEADER BOTTOM BORDER START ---------- //
+function headerBottomBorder() {
   const scrollPoint = 20;
   const pageHeader = document.getElementById("header");
 
