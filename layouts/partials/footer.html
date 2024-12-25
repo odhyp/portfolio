@@ -1,7 +1,25 @@
-<div
-  class="mx-auto flex w-full max-w-screen-xl items-center justify-center p-6"
->
-  <span class="text-sm text-zinc-500 dark:text-zinc-400">
-    &copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.
-  </span>
-</div>
+<footer class="mx-auto mt-16 w-full max-w-full lg:mt-32">
+  <div
+    class="mx-auto flex w-full max-w-screen-lg items-center justify-center px-6 py-6"
+  >
+    <span class="opacity-75">
+      &copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.
+    </span>
+  </div>
+</footer>
+
+<!-- WINDOW.ONLOAD SCRIPTS -->
+<script>
+  // ---------- OPEN EXTERNAL LINKS IN NEW TAB START ---------- //
+  // Adding `noopener` and `noreferrer` for all anchor tags under prose
+  // I don't know why this doesn't work on main.js, it works here.
+  function openExternalLinksInNewTab() {
+    document.querySelectorAll('a[href^="http"]').forEach((link) => {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
+  window.onload = openExternalLinksInNewTab;
+  // ---------- OPEN EXTERNAL LINKS IN NEW TAB END ---------- //
+</script>
