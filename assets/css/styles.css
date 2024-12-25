@@ -25,8 +25,25 @@
     background-position: 0 0;
   }
 
+  /* List Marker */
   .prose ul > li::marker {
     @apply text-primary dark:text-primary-dark;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-1.5 w-1.5 bg-zinc-200 dark:bg-zinc-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-zinc-400 dark:bg-zinc-600;
+  }
+
+  .toc-scroll::-webkit-scrollbar {
+    @apply bg-transparent;
+  }
+
+  .toc-scroll::-webkit-scrollbar-thumb {
+    @apply bg-zinc-300 dark:bg-zinc-800;
   }
 }
 
