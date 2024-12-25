@@ -24,6 +24,10 @@
     background-size: 200px 200px;
     background-position: 0 0;
   }
+
+  .prose ul > li::marker {
+    @apply text-primary dark:text-primary-dark;
+  }
 }
 
 @layer components {
