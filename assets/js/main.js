@@ -27,6 +27,7 @@ function darkLightMode() {
       themeLightIcon.classList.remove("hidden");
       themeDarkIcon.classList.add("hidden");
       themeToggleButton.setAttribute("aria-label", "Switch to dark mode");
+      setGiscusTheme("noborder_light");
     }
   };
 
@@ -136,3 +137,15 @@ function popupNavigation() {
   }
 }
 // ---------- NAVIGATION POP-UP END ---------- //
+
+// ---------- SET GISCUS THEME START ---------- //
+function setGiscusTheme(theme) {
+  var iframe = document.querySelector(".giscus-frame");
+
+  if (iframe) {
+    var url = new URL(iframe.src);
+    url.searchParams.set("theme", theme);
+    iframe.src = url.toString();
+  }
+}
+// ---------- SET GISCUS THEME END ---------- //
