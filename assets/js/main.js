@@ -103,6 +103,16 @@ function hamburgerMenu() {
       });
     });
   }
+
+  // HANDLE CLICKS OUTSIDE THE MENU
+  document.addEventListener("click", function (event) {
+    if (
+      !mobileNav.contains(event.target) &&
+      !menuOpenButton.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
 }
 // ---------- HAMBURGER MENU END ---------- //
 
