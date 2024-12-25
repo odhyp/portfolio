@@ -9,14 +9,14 @@
   <!-- DEV HELPER END -->
 
   <body
-    class="bg-white font-sans text-black dark:bg-neutral-950 dark:text-white"
+    class="flex min-h-dvh flex-col bg-white font-sans text-black sm:min-h-screen dark:bg-neutral-950 dark:text-white"
   >
     <!-- HEADER START -->
     {{- partial "header.html" . -}}
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main class="mx-auto mt-16 w-full max-w-full md:mt-24 lg:mt-32">
+    <main class="mx-auto mt-16 w-full max-w-full flex-1 grow md:mt-24 lg:mt-32">
       <div class="mx-auto w-full max-w-screen-lg px-6 py-16">
         {{- block "main" . -}}{{ end }}
       </div>
