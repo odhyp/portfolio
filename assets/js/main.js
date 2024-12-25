@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("scroll", () => {
   headerBottomBorder();
-  popupNavigation();
 });
 
 // ---------- DARK/LIGHT MODE START ---------- //
@@ -132,25 +131,6 @@ function headerBottomBorder() {
   }
 }
 // ---------- HEADER BOTTOM BORDER END ---------- //
-
-// ---------- NAVIGATION POP-UP START ---------- //
-function popupNavigation() {
-  const scrollPoint = 400;
-  const popupNav = document.getElementById("popupNavigation");
-
-  if (window.scrollY > scrollPoint) {
-    popupNav.classList.remove("translate-y-[200%]");
-    setTimeout(() => {
-      popupNav.classList.add("translate-y-0");
-    }, 150);
-  } else {
-    popupNav.classList.remove("translate-y-0");
-    setTimeout(() => {
-      popupNav.classList.add("translate-y-[200%]");
-    }, 150);
-  }
-}
-// ---------- NAVIGATION POP-UP END ---------- //
 
 // ---------- SET GISCUS THEME START ---------- //
 function setGiscusTheme(theme) {
