@@ -5,7 +5,7 @@ $terms 0).Parent.LinkTitle }}
 {{- range $index, $term := $terms }}
 <a
   href="{{ $term.RelPermalink }}"
-  class="mr-2 text-sm opacity-75 hover:opacity-50"
+  class="hover:text-primary dark:hover:text-primary-dark mr-2 text-sm font-medium text-zinc-500"
   >#{{ $term.LinkTitle }}</a
 >
 {{- end }}
