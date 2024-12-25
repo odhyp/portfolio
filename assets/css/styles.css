@@ -68,6 +68,11 @@
   }
 
   /* Table Of Contents */
+  /* TOC Shortcode */
+  #TableOfContents a {
+    @apply hover:text-primary dark:hover:text-primary-dark font-medium text-black dark:text-white;
+  }
+
   /* Heading 2 */
   #TableOfContents ol {
     @apply list-none space-y-2 p-0;
