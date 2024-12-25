@@ -5,38 +5,26 @@
   <!-- HEAD END -->
 
   <!-- DEV HELPER START -->
-  <!-- {{- partial "dev/dev-tools.html" . -}} -->
+  {{- partial "dev/dev-tools.html" . -}}
   <!-- DEV HELPER END -->
 
   <body
-    class="relative mx-auto flex min-h-dvh w-full max-w-full flex-col bg-white text-zinc-900 sm:min-h-screen dark:bg-zinc-900 dark:text-white"
+    class="bg-white font-sans text-black dark:bg-neutral-950 dark:text-white"
   >
     <!-- HEADER START -->
-    <header
-      id="header"
-      class="bg-noise bg-zero fixed top-0 z-50 mx-auto w-full max-w-full border-zinc-200 bg-white bg-[length:200px_200px] dark:border-zinc-800 dark:bg-zinc-900"
-    >
-      {{- partial "header.html" . -}}
-    </header>
+    {{- partial "header.html" . -}}
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main class="mx-auto my-16 w-full max-w-screen-xl flex-1 grow p-6">
-      {{- block "main" . -}}{{ end }}
+    <main class="mx-auto mt-16 w-full max-w-full md:mt-24 lg:mt-32">
+      <div class="mx-auto w-full max-w-screen-lg px-6 py-16">
+        {{- block "main" . -}}{{ end }}
+      </div>
     </main>
     <!-- MAIN END -->
 
     <!-- FOOTER START -->
-    <footer
-      id="footer"
-      class="mx-auto w-full max-w-full border-t border-zinc-200 dark:border-zinc-800"
-    >
-      {{- partial "footer.html" . -}}
-    </footer>
+    {{- partial "footer.html" . -}}
     <!-- FOOTER END -->
-
-    <!-- SINGLE PAGE POPUP NAV BAR START -->
-    {{ if .IsPage }} {{- partial "components/nav-popup.html" -}} {{ end }}
-    <!-- SINGLE PAGE POPUP NAV BAR END -->
   </body>
 </html>
