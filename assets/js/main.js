@@ -22,6 +22,7 @@ function darkLightMode() {
       themeDarkIcon.classList.remove("hidden");
       themeLightIcon.classList.add("hidden");
       themeToggleButton.setAttribute("aria-label", "Switch to light mode");
+      setGiscusTheme("noborder_dark");
     } else {
       document.documentElement.classList.remove("dark");
       themeLightIcon.classList.remove("hidden");
