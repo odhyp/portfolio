@@ -49,3 +49,5 @@ The deadline for submission is approaching fast.
   - [ ] Image gallery
 - [ ] Add pagination
 - [ ] Add RSS Feed output, link to github profile with GithubActions
+- [ ] Add support section under comments section
+
