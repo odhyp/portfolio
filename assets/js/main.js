@@ -2,6 +2,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   darkLightMode();
   hamburgerMenu();
+
+  const copyButton = document.getElementById("copy-url-btn");
+  copyButton.addEventListener("click", copyUrlToClipboard);
 });
 
 document.addEventListener("scroll", () => {
@@ -160,3 +163,17 @@ function setGiscusTheme(theme) {
   }
 }
 // ---------- SET GISCUS THEME END ---------- //
+
+// ---------- COPY URL BUTTON START ---------- //
+function copyUrlToClipboard() {
+  const urlInput = document.createElement("input");
+  urlInput.value = window.location.href;
+  document.body.appendChild(urlInput);
+  urlInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(urlInput);
+
+  // Optional: Show a success message
+  alert("URL copied to clipboard!");
+}
+// ---------- COPY URL BUTTON END ---------- //
