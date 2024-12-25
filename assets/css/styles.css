@@ -58,8 +58,8 @@
   }
 
   /* Inline Code */
-  code {
-    @apply rounded bg-zinc-200 p-1 dark:bg-zinc-700;
+  code:not(pre > *) {
+    @apply select-all rounded bg-zinc-200 p-1 dark:bg-zinc-700;
   }
 
   code::before,
