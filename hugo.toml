@@ -9,6 +9,11 @@ enableGitInfo = true
     extended = true
     min = "0.133.1"
 
+# Custom taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 # Markup highlighting configuration
 [markup]
   [markup.highlight]
@@ -18,3 +23,13 @@ enableGitInfo = true
     startLevel = 2
     endLevel = 3
     ordered = true
+
+# Related posts
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+[[related.indices]]
+  name = 'tags'
+  weight = 80
