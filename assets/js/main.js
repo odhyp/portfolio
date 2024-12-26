@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   darkLightMode();
   hamburgerMenu();
   searchModal();
-
-  const copyButton = document.getElementById("copy-url-btn");
-  copyButton.addEventListener("click", copyUrlToClipboard);
+  copyUrlToClipboard();
 });
 
 document.addEventListener("scroll", () => {
@@ -146,17 +144,49 @@ function setGiscusTheme(theme) {
 // ---------- SET GISCUS THEME END ---------- //
 
 // ---------- COPY URL BUTTON START ---------- //
-function copyUrlToClipboard() {
-  const urlInput = document.createElement("input");
-  urlInput.value = window.location.href;
-  document.body.appendChild(urlInput);
-  urlInput.select();
-  document.execCommand("copy");
-  document.body.removeChild(urlInput);
 
-  // Optional: Show a success message
-  alert("URL copied to clipboard!");
+function copyUrlToClipboard() {
+  // Select all buttons with the class 'copy-url-btn'
+  const copyButtons = document.querySelectorAll(".copy-url-btn");
+
+  // Function to handle the copy success alert
+  const copyAlertSuccess = (button) => {
+    const copyIcon = button.querySelector(".copy-icon");
+    const copyIconSuccess = button.querySelector(".copy-icon-success");
+    const copyAlert = button.querySelector(".copy-alert");
+
+    copyIcon.classList.add("hidden");
+    copyIconSuccess.classList.remove("hidden");
+
+    copyAlert.classList.remove("hidden");
+    setTimeout(() => {
+      copyAlert.classList.remove("scale-0");
+    }, 100);
+
+    setTimeout(() => {
+      copyIcon.classList.remove("hidden");
+      copyIconSuccess.classList.add("hidden");
+      copyAlert.classList.add("scale-0");
+      setTimeout(() => {
+        copyAlert.classList.add("hidden");
+      }, 100);
+    }, 1500);
+  };
+
+  // Add event listener to each button
+  copyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const urlInput = document.createElement("input");
+      urlInput.value = window.location.href;
+      document.body.appendChild(urlInput);
+      urlInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(urlInput);
+      copyAlertSuccess(button);
+    });
+  });
 }
+
 // ---------- COPY URL BUTTON END ---------- //
 
 // ---------- SEARCH START ---------- //
