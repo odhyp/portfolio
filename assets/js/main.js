@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   darkLightMode();
   hamburgerMenu();
+  searchModal();
 
   const copyButton = document.getElementById("copy-url-btn");
   copyButton.addEventListener("click", copyUrlToClipboard);
@@ -157,3 +158,60 @@ function copyUrlToClipboard() {
   alert("URL copied to clipboard!");
 }
 // ---------- COPY URL BUTTON END ---------- //
+
+// ---------- SEARCH START ---------- //
+function searchModal() {
+  const searchOpenButton = document.getElementById("search-button");
+  const searchCloseButton = document.getElementById("search-close");
+  const searchModal = document.getElementById("search-modal");
+  const searchBar = document.getElementById("search");
+
+  // OPEN SEARCH
+  const openSearch = () => {
+    searchModal.classList.remove("hidden");
+    setTimeout(() => {
+      searchModal.classList.remove("opacity-0");
+      searchModal.classList.add("opacity-100");
+    }, 200);
+
+    // Focus to search input
+    const searchInput = searchBar.querySelector('input[type="text"]');
+    if (searchInput) {
+      searchInput.focus();
+    }
+  };
+
+  // CLOSE SEARCH
+  const closeSearch = () => {
+    searchModal.classList.remove("opacity-100");
+    searchModal.classList.add("opacity-0");
+    setTimeout(() => {
+      searchModal.classList.add("hidden");
+    }, 200);
+  };
+
+  // OPEN AND CLOSE SEARCH EVENT
+  searchOpenButton.addEventListener("click", openSearch);
+  searchCloseButton.addEventListener("click", closeSearch);
+
+  // HANDLE CLICKS OUTSIDE SEARCH MODAL
+  document.addEventListener("click", function (event) {
+    if (
+      !searchBar.contains(event.target) &&
+      !searchOpenButton.contains(event.target)
+    ) {
+      closeSearch();
+    }
+  });
+
+  // HANDLE KEYBOARD SHORTCUTS TO OPEN AND CLOSE SEARCH
+  window.addEventListener("keydown", (event) => {
+    if (event.ctrlKey && event.key === "k") {
+      openSearch();
+      event.preventDefault();
+    } else if (event.key === "Escape") {
+      closeSearch();
+    }
+  });
+}
+// ---------- SEARCH END ---------- //
