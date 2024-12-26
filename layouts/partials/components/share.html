@@ -1,0 +1,110 @@
+<div class="flex w-fit items-center gap-x-2">
+  <!-- COPY URL -->
+  <button
+    id="copy-url-btn"
+    type="button"
+    class="copy-url-btn group relative rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/25 md:rounded dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+    title="Copy URL"
+  >
+    <!-- URL ICON -->
+    <svg
+      id="copy-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      class="copy-icon group-hover:text-primary dark:group-hover:text-primary-dark size-5"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+
+    <!-- CHECKMARK ICON -->
+    <svg
+      id="copy-icon-success"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="copy-icon-success text-primary dark:text-primary-dark hidden size-5"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m4.5 12.75 6 6 9-13.5"
+      />
+    </svg>
+
+    <!-- COPY SUCCESS ALERT -->
+    <div
+      id="copy-alert"
+      class="copy-alert absolute -top-10 left-1/2 z-20 hidden -translate-x-1/2 scale-0 items-center transition-transform duration-200 ease-in-out lg:top-12"
+    >
+      <span
+        class="flex w-24 justify-center rounded bg-zinc-200 px-1 py-2 text-xs font-semibold text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
+        >Link copied!</span
+      >
+    </div>
+  </button>
+
+  <!-- X - TWITTER -->
+  <a
+    class="group relative rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/25 md:rounded dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Share to X"
+    href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}"
+    ><svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      class="group-hover:text-primary dark:group-hover:text-primary-dark size-5 fill-current"
+    >
+      <path
+        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+      /></svg
+  ></a>
+
+  <!-- FACEBOOK -->
+  <a
+    class="group relative rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/25 md:rounded dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Share to Facebook"
+    href="https://www.facebook.com/sharer.php?u={{ .Permalink }}"
+  >
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      class="group-hover:text-primary dark:group-hover:text-primary-dark size-5 fill-current"
+    >
+      <path
+        d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+      />
+    </svg>
+  </a>
+
+  <!-- INSTAGRAM -->
+  <a
+    class="group relative rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/25 md:rounded dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Share to Instagram"
+    href="https://www.instagram.com/share?url={{ .Permalink | urlize }}"
+  >
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      class="group-hover:text-primary dark:group-hover:text-primary-dark size-5 fill-current"
+    >
+      <path
+        d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+      />
+    </svg>
+  </a>
+</div>
