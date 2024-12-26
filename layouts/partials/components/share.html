@@ -56,17 +56,22 @@
     target="_blank"
     rel="noopener noreferrer"
     title="Share to X"
-    href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}"
-    ><svg
-      role="img"
-      viewBox="0 0 24 24"
+    href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}%0A%0A"
+  >
+    <svg
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      viewBox="0 0 24 24"
       class="group-hover:text-primary dark:group-hover:text-primary-dark size-5 fill-current"
     >
       <path
-        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-      /></svg
-  ></a>
+        d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+      />
+    </svg>
+  </a>
 
   <!-- FACEBOOK -->
   <a
@@ -88,23 +93,29 @@
     </svg>
   </a>
 
-  <!-- INSTAGRAM -->
+  <!-- LINKEDIN -->
   <a
     class="group relative rounded-full border border-zinc-300 bg-zinc-100/40 p-2 text-zinc-600 hover:bg-zinc-200/25 md:rounded dark:border-zinc-700 dark:bg-zinc-800/40 dark:text-white"
     target="_blank"
     rel="noopener noreferrer"
     title="Share to Instagram"
-    href="https://www.instagram.com/share?url={{ .Permalink | urlize }}"
+    href="https://linkedin.com/sharing/share-offsite/?url={{ .Permalink }}&title={{ .Title }}"
   >
     <svg
-      role="img"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
       class="group-hover:text-primary dark:group-hover:text-primary-dark size-5 fill-current"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      viewBox="0 0 24 24"
     >
       <path
-        d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+        fill-rule="evenodd"
+        d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+        clip-rule="evenodd"
       />
+      <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
     </svg>
   </a>
 </div>
