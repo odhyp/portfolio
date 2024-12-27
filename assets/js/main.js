@@ -144,7 +144,6 @@ function setGiscusTheme(theme) {
 // ---------- SET GISCUS THEME END ---------- //
 
 // ---------- COPY URL BUTTON START ---------- //
-
 function copyUrlToClipboard() {
   // Select all buttons with the class 'copy-url-btn'
   const copyButtons = document.querySelectorAll(".copy-url-btn");
@@ -186,7 +185,6 @@ function copyUrlToClipboard() {
     });
   });
 }
-
 // ---------- COPY URL BUTTON END ---------- //
 
 // ---------- SEARCH START ---------- //
