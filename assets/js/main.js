@@ -176,7 +176,7 @@ function copyUrlToClipboard() {
   copyButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const urlInput = document.createElement("input");
-      urlInput.value = window.location.href;
+      urlInput.value = window.location.origin + window.location.pathname;
       document.body.appendChild(urlInput);
       urlInput.select();
       document.execCommand("copy");
