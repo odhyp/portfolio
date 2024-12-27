@@ -83,7 +83,7 @@
   }
 
   #TableOfContents ol li a {
-    @apply font-normal no-underline opacity-75 hover:opacity-100;
+    @apply font-medium no-underline opacity-75 hover:opacity-100;
   }
 
   /* Heading 3 */
@@ -92,7 +92,16 @@
   }
 
   #TableOfContents ol li ol li {
-    @apply m-0 mt-1.5 pl-4 text-sm;
+    @apply m-0 mt-1.5 pl-4;
+  }
+
+  #TableOfContents ol li ol li a {
+    @apply text-sm font-light;
+  }
+
+  /* Search */
+  .pagefind-ui {
+    @apply h-dvh overflow-y-auto sm:h-screen;
   }
 }
 
