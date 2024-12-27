@@ -43,11 +43,12 @@ The deadline for submission is approaching fast.
 ## Future Plans
 
 - [ ] Add search functionality
-- [ ] Utilize site announcements
 - [ ] Add shortcodes
   - [ ] Image with caption
   - [ ] Image gallery
 - [ ] Add pagination
+- [ ] Utilize site announcements
 - [ ] Add RSS Feed output, link to github profile with GithubActions
 - [ ] Add support section under comments section
+- [ ] Use Giscus custom theme for adaptive theming, instead of using JS (frame reload)
 
