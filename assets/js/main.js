@@ -247,30 +247,39 @@ function searchModal() {
 // 7. BACK TO TOP BUTTON --------------------------------------------
 function backToTopButton() {
   const button = document.getElementById("back-to-top");
+  const footer = document.querySelector("footer");
 
-  if (button) {
-    // SCROLL EVENT - SHOW/HIDE BUTTON
-    window.onscroll = function () {
+  if (button && footer) {
+    window.addEventListener("scroll", () => {
+      const footerTop = footer.getBoundingClientRect().top;
+      const viewportHeight = window.innerHeight;
+
+      // Show/hide the button based on scroll position
       if (
         document.body.scrollTop > 300 ||
         document.documentElement.scrollTop > 300
       ) {
         button.classList.remove("translate-y-40");
         button.classList.add("translate-y-0");
+
+        button.style.bottom =
+          footerTop < viewportHeight
+            ? `${viewportHeight - footerTop + 20}px`
+            : "20px";
       } else {
         button.classList.remove("translate-y-0");
         button.classList.add("translate-y-40");
       }
-    };
+    });
 
     // CLICK EVENT - SCROLL TO TOP
-    button.addEventListener("click", function () {
+    button.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     });
   } else {
-    console.error("Back to top button not found.");
+    console.error("Back to top button or footer not found.");
   }
 }
