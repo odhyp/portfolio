@@ -1,4 +1,15 @@
-// LOAD ALL FUNCTION
+// TABLE OF CONTENTS
+
+// 00. LOAD ALL FUNCTION
+// 01. DARK/LIGHT MODE
+// 02. HAMBURGER MENU
+// 03. HEADER BOTTOM BORDER
+// 04. SET GISCUS THEME
+// 05. COPY URL BUTTON
+// 06. SEARCH
+// 07. BACK TO TOP BUTTON
+
+// 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   darkLightMode();
   hamburgerMenu();
@@ -11,7 +22,7 @@ document.addEventListener("scroll", () => {
   headerBottomBorder();
 });
 
-// ---------- DARK/LIGHT MODE START ---------- //
+// 01. DARK/LIGHT MODE ------------------------------------------------------------------
 function darkLightMode() {
   const themeToggleButton = document.getElementById("theme-toggle");
   const themeDarkIcon = document.getElementById("theme-toggle-dark");
@@ -62,9 +73,8 @@ function darkLightMode() {
   // Apply the correct theme on page load
   initTheme();
 }
-// ---------- DARK/LIGHT MODE END ---------- //
 
-// ---------- HAMBURGER MENU START ---------- //
+// 02. HAMBURGER MENU -------------------------------------------------------------------
 function hamburgerMenu() {
   const menuOpenButton = document.getElementById("menu-open");
   const menuCloseButton = document.getElementById("menu-close");
@@ -117,9 +127,8 @@ function hamburgerMenu() {
     }
   });
 }
-// ---------- HAMBURGER MENU END ---------- //
 
-// ---------- HEADER BOTTOM BORDER START ---------- //
+// 03. HEADER BOTTOM BORDER -------------------------------------------------------------
 function headerBottomBorder() {
   const scrollPoint = 20;
   const pageHeader = document.getElementById("header");
@@ -130,9 +139,8 @@ function headerBottomBorder() {
     pageHeader.classList.remove("border-b", "shadow");
   }
 }
-// ---------- HEADER BOTTOM BORDER END ---------- //
 
-// ---------- SET GISCUS THEME START ---------- //
+// 04. SET GISCUS THEME -----------------------------------------------------------------
 function setGiscusTheme(theme) {
   var iframe = document.querySelector(".giscus-frame");
 
@@ -142,9 +150,8 @@ function setGiscusTheme(theme) {
     iframe.src = url.toString();
   }
 }
-// ---------- SET GISCUS THEME END ---------- //
 
-// ---------- COPY URL BUTTON START ---------- //
+// 05. COPY URL BUTTON ------------------------------------------------------------------
 function copyUrlToClipboard() {
   // Select all buttons with the class 'copy-url-btn'
   const copyButtons = document.querySelectorAll(".copy-url-btn");
@@ -186,9 +193,8 @@ function copyUrlToClipboard() {
     });
   });
 }
-// ---------- COPY URL BUTTON END ---------- //
 
-// ---------- SEARCH START ---------- //
+// 06. SEARCH ---------------------------------------------------------------------------
 function searchModal() {
   const searchOpenButton = document.getElementById("search-button");
   const searchCloseButton = document.getElementById("search-close");
@@ -244,7 +250,7 @@ function searchModal() {
   });
 }
 
-// 7. BACK TO TOP BUTTON --------------------------------------------
+// 07. BACK TO TOP BUTTON ---------------------------------------------------------------
 function backToTopButton() {
   const button = document.getElementById("back-to-top");
   const footer = document.querySelector("footer");
