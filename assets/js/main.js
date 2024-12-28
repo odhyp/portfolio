@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburgerMenu();
   searchModal();
   copyUrlToClipboard();
+  backToTopButton();
 });
 
 document.addEventListener("scroll", () => {
@@ -242,4 +243,34 @@ function searchModal() {
     }
   });
 }
-// ---------- SEARCH END ---------- //
+
+// 7. BACK TO TOP BUTTON --------------------------------------------
+function backToTopButton() {
+  const button = document.getElementById("back-to-top");
+
+  if (button) {
+    // SCROLL EVENT - SHOW/HIDE BUTTON
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+      ) {
+        button.classList.remove("translate-y-40");
+        button.classList.add("translate-y-0");
+      } else {
+        button.classList.remove("translate-y-0");
+        button.classList.add("translate-y-40");
+      }
+    };
+
+    // CLICK EVENT - SCROLL TO TOP
+    button.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  } else {
+    console.error("Back to top button not found.");
+  }
+}
