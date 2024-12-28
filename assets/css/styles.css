@@ -54,7 +54,7 @@
   }
 
   pre {
-    @apply bg-noise bg-zero rounded border border-zinc-200 bg-zinc-800 bg-[length:200px_200px] p-4 dark:border-zinc-700 dark:bg-zinc-900 !important;
+    @apply bg-noise bg-zero rounded bg-zinc-800 bg-[length:200px_200px] p-4 dark:bg-zinc-900 !important;
   }
 
   /* Inline Code */
