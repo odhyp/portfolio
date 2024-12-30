@@ -18,6 +18,8 @@ Donec sit amet justo commodo, ultrices mi id, ultricies neque. Nullam aliquet, l
 The tools and technologies I use to build projects.
 
 {{< icon name="python" title="Python" href="https://www.python.org/" >}}
+{{< icon name="playwright" title="Playwright" href="https://playwright.dev/python/" >}}
+{{< icon name="selenium" title="Selenium" href="https://www.selenium.dev/" >}}
 {{< icon name="pandas" title="Pandas" href="https://pandas.pydata.org/" >}}
 {{< icon name="numpy" title="NumPy" href="https://numpy.org/" >}}
 {{< icon name="jupyter" title="Jupyter" href="https://jupyter.org/" >}}
@@ -26,7 +28,6 @@ The tools and technologies I use to build projects.
 {{< icon name="fastapi" title="FastAPI" href="https://fastapi.tiangolo.com/" >}}
 {{< icon name="flask" title="Flask" href="https://flask.palletsprojects.com/en/stable/" >}}
 {{< icon name="jinja" title="Jinja" href="https://jinja.palletsprojects.com/en/stable/" >}}
-{{< icon name="selenium" title="Selenium" href="https://www.selenium.dev/" >}}
 {{< icon name="pydantic" title="Pydantic" href="https://docs.pydantic.dev/latest/" >}}
 {{< icon name="pypi" title="PyPI" href="https://pypi.org/" >}}
 {{< icon name="mysql" title="MySQL" href="https://www.mysql.com/" >}}
