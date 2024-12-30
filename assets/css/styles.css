@@ -99,6 +99,11 @@
     @apply text-sm font-light;
   }
 
+  /* Prose */
+  .prose img {
+    @apply rounded-lg;
+  }
+
   /* Search */
   .pagefind-ui {
     @apply h-dvh overflow-y-auto sm:h-screen;
