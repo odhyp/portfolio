@@ -8,7 +8,7 @@
   </p>
   <p class="my-0 text-sm">
     <span>{{ .Get "startDate" }}</span>
-    —
+    <span class="mx-1">—</span>
     <span 
       class="{{ if eq (.Get "endDate") "Present" }}text-primary dark:text-primary-dark font-bold{{ end }}"
     >
