@@ -1,3 +1,10 @@
 {{ define "main" }}
-<h1>This is about page</h1>
+<section class="flex w-full max-w-full gap-x-24">
+  <article
+    class="prose prose-zinc dark:prose-invert mx-auto w-full max-w-prose shrink-0"
+  >
+    {{ .Content }}
+    <div>{{- partial "giscus.html" . -}}</div>
+  </article>
+</section>
 {{ end }}
