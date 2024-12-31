@@ -3,15 +3,15 @@ title = 'About'
 layout = 'about'
 +++
 
-## Hello World
+## Hello World!
 
 ![A Beach](/img/about/sample.jpg)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus in dui a lacinia. Cras non nulla ut dui pellentesque fermentum ut vitae nulla. Proin eget interdum est. Maecenas sagittis elit consectetur neque feugiat, sed euismod nisi vehicula. Suspendisse nec ultrices dolor. Aenean quis molestie orci. Nulla sodales hendrerit metus, nec rutrum ante ultrices eu.
+Hi, I'm Odhy. I build Python automations to simplify workflows and eliminate repetitive tasks, creating scripts to handle office processes and tools for managing large datasets. I also work with data visualization and data science, using Streamlit to turn datasets into interactive dashboards.
 
-Vestibulum ac ipsum a leo bibendum cursus. Sed non purus sed tortor tempus malesuada. Nam accumsan felis et viverra mollis. Pellentesque venenatis, turpis sit amet dictum semper, orci nibh sagittis elit, sit amet scelerisque ipsum est eu odio. Vestibulum dignissim purus in gravida dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed rhoncus gravida magna viverra finibus.
+I explore front-end development with Hugo and JavaScript, building fast and functional static websites—like this one.
 
-Donec sit amet justo commodo, ultrices mi id, ultricies neque. Nullam aliquet, lectus a laoreet vehicula, erat sem tempus ex, vitae varius massa enim ut risus. Integer faucibus porta dapibus. Proin dolor nunc, iaculis a ante dapibus, ultricies egestas est. Fusce mollis tristique felis rhoncus pellentesque. Donec at urna quis dolor ultricies viverra. Praesent dapibus ex vitae vestibulum iaculis. Integer id purus at eros suscipit euismod in id erat.
+In my spare time, I write blogs about tech and practice photography to capture the world around me.
 
 ## Tech Stack
 
@@ -52,29 +52,31 @@ The tools and technologies I use to build projects.
 {{< icon name="notion" title="Notion" href="https://www.notion.com/" >}}
 {{< icon name="googlekeep" title="Google Keep" href="https://keep.google.com/" >}}
 
-Donec sit amet justo commodo, ultrices mi id, ultricies neque. Nullam aliquet, lectus a laoreet vehicula, erat sem tempus ex, vitae varius massa enim ut risus. Integer faucibus porta dapibus. Proin dolor nunc, iaculis a ante dapibus, ultricies egestas est. Fusce mollis tristique felis rhoncus pellentesque. Donec at urna quis dolor ultricies viverra. Praesent dapibus ex vitae vestibulum iaculis. Integer id purus at eros suscipit euismod in id erat.
+I primarily use Python for building automation scripts, web applications, and data analysis solutions. Its flexibility, combined with powerful libraries, allows me to tackle a wide range of tasks efficiently. Playwright and Selenium are my go-to tools for automating web tasks and testing applications, while Pandas and NumPy support data manipulation and analysis. Streamlit is my tool of choice for developing interactive dashboards, enabling me to present data insights in an engaging way.
+
+For front-end development, I mainly use Hugo and JavaScript for building fast, content-driven websites with TailwindCSS for the styling. Hosting is handled through Vercel and Hostinger, providing scalable, high-performance solutions for websites.
+
+These tools form the backbone of my development process, enabling me to deliver efficient, scalable, and interactive solutions across a variety of projects.
 
 ## Work Experience
 
+I work a 9-to-5 job and code in my spare time. Here's a glimpse into my professional journey:
+
 {{< work-experience title="Accountant" organization="BPKA DIY" organizationLink="https://bpka.jogjaprov.go.id/" startDate="Oct 2024" endDate="Present" >}}
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum dicta aperiam quidem nemo dolore cupiditate hic odit inventore reiciendis earum velit voluptates a neque deleniti, quisquam nihil. Quos, dolores.
+Prepare and create financial reports for the Special Region of Yogyakarta, ensuring accuracy and compliance with government standards.
 {{< /work-experience >}}
 
 {{< work-experience title="Human Resource Manager" organization="KPPD DIY di Kabupaten Bantul" organizationLink="https://samsat-jogjaprov.id/profilbantul.php" startDate="Jan 2022" endDate="Sep 2024" >}}
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum dicta aperiam quidem nemo dolore cupiditate hic odit inventore reiciendis earum velit voluptates a neque deleniti, quisquam nihil. Quos, dolores.
+Managed employee attendance, allowances, promotions, retirements, and periodic salary increases.
 {{< /work-experience >}}
 
 {{< work-experience title="Payroll Manager" organization="KPPD DIY di Kabupaten Bantul" organizationLink="https://samsat-jogjaprov.id/profilbantul.php" startDate="Mar 2021" endDate="Sep 2024" >}}
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum dicta aperiam quidem nemo dolore cupiditate hic odit inventore reiciendis earum velit voluptates a neque deleniti, quisquam nihil. Quos, dolores.
+Managed payroll for 40 employees, ensuring timely disbursements and streamlining processes with automation.
 {{< /work-experience >}}
-
-## Hobbies & Interests
-
-Vestibulum ac ipsum a leo bibendum cursus. Sed non purus sed tortor tempus malesuada. Nam accumsan felis et viverra mollis. Pellentesque venenatis, turpis sit amet dictum semper, orci nibh sagittis elit, sit amet scelerisque ipsum est eu odio. Vestibulum dignissim purus in gravida dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed rhoncus gravida magna viverra finibus.
 
 ## Contact
 
-Feel free to send me an email at [pradhana.odhy@gmail.com](mailto:pradhana.odhy@gmail.com)
+You can reach me via email at [pradhana.odhy@gmail.com](mailto:pradhana.odhy@gmail.com). Feel free to connect with me on any of the following platforms:
 
 {{< icon name="github" title="GitHub" href="https://github.com/odhyp" >}}
 {{< icon name="x" title="X" href="https://x.com/valgtreiz" >}}
@@ -84,4 +86,6 @@ Feel free to send me an email at [pradhana.odhy@gmail.com](mailto:pradhana.odhy@
 {{< icon name="steam" title="Steam" href="https://steamcommunity.com/valgtreiz" >}}
 {{< icon name="spotify" title="Spotify" href="https://open.spotify.com/user/oz_dhy" >}}
 
-## Ask Me Anything
+## Got Questions or Feedback?
+
+Drop a comment below—I'm happy to help or hear your thoughts!
