@@ -128,9 +128,11 @@
 
     {{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }}
     <div class="">
-      <ul class="space-y-4 text-zinc-800 dark:text-zinc-300">
+      <ul
+        class="marker:text-primary dark:marker:text-primary-dark list-disc space-y-4 text-zinc-800 dark:text-zinc-300"
+      >
         {{ range . }}
-        <li>
+        <li class="ml-4">
           <a
             class="hover:text-primary dark:hover:text-primary-dark font-medium"
             href="{{ .RelPermalink }}"
