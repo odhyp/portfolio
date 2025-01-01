@@ -3,7 +3,7 @@ title = 'About'
 layout = 'about'
 +++
 
-## Hello World!
+# Hello World!
 
 ![A Beach](/img/about/sample.jpg)
 
