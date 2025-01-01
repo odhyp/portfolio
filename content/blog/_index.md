@@ -3,6 +3,6 @@ layout = 'blog'
 title = 'Blog'
 +++
 
-## I write stuffs.
+# Blog
 
-I document all sorts of things—Python scripts and packages, front-end frameworks, my love for music, bits of my personal life, and whatever else catches my eye.
+I started this blog as a way to keep track of what I’ve learned over the years, so I can easily revisit and build on that knowledge in the future. It’s mostly about tech, but every now and then, I also share a bit about my life.
