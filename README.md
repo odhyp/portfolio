@@ -51,4 +51,5 @@ The deadline for submission is approaching fast.
 - [ ] Add RSS Feed output, link to github profile with GithubActions
 - [ ] Add support section under comments section
 - [ ] Use Giscus custom theme for adaptive theming, instead of using JS (frame reload)
+- [ ] Add notification badge in the header menu for a new page (blog or project)
 
