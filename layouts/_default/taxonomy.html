@@ -1,1 +1,44 @@
-{{ define "main" }} {{ end }}
+{{ define "main" }}
+<section class="flex w-full max-w-full flex-col">
+  <!-- INTRO START -->
+  <article
+    class="prose prose-zinc dark:prose-invert mx-auto w-full max-w-prose"
+  >
+    <h1>{{ .Title }}</h1>
+  </article>
+  <!-- INTRO END -->
+
+  <!-- BLOG LIST START -->
+  <div class="mx-auto mt-8 flex w-full max-w-prose flex-col space-y-8 md:mt-12">
+    <!-- POST GROUP START -->
+    {{ range .Pages.GroupByDate "2006" }}
+    <div class="flex flex-col gap-y-4 md:flex-row md:items-start md:gap-x-8">
+      <h2
+        class="text-primary dark:text-primary-dark shrink-0 pt-1.5 font-mono text-3xl font-bold"
+      >
+        {{ .Key }}
+      </h2>
+      <ul class="w-full space-y-4">
+        {{ range .Pages }}
+        <li>
+          <a
+            class="hover:text-primary dark:hover:text-primary-dark hover:border-primary dark:hover:border-primary-dark group flex items-end justify-between gap-x-8 border-b border-dashed border-zinc-400 py-2 hover:border-solid dark:border-zinc-600"
+            href="{{ .RelPermalink }}"
+          >
+            <p class="">{{ .Title }}</p>
+            <p
+              class="group-hover:text-primary dark:group-hover:text-primary-dark shrink-0 text-zinc-400 dark:text-zinc-600"
+            >
+              {{ .Date.Format "Jan 2" }}
+            </p>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    <!-- POST GROUP END -->
+  </div>
+  <!-- BLOG LIST END -->
+</section>
+{{ end }}
