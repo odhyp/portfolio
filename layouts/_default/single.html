@@ -118,7 +118,11 @@
 
   <!-- POST TAGS START -->
   <div class="inline-flex w-full flex-wrap items-center justify-start gap-x-2">
+    <!-- Tags for blog -->
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+    <!-- Categories for project -->
+    {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
   </div>
   <!-- POST TAGS END -->
 
