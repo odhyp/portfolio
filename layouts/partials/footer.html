@@ -75,7 +75,7 @@
   // Adding `noopener` and `noreferrer` for all anchor tags under prose
   // I don't know why this doesn't work on main.js, it works here.
   function openExternalLinksInNewTab() {
-    document.querySelectorAll('a[href^="http"]').forEach((link) => {
+    document.querySelectorAll('.prose a[href^="http"]').forEach((link) => {
       link.setAttribute("target", "_blank");
       link.setAttribute("rel", "noopener noreferrer");
     });
