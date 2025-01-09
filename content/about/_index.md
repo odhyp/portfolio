@@ -9,9 +9,7 @@ layout = 'about'
 
 Hi, I'm Odhy. I build Python automations to simplify workflows and eliminate repetitive tasks, creating scripts to handle office processes and tools for managing large datasets. I also work with data visualization and data science, using Streamlit to turn datasets into interactive dashboards.
 
-I explore front-end development with Hugo and JavaScript, building fast and functional static websites—like this one.
-
-In my spare time, I write blogs about tech and practice photography to capture the world around me.
+As a side project, I explore front-end development with Hugo and JavaScript, building fast and functional static websites—like this one.
 
 ## Tech Stack
 
@@ -74,17 +72,23 @@ Managed employee attendance, allowances, promotions, retirements, and periodic s
 Managed payroll for 40 employees, ensuring timely disbursements and streamlining processes with automation.
 {{< /work-experience >}}
 
+## Hobbies & Interests
+
+Outside of coding, you can find me here:
+
+- Writing tech-related articles on my [blog](/blog), where I share tips and projects
+- [Capturing moments](/photo) and sharing short stories about my photography journey
+- Slaying Elder Dragons in {{< icon-inline name="steam" title="Steam" href="https://steamcommunity.com/valgtreiz" >}} while playing [Monster Hunter: World](https://www.monsterhunter.com/world/)
+- Listening to [alternative rock](https://open.spotify.com/playlist/37i9dQZF1DX9GRpeH4CL0S) via {{< icon-inline name="spotify" title="Spotify" href="https://open.spotify.com/user/oz_dhy" >}}
+
 ## Contact
 
-You can reach me via email at [pradhana.odhy@gmail.com](mailto:pradhana.odhy@gmail.com). Feel free to connect with me on any of the following platforms:
+Feel free to drop me an email at [pradhana.odhy@gmail.com](mailto:pradhana.odhy@gmail.com) or connect with me on these platforms:
 
 {{< icon name="github" title="GitHub" href="https://github.com/odhyp" >}}
 {{< icon name="x" title="X" href="https://x.com/valgtreiz" >}}
 {{< icon name="linkedin" title="LinkedIn" href="https://www.linkedin.com/in/odhy-pradhana/" >}}
 {{< icon name="instagram" title="Instagram" href="https://www.instagram.com/odhypradhana/" >}}
-{{< icon name="unsplash" title="Unsplash" href="https://unsplash.com/@odhyp" >}}
-{{< icon name="steam" title="Steam" href="https://steamcommunity.com/valgtreiz" >}}
-{{< icon name="spotify" title="Spotify" href="https://open.spotify.com/user/oz_dhy" >}}
 
 ## Got Questions or Feedback?
 
