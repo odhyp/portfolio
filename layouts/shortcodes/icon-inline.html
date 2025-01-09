@@ -4,7 +4,7 @@
 {{ $iconPath := printf "/icons/%s.svg" $iconName }}
 
 {{ if and $iconName $title $href }}
-  <span class="inline-flex items-center space-x-2 align-middle px-1">
+  <span class="inline-flex space-x-2 align-bottom px-1">
     <a href="{{ $href }}" class="inline-flex items-center space-x-2 no-underline hover:underline">
       {{ if fileExists (printf "static%s" $iconPath) }}
         {{ $iconContent := readFile (printf "static%s" $iconPath) }}
