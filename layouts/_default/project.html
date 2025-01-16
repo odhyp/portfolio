@@ -1,1 +1,46 @@
-{{ define "main" }} {{ end }}
+{{ define "main" }}
+<section class="flex w-full max-w-full flex-col">
+  <!-- INTRO START -->
+  <article
+    class="prose prose-zinc dark:prose-invert mx-auto w-full max-w-prose"
+  >
+    {{ .Content }}
+  </article>
+  <!-- INTRO END -->
+
+  <!-- PROJECT LIST START -->
+  <div class="mx-auto mt-8 flex w-full max-w-prose flex-col gap-y-8 md:mt-12">
+    {{ range .Pages }}
+    <div
+      class="bg-noise bg-zero group flex flex-col rounded bg-zinc-100 bg-[length:200px_200px] sm:flex-row dark:bg-zinc-900"
+    >
+      <!-- PROJECT COVER -->
+      <a
+        class="w-full overflow-hidden rounded-t object-cover sm:w-2/5 sm:rounded-none sm:rounded-l"
+        href="{{ .Permalink }}"
+      >
+        <img
+          class="h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
+          src="/img/sample.jpg"
+          alt=""
+        />
+      </a>
+
+      <!-- PROJECT TITLE, DESC, AND CATEGORIES -->
+      <div class="flex w-full flex-col gap-y-4 px-6 py-6 sm:w-3/5 sm:px-8">
+        <a
+          class="group-hover:text-primary dark:group-hover:text-primary-dark line-clamp-2 w-fit shrink-0 text-lg font-bold"
+          href="{{ .Permalink }}"
+          >{{ .Title }}</a
+        >
+        <p class="line-clamp-2 grow opacity-60">{{ .Summary }}</p>
+        <div class="line-clamp-2 shrink-0 text-zinc-500">
+          {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <!-- PROJECT LIST END -->
+</section>
+{{ end }}
