@@ -9,6 +9,6 @@
 {{ $uniqueTags := uniq $allCategories }}
 
 <p class="inline">
-  So far, I've created {{ $totalPosts }} project{{ if ne $totalPosts 1 }}s{{ end }} with
-  <a class="hover:text-primary dark:hover:text-primary-dark" href="/categories/">{{ len $uniqueTags }} tag{{ if ne (len $uniqueTags) 1 }}s{{ end }}</a>.
+  To date, I have completed {{ $totalPosts }} project{{ if ne $totalPosts 1 }}s{{ end }} spanning
+  <a class="hover:text-primary dark:hover:text-primary-dark" href="/categories/">{{ len $uniqueTags }} categor{{ if eq (len $uniqueTags) 1 }}y{{ else }}ies{{ end }}</a>.
 </p>

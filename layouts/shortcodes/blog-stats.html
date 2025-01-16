@@ -9,6 +9,6 @@
 {{ $uniqueTags := uniq $allTags }}
 
 <p class="inline">
-  So far, I've written {{ $totalPosts }} blog post{{ if ne $totalPosts 1 }}s{{ end }} with
+  So far, I've written {{ $totalPosts }} blog post{{ if ne $totalPosts 1 }}s{{ end }} across
   <a class="hover:text-primary dark:hover:text-primary-dark" href="/tags/">{{ len $uniqueTags }} tag{{ if ne (len $uniqueTags) 1 }}s{{ end }}</a>.
 </p>
