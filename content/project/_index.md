@@ -1,10 +1,10 @@
 +++
-layout = 'projects'
+layout = 'project'
 title = 'Projects'
 +++
 
-## I create stuffs.
+# Projects
 
-I'm currently working on [ASIK](https://github.com/odhyp/asik/), a Python GUI application for my 9-to-5. On the front-end, I enjoy working with Hugo, TailwindCSS, and JavaScript.
+I do web automations
 
-I'm also in the process of migrating all my projects to make them more presentable here, so please excuse the chaos!
+{{< project-stats >}}
