@@ -37,7 +37,14 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
    hugo new --kind project project/2024-10-27-my-first-project.md
    ```
 
+3. New Photo
+
+   ```bash
+   hugo new --kind photo photo/2024-10-27-tuna.md
+   ```
+
 > Blog page is using `pinned` and `tags`, while Project page is `featured` and `categories`.
+> Photo page doesn't have any taxonomy.
 
 ### Utilizing Shortcodes
 
