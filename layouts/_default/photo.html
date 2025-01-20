@@ -9,28 +9,42 @@
   <!-- PHOTO LIST START -->
   <div class="mx-auto mt-8 flex w-full max-w-full flex-col gap-y-8 md:mt-12">
     <!-- Container -->
-    <div class="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-4">
+    <div
+      class="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3"
+    >
       <!-- PHOTO LIST START -->
       {{ range .Pages }}
-      <div class="relative w-full">
-        <a
-          href="{{ .Params.photo_link }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div class="group relative w-full overflow-hidden">
+        <!-- CARD COVER -->
+        <div class="group-hover:-z-10">
           <div class="aspect-w-1 aspect-h-1">
             <img
               class="h-full w-full object-cover"
-              src="{{ .Params.photo_cover }}"
+              src="{{ .Params.source }}"
               alt=""
             />
           </div>
-        </a>
+        </div>
 
-        <div>
-          <p>{{ .Title }}</p>
-          <a href="{{ .Params.location_link }}">{{ .Params.location_name }}</a>
-          <p>{{ .Summary }}</p>
+        <!-- CARD HOVER MODAL -->
+        <a
+          class="absolute top-0 h-full w-full bg-black opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"
+          href="{{ .Params.goto }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+
+        <!-- CARD INFO -->
+        <div
+          class="absolute -bottom-32 w-full p-4 transition-transform duration-300 ease-in-out group-hover:-translate-y-32"
+        >
+          <div
+            class="flex w-full max-w-full flex-col gap-y-1 text-sm text-white"
+          >
+            <p class="font-semibold">{{ .Title }}</p>
+            <p class="italic opacity-75">{{ .Params.location }}</p>
+            <p class="opacity-60">{{ .Params.caption }}</p>
+          </div>
         </div>
       </div>
       {{ end }}
