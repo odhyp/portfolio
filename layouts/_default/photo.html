@@ -28,7 +28,7 @@
 
         <!-- CARD HOVER MODAL -->
         <a
-          class="absolute top-0 h-full w-full bg-black opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-75"
+          class="absolute top-0 h-full w-full bg-black opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"
           href="{{ .Params.goto }}"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,8 +42,8 @@
             class="flex w-full max-w-full flex-col gap-y-1 text-sm text-white"
           >
             <p class="font-semibold">{{ .Title }}</p>
-            <p class="opacity-75">{{ .Params.location }}</p>
-            <p class="italic opacity-50">{{ .Params.caption }}</p>
+            <p class="italic opacity-75">{{ .Params.location }}</p>
+            <p class="opacity-60">{{ .Params.caption }}</p>
           </div>
         </div>
       </div>
