@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section>
+  <!-- INTRO START -->
+  <article class="prose prose-zinc dark:prose-invert mx-auto w-full max-w-full">
+    {{ .Content }}
+  </article>
+  <!-- INTRO END -->
+
+  <!-- PHOTO LIST START -->
+  <div class="mx-auto mt-8 flex w-full max-w-full flex-col gap-y-8 md:mt-12">
+    <!-- Container -->
+    <div class="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-4">
+      <!-- PHOTO LIST START -->
+      {{ range .Pages }}
+      <div class="relative w-full">
+        <a
+          href="{{ .Params.photo_link }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="aspect-w-1 aspect-h-1">
+            <img
+              class="h-full w-full object-cover"
+              src="{{ .Params.photo_cover }}"
+              alt=""
+            />
+          </div>
+        </a>
+
+        <div>
+          <p>{{ .Title }}</p>
+          <a href="{{ .Params.location_link }}">{{ .Params.location_name }}</a>
+          <p>{{ .Summary }}</p>
+        </div>
+      </div>
+      {{ end }}
+      <!-- PHOTO LIST END -->
+    </div>
+  </div>
+  <!-- PHOTO LIST END -->
+</section>
+{{ end }}
