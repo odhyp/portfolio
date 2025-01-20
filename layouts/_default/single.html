@@ -132,6 +132,7 @@
   <!-- POST TAGS END -->
 
   <!-- RELATED POST START -->
+  {{ if eq .Section "blog" }}
   <div class="mt-16 flex flex-col md:mt-24">
     <h3 class="mb-8 text-2xl font-bold">Related Post</h3>
 
@@ -156,6 +157,7 @@
     </div>
     {{ end }}
   </div>
+  {{ end }}
   <!-- RELATED POST END -->
 
   <!-- COMMENTS START -->
