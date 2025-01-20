@@ -117,12 +117,17 @@
   <hr class="my-4 border-zinc-300 dark:border-zinc-700" />
 
   <!-- POST TAGS START -->
-  <div class="inline-flex w-full flex-wrap items-center justify-start gap-x-2">
-    <!-- Tags for blog -->
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <div class="mt-8 flex flex-col md:mt-12">
+    <h3 class="mb-8 text-2xl font-bold">Tags</h3>
+    <div
+      class="inline-flex w-full flex-wrap items-center justify-start gap-x-2"
+    >
+      <!-- Tags for blog -->
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
-    <!-- Categories for project -->
-    {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+      <!-- Categories for project -->
+      {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+    </div>
   </div>
   <!-- POST TAGS END -->
 
