@@ -1,0 +1,86 @@
+<footer
+  class="mx-auto mt-16 w-full max-w-full border-t border-zinc-200 lg:mt-32 dark:border-zinc-800"
+>
+  <div
+    class="mx-auto flex w-full max-w-screen-lg flex-col items-center gap-y-4 px-6 py-6 lg:flex-row lg:items-center lg:justify-between xl:px-0"
+  >
+    <!-- BUILT WITH START -->
+    <div class="flex items-center gap-x-2 text-sm md:gap-x-4">
+      <p>Built with:</p>
+      <!-- HUGO -->
+      <a
+        class="flex items-center gap-x-1 hover:underline"
+        href="https://gohugo.io/"
+      >
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="dark:text-primary-dark size-5 fill-current text-[#FF4088]"
+        >
+          <title>Hugo</title>
+          <path
+            d="M11.754 0a3.998 3.998 0 00-2.049.596L3.33 4.532a4.252 4.252 0 00-2.017 3.615v8.03c0 1.473.79 2.838 2.067 3.574l6.486 3.733a3.88 3.88 0 003.835.018l7.043-3.966a3.817 3.817 0 001.943-3.323V7.752a3.57 3.57 0 00-1.774-3.084L13.817.541a3.998 3.998 0 00-2.063-.54zm.022 1.674c.413-.006.828.1 1.2.315l7.095 4.127c.584.34.941.96.94 1.635v8.462c0 .774-.414 1.484-1.089 1.864l-7.042 3.966a2.199 2.199 0 01-2.179-.01l-6.485-3.734a2.447 2.447 0 01-1.228-2.123v-8.03c0-.893.461-1.72 1.221-2.19l6.376-3.935a2.323 2.323 0 011.19-.347zm-4.7 3.844V18.37h2.69v-5.62h4.46v5.62h2.696V5.518h-2.696v4.681h-4.46V5.518Z"
+          /></svg
+        >Hugo</a
+      >
+
+      <!-- TAILWINDCSS -->
+      <a
+        class="flex items-center gap-x-1 hover:underline"
+        href="https://tailwindcss.com/"
+      >
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="dark:text-primary-dark size-5 fill-current text-[#06B6D4]"
+        >
+          <title>Tailwind CSS</title>
+          <path
+            d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+          /></svg
+        >TailwindCSS</a
+      >
+
+      <!-- VERCEL -->
+      <a
+        class="flex items-center gap-x-1 hover:underline"
+        href="https://vercel.com/"
+      >
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="dark:text-primary-dark size-4 fill-current text-[#000000]"
+        >
+          <title>Vercel</title>
+          <path d="M24 22.525H0l12-21.05 12 21.05z" /></svg
+        >Vercel</a
+      >
+    </div>
+    <!-- BUILT WITH END -->
+
+    <!-- COPYRIGHT START -->
+    <span class="text-sm opacity-75">
+      &copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.
+    </span>
+    <!-- COPYRIGHT END -->
+  </div>
+</footer>
+
+<!-- WINDOW.ONLOAD SCRIPTS -->
+<script>
+  // ---------- OPEN EXTERNAL LINKS IN NEW TAB START ---------- //
+  // Adding `noopener` and `noreferrer` for all anchor tags under prose
+  // I don't know why this doesn't work on main.js, it works here.
+  function openExternalLinksInNewTab() {
+    document.querySelectorAll('.prose a[href^="http"]').forEach((link) => {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
+  window.onload = openExternalLinksInNewTab;
+  // ---------- OPEN EXTERNAL LINKS IN NEW TAB END ---------- //
+</script>

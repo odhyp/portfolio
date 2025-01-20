@@ -1,4 +1,6 @@
 +++
-layout = 'categories'
+layout = 'tags'
 title = 'Categories'
 +++
+
+# Categories

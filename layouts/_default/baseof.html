@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <!-- HEAD START -->
+  {{ partial "head.html" . }}
+  <!-- HEAD END -->
+
+  <!-- DEV HELPER START -->
+  {{- partial "dev/dev-tools.html" . -}}
+  <!-- DEV HELPER END -->
+
+  <body
+    class="relative flex min-h-dvh flex-col bg-white font-sans text-black sm:min-h-screen dark:bg-zinc-950 dark:text-white"
+  >
+    <!-- HEADER START -->
+    {{- partial "header.html" . -}}
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main
+      data-pagefind-body
+      class="mx-auto mt-16 w-full max-w-full flex-1 grow md:mt-24 lg:mt-32"
+    >
+      <div class="mx-auto w-full max-w-screen-lg px-6 py-16 xl:px-0">
+        {{- block "main" . -}}{{ end }}
+      </div>
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    {{- partial "footer.html" . -}}
+    <!-- FOOTER END -->
+
+    <!-- BACK TO TOP BUTTON START -->
+    {{- partial "components/back-to-top-button.html" . -}}
+    <!-- BACK TO TOP BUTTON END -->
+  </body>
+</html>

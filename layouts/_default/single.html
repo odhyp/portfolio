@@ -1,0 +1,189 @@
+{{ define "main" }}
+<!-- PAGE HEADER START -->
+<section class="w-full max-w-full">
+  <div class="mx-auto flex w-full max-w-prose flex-col gap-y-4 lg:mx-0">
+    <h1
+      data-pagefind-meta="title"
+      class="text-4xl font-bold leading-snug md:text-5xl md:leading-snug lg:md:leading-snug"
+    >
+      {{- .Title -}}
+    </h1>
+    <div
+      class="flex flex-col gap-y-2 text-sm opacity-75 sm:flex-row sm:items-center sm:gap-x-6 md:gap-x-8 md:text-base"
+    >
+      <!-- POSTED DATE -->
+      <span class="flex items-center gap-x-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="size-5"
+        >
+          <path
+            d="M10 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75H10ZM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H6ZM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H8ZM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75V14ZM12 11.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75H12ZM12 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H12ZM13.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75V12ZM11.25 10.005c0-.417.338-.755.755-.755h2a.755.755 0 1 1 0 1.51h-2a.755.755 0 0 1-.755-.755ZM6.005 11.25a.755.755 0 1 0 0 1.51h4a.755.755 0 1 0 0-1.51h-4Z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        {{ .Date.Format "Jan 2, 2006" }}
+      </span>
+
+      <!-- ESTIMATE READING TIME -->
+      <span class="flex items-center gap-x-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="size-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        {{ printf "%d min read" .ReadingTime }}
+      </span>
+
+      <!-- COMMENTS -->
+      <a
+        class="text-primary dark:text-primary-dark flex items-center gap-x-2 font-semibold hover:underline"
+        href="#comments"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="size-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 0 0 1.28.53l4.184-4.183a.39.39 0 0 1 .266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0 0 12 2.25ZM8.25 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Zm2.625 1.125a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        Comments
+      </a>
+    </div>
+  </div>
+</section>
+<!-- PAGE HEADER END -->
+
+<!-- PAGE MAIN START -->
+<section class="mt-8 flex gap-x-24 md:mt-16">
+  <!-- MARKDOWN CONTENT START -->
+  <article
+    class="prose prose-zinc dark:prose-invert prose-a:text-primary dark:prose-a:text-primary-dark mx-auto w-full max-w-prose shrink-0"
+  >
+    {{- .Content -}}
+  </article>
+  <!-- MARKDOWN CONTENT END -->
+
+  <!-- SIDEBAR START -->
+  <aside class="hidden w-full lg:flex">
+    <div class="sticky top-32 h-fit space-y-6">
+      <!-- TABLE OF CONTENTS START -->
+      <span class="text-lg font-semibold">Table of Contents</span>
+      <div
+        class="toc-scroll overflow-y-auto pr-4"
+        style="max-height: calc(100vh - 20rem)"
+      >
+        {{ .TableOfContents }}
+      </div>
+      <!-- TABLE OF CONTENTS end -->
+
+      <!-- SIDE SHARE START -->
+      <div class="hidden justify-start lg:flex">
+        {{- partial "components/share.html" . -}}
+      </div>
+      <!-- SIDE SHARE END -->
+    </div>
+  </aside>
+  <!-- SIDEBAR END -->
+</section>
+<!-- PAGE MAIN END -->
+
+<!-- PAGE FOOTER START -->
+<section class="mx-auto mt-16 w-full max-w-prose md:mt-24 lg:mx-0">
+  <!-- MAIN SHARE START -->
+  <div class="flex justify-center lg:hidden">
+    {{- partial "components/share.html" . -}}
+  </div>
+  <!-- MAIN SHARE END -->
+
+  <hr class="my-4 border-zinc-300 dark:border-zinc-700" />
+
+  <!-- POST TAGS START -->
+  <div class="mt-8 flex flex-col md:mt-12">
+    <h3 class="mb-8 text-2xl font-bold">Tags</h3>
+    <div
+      class="inline-flex w-full flex-wrap items-center justify-start gap-x-2"
+    >
+      <!-- Tags for blog -->
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+      <!-- Categories for project -->
+      {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+    </div>
+  </div>
+  <!-- POST TAGS END -->
+
+  <!-- RELATED POST START -->
+  {{ if eq .Section "blog" }}
+  <div class="mt-16 flex flex-col md:mt-24">
+    <h3 class="mb-8 text-2xl font-bold">Related Post</h3>
+
+    {{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }}
+    <div class="">
+      <ul
+        class="marker:text-primary dark:marker:text-primary-dark list-disc space-y-4 pl-6 text-zinc-800 dark:text-zinc-300"
+      >
+        {{ range . }}
+        <li class="pl-1.5">
+          <a
+            class="hover:text-primary dark:hover:text-primary-dark font-medium"
+            href="{{ .RelPermalink }}"
+            >{{ .LinkTitle }}</a
+          >
+          <p class="font-normal text-zinc-500">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+  <!-- RELATED POST END -->
+
+  <!-- COMMENTS START -->
+  <div class="mt-16 w-full max-w-full md:mt-24">
+    <h3 id="comments" class="mb-4 text-2xl font-bold">Comments</h3>
+    <div>{{- partial "giscus.html" . -}}</div>
+  </div>
+  <!-- COMMENTS END -->
+
+  <!-- SUPPORT START -->
+  <div class="mt-16 w-full max-w-full md:mt-24">
+    <h3 class="mb-4 text-2xl font-bold">Support</h3>
+    <div
+      class="bg-noise bg-zero group flex flex-col items-center justify-center gap-y-4 rounded-lg bg-zinc-100 bg-[length:200px_200px] px-8 py-6 sm:flex-row sm:gap-x-16 dark:bg-zinc-900"
+    >
+      <p class="text-center">Help me keep creating awesome stuff! 🤓</p>
+      <a href="https://www.buymeacoffee.com/odhyp" target="_blank"
+        ><img
+          class="h-12 w-auto transition-all duration-500 ease-in-out md:grayscale md:group-hover:grayscale-0"
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+          alt="Buy Me A Coffee"
+      /></a>
+    </div>
+  </div>
+  <!-- SUPPORT END -->
+</section>
+<!-- PAGE FOOTER END -->
+
+{{ end }}

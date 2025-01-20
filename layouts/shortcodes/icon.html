@@ -1,0 +1,18 @@
+{{ $iconName := .Get "name" }}
+{{ $title := .Get "title" }}
+{{ $href := .Get "href" }}
+{{ $iconPath := printf "/icons/%s.svg" $iconName }}
+
+{{ if and $iconName $title $href }}
+  <div class="inline-block leading-loose mb-2">
+    <a href="{{ $href }}" class="inline-flex items-center space-x-2 mr-4 no-underline border-b border-zinc-300 dark:border-zinc-800 hover:border-primary dark:hover:border-primary-dark">
+      {{ if fileExists (printf "static%s" $iconPath) }}
+        {{ $iconContent := readFile (printf "static%s" $iconPath) }}
+        <div class="size-5 text-primary dark:text-primary-dark" style="fill: currentColor;">{{ $iconContent | safeHTML }}</div>
+      {{ end }}
+      <span class="font-medium">{{ $title }}</span>
+    </a>
+  </div>
+{{ else }}
+  <p class="text-primary dark:text-primary-dark">Error: Missing parameters or icon not found.</p>
+{{ end }}

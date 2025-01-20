@@ -1,0 +1,114 @@
+/* TailwindCSS base styles */
+/* see https://tailwindcss.com/docs/functions-and-directives#tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Site Specific */
+/* put site specific css styles here using the @layer directive */
+/* see https://tailwindcss.com/docs/functions-and-directives#layer */
+@layer base {
+  html,
+  body,
+  :root {
+    height: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    background-image: url("/img/noise.png");
+    background-size: 200px 200px;
+    background-position: 0 0;
+  }
+
+  /* List Marker */
+  .prose ul > li::marker {
+    @apply text-primary dark:text-primary-dark;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-1.5 w-1.5 bg-zinc-200 dark:bg-zinc-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-zinc-400 dark:bg-zinc-600;
+  }
+
+  .toc-scroll::-webkit-scrollbar {
+    @apply bg-transparent;
+  }
+
+  .toc-scroll::-webkit-scrollbar-thumb {
+    @apply bg-zinc-300 dark:bg-zinc-800;
+  }
+}
+
+@layer components {
+  /* Code Block */
+  td pre {
+    @apply my-0 !important;
+  }
+
+  pre {
+    @apply bg-noise bg-zero rounded bg-zinc-800 bg-[length:200px_200px] p-4 dark:bg-zinc-900 !important;
+  }
+
+  /* Inline Code */
+  code:not(pre > *) {
+    @apply select-all rounded bg-zinc-200 p-1 dark:bg-zinc-700;
+  }
+
+  code::before,
+  code::after {
+    @apply hidden;
+  }
+
+  /* Table Of Contents */
+  /* TOC Shortcode */
+  #TableOfContents a {
+    @apply hover:text-primary dark:hover:text-primary-dark font-medium text-black dark:text-white;
+  }
+
+  /* Heading 2 */
+  #TableOfContents ol {
+    @apply list-none space-y-2 p-0;
+  }
+
+  #TableOfContents ol li {
+    @apply m-0 p-0;
+  }
+
+  #TableOfContents ol li a {
+    @apply font-medium no-underline opacity-75 hover:opacity-100;
+  }
+
+  /* Heading 3 */
+  #TableOfContents ol li ol {
+    @apply m-0;
+  }
+
+  #TableOfContents ol li ol li {
+    @apply m-0 mt-1.5 pl-4;
+  }
+
+  #TableOfContents ol li ol li a {
+    @apply text-sm font-light;
+  }
+
+  /* Prose */
+  .prose img {
+    @apply rounded-lg;
+  }
+
+  /* Search */
+  .pagefind-ui {
+    @apply h-dvh overflow-y-auto sm:h-screen;
+  }
+}
+
+@layer utilities {
+}

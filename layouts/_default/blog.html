@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="flex w-full max-w-full flex-col">
+  <!-- INTRO START -->
+  <article
+    class="prose prose-zinc dark:prose-invert mx-auto w-full max-w-prose"
+  >
+    {{ .Content }}
+  </article>
+  <!-- INTRO END -->
+
+  <!-- BLOG LIST START -->
+  {{- partial "components/blog-list.html" . -}}
+  <!-- BLOG LIST END -->
+</section>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ $totalPosts := 0 }}
+{{ $allTags := slice }}
+
+{{ range where .Site.RegularPages "Section" "blog" }}
+  {{ $totalPosts = add $totalPosts 1 }}
+  {{ $allTags = union $allTags .Params.tags }}
+{{ end }}
+
+{{ $uniqueTags := uniq $allTags }}
+
+<p class="inline">
+  So far, I've written {{ $totalPosts }} blog post{{ if ne $totalPosts 1 }}s{{ end }} across
+  <a class="hover:text-primary dark:hover:text-primary-dark" href="/tags/">{{ len $uniqueTags }} tag{{ if ne (len $uniqueTags) 1 }}s{{ end }}</a>.
+</p>

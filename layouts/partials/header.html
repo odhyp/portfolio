@@ -1,0 +1,76 @@
+<header
+  id="header"
+  class="bg-noise bg-zero fixed top-0 z-40 mx-auto w-full max-w-full border-zinc-200 bg-white bg-[length:200px_200px] dark:border-zinc-800 dark:bg-zinc-950"
+>
+  <!-- SEARCH MODAL START -->
+  {{- partial "components/search-modal.html" . -}}
+  <!-- SEARCH MODAL END -->
+
+  <div
+    class="mx-auto flex w-full max-w-screen-lg items-center justify-between px-6 py-6 xl:px-0"
+  >
+    <!-- LOGO START -->
+    <a class="" href="/">
+      <img class="h-9 w-auto" src="/img/logo.png" alt="Logo" />
+    </a>
+    <!-- LOGO END -->
+
+    <!-- MOBILE LAYOUT START -->
+    <nav class="flex items-center gap-x-2">
+      <!-- DESKTOP MENU -->
+      <ul class="hidden gap-x-6 md:mr-4 md:flex md:items-center">
+        <li>
+          <a class="hover:text-primary dark:hover:text-primary-dark" href="/"
+            >home</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="hover:text-primary dark:hover:text-primary-dark"
+            href="/project"
+            >projects</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="hover:text-primary dark:hover:text-primary-dark"
+            href="/blog"
+            >blog</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="hover:text-primary dark:hover:text-primary-dark"
+            href="/photo"
+            >photos</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="hover:text-primary dark:hover:text-primary-dark"
+            href="/about"
+            >about</a
+          >
+        </li>
+      </ul>
+
+      <div
+        class="hidden h-6 border-l-2 border-zinc-300 md:mr-4 md:block dark:border-zinc-800"
+      ></div>
+
+      <!-- SEARCH BUTTON -->
+      {{- partial "components/search-button.html" . -}}
+
+      <!-- SEARCH BUTTON -->
+      {{- partial "components/dark-mode.html" . -}}
+
+      <!-- SEARCH BUTTON -->
+      {{- partial "components/hamburger-menu.html" . -}}
+    </nav>
+    <!-- MOBILE LAYOUT END -->
+  </div>
+</header>

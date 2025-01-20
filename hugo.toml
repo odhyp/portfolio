@@ -1,31 +1,7 @@
 baseURL = 'https://odhyp.com/'
 languageCode = 'en-us'
 title = 'Odhy'
-theme = 'odai-theme'
 enableGitInfo = true
-
-# Page custom parameters
-[Params]
-  description = "Portfolio and Blog website"
-  disableComments = false
-  giscusTheme = "dark"
-
-# Author information
-[Params.Author]
-  fullname = "Odhy Pradhana"
-  shortname = "Odhy"
-  bio = "A Python Developer"
-  avatar = "https://avatars.githubusercontent.com/u/78688788?v=4"
-
-# Social account info
-[Params.Social]
-  email = "pradhana.odhy@gmail.com"
-  github = "odhyp"
-  linkedin = "odhy-pradhana"
-  facebook = ""
-  twitter = ""
-  instagram = ""
-  medium = ""
 
 # Hugo Module version
 [module]
@@ -33,13 +9,35 @@ enableGitInfo = true
     extended = true
     min = "0.133.1"
 
+# Custom taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 # Markup highlighting configuration
 [markup]
   [markup.highlight]
     style = "monokai"
     tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = true
+  [markup.goldmark.renderer]
+    unsafe = true
 
-# Custom taxonomies
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+# Related posts
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+[[related.indices]]
+  name = 'tags'
+  weight = 80
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']

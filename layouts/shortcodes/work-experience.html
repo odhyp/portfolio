@@ -1,0 +1,21 @@
+<div
+  class="bg-noise bg-zero rounded-lg bg-zinc-100 bg-[length:200px_200px] p-4 dark:bg-zinc-900 mb-4 md:p-6"
+>
+  <p class="my-0">
+    <strong>{{ .Get "title" }}</strong>
+    at
+    <a class="opacity-75" href="{{ .Get "organizationLink" }}">{{ .Get "organization" }}</a>
+  </p>
+  <p class="my-0 text-sm">
+    <span>{{ .Get "startDate" }}</span>
+    <span class="mx-1">—</span>
+    <span 
+      class="{{ if eq (.Get "endDate") "Present" }}text-primary dark:text-primary-dark font-bold{{ end }}"
+    >
+      {{ .Get "endDate" }}
+    </span>
+  </p>
+  <p class="mb-0">
+    {{ .Inner }}
+  </p>
+</div>

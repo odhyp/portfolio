@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="flex w-full max-w-full flex-col">
+  <!-- INTRO START -->
+  <article
+    class="prose prose-zinc dark:prose-invert mx-auto w-full max-w-prose"
+  >
+    <h1>{{ .Title }}</h1>
+  </article>
+  <!-- INTRO END -->
+
+  <!-- CONDITIONAL LIST START -->
+  {{ if eq .Type "tags" }}
+  <!-- BLOG LIST START -->
+  {{ partial "components/blog-list.html" . }}
+  <!-- BLOG LIST END -->
+
+  {{ else if eq .Type "categories" }}
+  <!-- PROJECT LIST START -->
+  {{ partial "components/project-list.html" . }}
+  <!-- PROJECT LIST END -->
+
+  {{ else }}
+  <p class="text-center">No content available for this taxonomy.</p>
+  {{ end }}
+  <!-- CONDITIONAL LIST END -->
+</section>
+{{ end }}

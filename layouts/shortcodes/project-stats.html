@@ -1,0 +1,14 @@
+{{ $totalPosts := 0 }}
+{{ $allCategories := slice }}
+
+{{ range where .Site.RegularPages "Section" "project" }}
+  {{ $totalPosts = add $totalPosts 1 }}
+  {{ $allCategories = union $allCategories .Params.categories }}
+{{ end }}
+
+{{ $uniqueTags := uniq $allCategories }}
+
+<p class="inline">
+  To date, I have completed {{ $totalPosts }} project{{ if ne $totalPosts 1 }}s{{ end }} spanning
+  <a class="hover:text-primary dark:hover:text-primary-dark" href="/categories/">{{ len $uniqueTags }} categor{{ if eq (len $uniqueTags) 1 }}y{{ else }}ies{{ end }}</a>.
+</p>
