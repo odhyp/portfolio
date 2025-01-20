@@ -5,11 +5,10 @@
 +++
 draft = true
 title = "{{ $pageTitle }}"
-slug = "{{ $pageSlug }}"
+slug = "{{ now.Format "2006-01-02" }}-{{ $pageSlug }}"
 date = {{ now.Format "2006-01-02" }}
-photo_cover = "https://placehold.co/1200x600?text=Blog\nCover+Image"
-photo_link = ""
-location_name = ""
-location link = ""
-summary = ""
+source = "The source of the image"
+goto = "External URL of the image"
+location = "Yogyakarta, Indonesia"
+caption = "A beautiful view"
 +++
