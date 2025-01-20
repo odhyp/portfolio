@@ -16,25 +16,27 @@
     >
       <!-- PROJECT COVER -->
       <a
-        class="w-full overflow-hidden rounded-t object-cover sm:w-2/5 sm:rounded-none sm:rounded-l"
+        class="h-40 w-full overflow-hidden rounded-t sm:w-2/6 sm:rounded-none sm:rounded-l"
         href="{{ .Permalink }}"
       >
         <img
-          class="h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
-          src="/img/sample.jpg"
-          alt=""
+          class="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+          src="{{ .Params.Cover }}"
+          alt="{{ .Title }} cover image"
         />
       </a>
 
       <!-- PROJECT TITLE, DESC, AND CATEGORIES -->
-      <div class="flex w-full flex-col gap-y-4 px-6 py-6 sm:w-3/5 sm:px-8">
+      <div
+        class="flex w-full flex-col gap-y-2 px-6 py-6 sm:w-4/6 sm:justify-between sm:gap-y-0 sm:px-8"
+      >
         <a
-          class="group-hover:text-primary dark:group-hover:text-primary-dark line-clamp-2 w-fit shrink-0 text-lg font-bold"
+          class="group-hover:text-primary dark:group-hover:text-primary-dark line-clamp-1 w-fit shrink-0 text-lg font-bold"
           href="{{ .Permalink }}"
           >{{ .Title }}</a
         >
-        <p class="line-clamp-2 grow opacity-60">{{ .Summary }}</p>
-        <div class="line-clamp-2 shrink-0 text-zinc-500">
+        <p class="line-clamp-2 opacity-60">{{ .Summary }}</p>
+        <div class="line-clamp-1 shrink-0 text-zinc-500">
           {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
         </div>
       </div>
