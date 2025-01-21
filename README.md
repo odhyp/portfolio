@@ -5,10 +5,10 @@ Built with Hugo, JavaScript, and TailwindCSS
 ## Future Plans
 
 - [ ] Add search functionality
-- [ ] Add support section under comments section
 - [ ] Add shortcodes
   - [ ] Image with caption
   - [ ] Image gallery
+- [ ] Add image modal for photo page
 - [ ] Add notification badge in the header menu for a new page (blog or project)
 - [ ] Utilize site announcements
 - [ ] Use Giscus custom theme for adaptive theming, instead of using JS (frame reload)
