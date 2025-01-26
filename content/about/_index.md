@@ -77,7 +77,8 @@ Managed payroll for 40 employees, ensuring timely disbursements and streamlining
 Outside of coding, you can find me here:
 
 - Writing tech-related articles on my [blog](/blog), where I share tips and projects
-- [Capturing moments](/photo) and sharing short stories about my photography journey
+  <!-- TODO: temporarily hidden until layout is finished -->
+  <!-- - [Capturing moments](/photo) and sharing short stories about my photography journey -->
 - Slaying Elder Dragons in {{< icon-inline name="steam" title="Steam" href="https://steamcommunity.com/valgtreiz" >}} while playing [Monster Hunter: World](https://www.monsterhunter.com/world/)
 - Listening to [alternative rock](https://open.spotify.com/playlist/37i9dQZF1DX9GRpeH4CL0S) via {{< icon-inline name="spotify" title="Spotify" href="https://open.spotify.com/user/oz_dhy" >}}
 
