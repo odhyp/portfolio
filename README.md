@@ -2,6 +2,10 @@
 
 Built with Hugo, JavaScript, and TailwindCSS
 
+## Quick Note
+
+- Photos page is currently hidden
+
 ## Future Plans
 
 - [ ] Add search functionality
@@ -72,8 +76,8 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
    {{< /work-experience >}}
    ```
 
-4. Blog Stats
+4. Blog and Project Stats
    Simple call, no parameters needed.
    ```
-   {{< blog-stats >}}
+   {{< blog-stats >}} or {{< project-stats >}}
    ```
