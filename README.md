@@ -9,9 +9,10 @@ Built with Hugo, JavaScript, and TailwindCSS
 ## Future Plans
 
 - [ ] Add search functionality
-- [ ] Add shortcodes
-  - [ ] Image with caption
-  - [ ] Image gallery
+- [ ] Shortcodes
+  - [ ] Add image with caption
+  - [ ] Add image gallery with slider
+  - [ ] Add styles (e.g. primary, secondary, etc) for button
 - [ ] Add image modal for photo page
 - [ ] Add notification badge in the header menu for a new page (blog or project)
 - [ ] Utilize site announcements
@@ -59,12 +60,16 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
    {{< toc >}}
    ```
 
-2. Icon
+2. Icon and Icon Inline
    Provide name for the icon name, title for the displayed text, and href.
    Icon should exist in the `static/icon/...`
 
    ```
    {{< icon name="python" title="Python" href="https://www.python.org/" >}}
+
+   or
+
+   {{< icon-inline name="python" title="Python" href="https://www.python.org/" >}}
    ```
 
 3. Work Experience
@@ -78,6 +83,14 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 
 4. Blog and Project Stats
    Simple call, no parameters needed.
+
    ```
    {{< blog-stats >}} or {{< project-stats >}}
+   ```
+
+5. Button
+   Create a CTA in the page
+
+   ```
+   {{< button label="View Repository" href="https://github.com/odhyp/sipd-ri" icon="github" >}}
    ```
