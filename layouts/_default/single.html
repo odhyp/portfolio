@@ -134,11 +134,15 @@
   <!-- POST TAGS END -->
 
   <!-- RELATED POST START -->
+  <!-- Will only show for Blog page -->
   {{ if eq .Section "blog" }}
   <div class="mt-16 flex flex-col md:mt-24">
     <h3 class="mb-4 text-2xl font-bold">Related Post</h3>
 
-    {{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }}
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+
+    <!-- If related post exist -->
+    {{ if $related }}
     <div class="">
       <ul
         class="marker:text-primary dark:marker:text-primary-dark list-disc space-y-4 pl-6 text-zinc-800 dark:text-zinc-300"
@@ -157,6 +161,10 @@
         {{ end }}
       </ul>
     </div>
+
+    <!-- If there are no related post -->
+    {{ else }}
+    <p class="text-zinc-500">No related posts available.</p>
     {{ end }}
   </div>
   {{ end }}
