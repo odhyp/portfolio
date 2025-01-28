@@ -1,6 +1,4 @@
-{{- if (eq (.Site.Params.disableComments | default false) false) -}} {{- if (eq
-(.Params.disableComments | default false) false) -}}
-
+{{- if not (.Params.disableComments | default false) -}}
 <script>
   const theme =
     localStorage.getItem("color-theme") === "dark"
@@ -30,5 +28,6 @@
     .querySelector('script[src="https://giscus.app/client.js"]')
     .setAttribute("data-theme", theme);
 </script>
-
-{{- end -}} {{- end -}}
+{{- else -}}
+<p class="text-zinc-500">Comments are disabled for this page.</p>
+{{- end -}}

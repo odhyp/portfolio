@@ -49,6 +49,7 @@
       </span>
 
       <!-- COMMENTS -->
+      {{- if not (.Params.disableComments | default false) -}}
       <a
         class="text-primary dark:text-primary-dark flex items-center gap-x-2 font-semibold hover:underline"
         href="#comments"
@@ -67,6 +68,7 @@
         </svg>
         Comments
       </a>
+      {{- end -}}
     </div>
   </div>
 </section>
