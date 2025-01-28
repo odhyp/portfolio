@@ -136,7 +136,7 @@
   <!-- RELATED POST START -->
   {{ if eq .Section "blog" }}
   <div class="mt-16 flex flex-col md:mt-24">
-    <h3 class="mb-8 text-2xl font-bold">Related Post</h3>
+    <h3 class="mb-4 text-2xl font-bold">Related Post</h3>
 
     {{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }}
     <div class="">
