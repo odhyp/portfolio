@@ -1,0 +1,27 @@
+{{ $label := .Get "label" }}
+{{ $href := .Get "href" }}
+{{ $icon := .Get "icon" }}
+{{ $iconPath := printf "/icons/%s.svg" $icon }}
+
+{{ if and $label $href $icon }}
+  <div class="inline-block mr-4 mb-4 w-full sm:w-auto">
+    <a href="{{ $href }}" class="flex justify-center items-center gap-x-4 px-6 py-3 no-underline border-2 rounded-lg border-zinc-200 dark:border-zinc-800 hover:border-primary dark:hover:border-primary-dark transition-colors ease-in-out">
+      {{ if fileExists (printf "static%s" $iconPath) }}
+        {{ $iconContent := readFile (printf "static%s" $iconPath) }}
+        <div class="flex-shrink-0 text-primary dark:text-primary-dark size-5" style="fill: currentColor;">
+          {{ $iconContent | safeHTML }}
+        </div>
+      {{ else }}
+        <div class="flex-shrink-0 text-primary dark:text-primary-dark size-5">
+          <!-- Placeholder for missing icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+          </svg>          
+        </div>
+      {{ end }}
+      <span class="font-medium leading-none">{{ $label }}</span>
+    </a>
+  </div>
+{{ else }}
+  <p class="text-primary dark:text-primary-dark">Error: Missing parameters or icon not found.</p>
+{{ end }}
