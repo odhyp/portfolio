@@ -10,11 +10,8 @@ title = "{{ $pageTitle }}"
 slug = "{{ $pageSlug }}"
 date = {{ now.Format "2006-01-02" }}
 categories = ["categories1", "categories2", "categories3"]
+description = "Write a short description of the project here"
 cover = "https://placehold.co/1200x600?text=Project\nCover+Image"
-summary = "A quick summary of your project here"
-codeUrl = ""
-liveUrl = ""
-docsUrl = ""
 +++
 
 <!-- Provide an overview of the project -->

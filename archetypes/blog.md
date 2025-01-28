@@ -10,10 +10,12 @@ title = "{{ $pageTitle }}"
 slug = "{{ $pageSlug }}"
 date = {{ now.Format "2006-01-02" }}
 tags = ["tag1", "tag2", "tag3"]
-summary = "blogSummaryHere"
+description = "Write a short description of the blog here"
 +++
 
 <!-- A quick introduction/opening -->
+
+{{< toc >}}
 
 ## Main Content
 
