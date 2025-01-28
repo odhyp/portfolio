@@ -96,12 +96,6 @@
         {{ .TableOfContents }}
       </div>
       <!-- TABLE OF CONTENTS end -->
-
-      <!-- SIDE SHARE START -->
-      <div class="hidden justify-start lg:flex">
-        {{- partial "components/share.html" . -}}
-      </div>
-      <!-- SIDE SHARE END -->
     </div>
   </aside>
   <!-- SIDEBAR END -->
@@ -109,18 +103,12 @@
 <!-- PAGE MAIN END -->
 
 <!-- PAGE FOOTER START -->
-<section class="mx-auto mt-16 w-full max-w-prose md:mt-24 lg:mx-0">
-  <!-- MAIN SHARE START -->
-  <div class="flex justify-center lg:hidden">
-    {{- partial "components/share.html" . -}}
-  </div>
-  <!-- MAIN SHARE END -->
-
-  <hr class="my-4 border-zinc-300 dark:border-zinc-700" />
-
+<section
+  class="mx-auto mt-16 w-full max-w-prose border-t border-zinc-300 md:mt-24 lg:mx-0 dark:border-zinc-700"
+>
   <!-- POST TAGS START -->
-  <div class="mt-8 flex flex-col md:mt-12">
-    <h3 class="mb-4 text-2xl font-bold">Tags</h3>
+  <div class="mt-12 flex flex-col md:mt-16">
+    <h3 class="mb-4 text-xl font-bold">Tags</h3>
     <div
       class="inline-flex w-full flex-wrap items-center justify-start gap-x-2"
     >
@@ -133,11 +121,20 @@
   </div>
   <!-- POST TAGS END -->
 
+  <!-- SHARE START -->
+  <div class="mt-12 flex flex-col md:mt-16">
+    <h3 class="mb-4 text-xl font-bold">Share!</h3>
+    <div class="flex justify-start">
+      {{- partial "components/share.html" . -}}
+    </div>
+  </div>
+  <!-- SHARE END -->
+
   <!-- RELATED POST START -->
   <!-- Will only show for Blog page -->
   {{ if eq .Section "blog" }}
-  <div class="mt-16 flex flex-col md:mt-24">
-    <h3 class="mb-4 text-2xl font-bold">Related Post</h3>
+  <div class="mt-12 flex flex-col md:mt-16">
+    <h3 class="mb-4 text-xl font-bold">Related Post:</h3>
 
     {{ $related := .Site.RegularPages.Related . | first 5 }}
 
@@ -171,15 +168,15 @@
   <!-- RELATED POST END -->
 
   <!-- COMMENTS START -->
-  <div class="mt-16 w-full max-w-full md:mt-24">
-    <h3 id="comments" class="mb-4 text-2xl font-bold">Comments</h3>
+  <div class="mt-12 w-full max-w-full md:mt-16">
+    <h3 id="comments" class="mb-4 text-xl font-bold">Comments</h3>
     <div>{{- partial "giscus.html" . -}}</div>
   </div>
   <!-- COMMENTS END -->
 
   <!-- SUPPORT START -->
-  <div class="mt-16 w-full max-w-full md:mt-24">
-    <h3 class="mb-4 text-2xl font-bold">Support</h3>
+  <div class="mt-12 w-full max-w-full md:mt-16">
+    <h3 class="mb-4 text-xl font-bold">Support</h3>
     <div
       class="bg-noise bg-zero group flex flex-col items-center justify-center gap-y-4 rounded-lg bg-zinc-100 bg-[length:200px_200px] px-8 py-6 sm:flex-row sm:gap-x-16 dark:bg-zinc-900"
     >
