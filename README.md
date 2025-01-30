@@ -5,6 +5,9 @@ Built with Hugo, JavaScript, and TailwindCSS
 ## Quick Note
 
 - Photos page is currently hidden
+- Replace profile image in About page
+- Structure the content better (like hugoDocs)
+- Create an anchor tag in the markdown indirectly (like hugoDocs or like how we use the shield badges in the profile)
 
 ## Future Plans
 
@@ -56,7 +59,7 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 1. Table of Content
    Simple call, no parameters needed.
 
-   ```
+   ```bash
    {{< toc >}}
    ```
 
@@ -64,7 +67,7 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
    Provide name for the icon name, title for the displayed text, and href.
    Icon should exist in the `static/icon/...`
 
-   ```
+   ```bash
    {{< icon name="python" title="Python" href="https://www.python.org/" >}}
 
    or
@@ -75,7 +78,7 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 3. Work Experience
    Provide job title, organization name, organization website URL, start and end date, and the brief description.
 
-   ```
+   ```bash
    {{< work-experience title="Accountant" organization="BPKA DIY" organizationLink="https://bpka.jogjaprov.go.id/" startDate="Oct 2024" endDate="Present" >}}
    Prepare and create financial reports for the Special Region of Yogyakarta, ensuring accuracy and compliance with government standards.
    {{< /work-experience >}}
@@ -84,13 +87,13 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 4. Blog and Project Stats
    Simple call, no parameters needed.
 
-   ```
+   ```bash
    {{< blog-stats >}} or {{< project-stats >}}
    ```
 
 5. Button
    Create a CTA in the page
 
-   ```
+   ```bash
    {{< button label="View Repository" href="https://github.com/odhyp/sipd-ri" icon="github" >}}
    ```
