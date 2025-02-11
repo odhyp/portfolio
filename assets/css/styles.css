@@ -1,14 +1,66 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+@plugin 'tailwind-scrollbar';
+
 @theme {
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --font-inter: "Inter", serif;
+  --color-white-prose: oklch(0.872 0.01 258.338);
 }
 
-.sample {
-  @apply text-red-400 italic;
+/* Default site */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 32px;
+}
+
+body {
+  @apply selection:bg-teal-300 selection:text-teal-900;
+}
+
+/* Section container */
+.site-container {
+  @apply mx-auto w-full max-w-2xl;
+}
+
+/* Prose container */
+article {
+  @apply prose prose-invert prose-img:rounded-lg;
+}
+
+/* Code block and Inline-code block */
+pre {
+  @apply scrollbar-thumb-neutral-800 scrollbar-thin scrollbar-track-neutral-900 rounded-lg bg-neutral-900! p-4;
+}
+
+code:not(pre > *) {
+  @apply rounded bg-neutral-800 p-1 select-all;
+}
+
+code::before,
+code::after {
+  @apply hidden;
+}
+
+/* Table Of Contents */
+#TableOfContents a {
+  @apply text-white-prose font-normal no-underline;
+}
+
+#TableOfContents ol,
+#TableOfContents li {
+  @apply m-0 list-none p-0;
+}
+
+#TableOfContents ol {
+  @apply space-y-2!;
+}
+
+/* TOC Heading 3 anchor tags */
+#TableOfContents li li > a {
+  @apply ml-4 inline-block font-light;
+}
+
+#TableOfContents ol li ol li {
+  @apply m-0!;
 }
