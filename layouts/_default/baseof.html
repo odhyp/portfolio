@@ -7,8 +7,14 @@
   <!-- DEV TOOLS END -->
 
   <body
-    class="font-inter flex min-h-dvh w-full flex-col bg-neutral-950 text-white sm:min-h-screen"
+    class="font-inter relative flex min-h-dvh w-full flex-col bg-neutral-950 text-white sm:min-h-screen"
   >
+    <!-- BACKGROUND START -->
+    <div
+      class="absolute inset-0 -z-50 h-full w-full bg-neutral-950 bg-[radial-gradient(#202020_1px,transparent_1px)] [background-size:40px_40px]"
+    ></div>
+    <!-- BACKGROUND END -->
+
     <!-- HEADER START -->
     {{- partial "header.html" . -}}
     <!-- HEADER END -->
