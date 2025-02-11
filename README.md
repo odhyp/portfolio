@@ -1,99 +1,145 @@
-# Portfolio
+<!-- PROJECT SHIELDS -->
 
-Built with Hugo, JavaScript, and TailwindCSS
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
 
-## Quick Note
+<!-- PROJECT LOGO -->
+<br />
+<br />
+<div align="center">
+  <a href="https://github.com/odhyp/hugo-tailwindcss-starter">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Logo_of_Hugo_the_static_website_generator.svg" alt="Logo" width="auto" height="75">
+  </a>
 
-- Photos page is currently hidden
-- Replace profile image in About page
-- Structure the content better (like hugoDocs)
-- Create an anchor tag in the markdown indirectly (like hugoDocs or like how we use the shield badges in the profile)
+<h3 align="center">Hugo TailwindCSS Starter</h3>
 
-## Future Plans
+  <p align="center">
+    A starter project for Hugo and TailwindCSS v4.0
+    <br />
+    Ready to deploy in Vercel 🚀
+    <br />
+    <a href="https://hugo-tailwindcss-starter.vercel.app/"><strong>View Live »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/odhyp/hugo-tailwindcss-starter/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/odhyp/hugo-tailwindcss-starter/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+    <br />
+</div>
 
-- [ ] Add search functionality
-- [ ] Shortcodes
-  - [ ] Add image with caption
-  - [ ] Add image gallery with slider
-  - [ ] Add styles (e.g. primary, secondary, etc) for button
-- [ ] Add image modal for photo page
-- [ ] Add notification badge in the header menu for a new page (blog or project)
-- [ ] Utilize site announcements
-- [ ] Use Giscus custom theme for adaptive theming, instead of using JS (frame reload)
+<!-- ABOUT THE PROJECT -->
 
-## Usage
+## Welcome
 
-A quick reminder on how to do stuffs.
+This starter project integrates **Hugo** with **TailwindCSS v4.0** and is ready for deployment on **Vercel**.
 
-### Running Site on Local Connection
+### Built With
 
-```bash
-hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
-```
+- ![Hugo](https://img.shields.io/badge/Hugo-FF4088?style=for-the-badge&logo=hugo&logoColor=white)
+- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-### Generating Page with Archetypes
+### Features
 
-1. New Blog
+- Integration of Hugo and TailwindCSS v4.0
+- Easy deployment with Vercel
+- Starter templates for rapid development
 
-   ```bash
-   hugo new --kind blog blog/2024-10-27-my-first-post.md
-   ```
+<!-- GETTING STARTED -->
 
-2. New Project
+## Installation
 
-   ```bash
-   hugo new --kind project project/2024-10-27-my-first-project.md
-   ```
+Ensure you have the following installed:
 
-3. New Photo
+- [Hugo](https://gohugo.io/installation/) (Extended Edition - at least v0.136.x)
+- [Node.js](https://nodejs.org/en/download) (at least v18.x)
+- [Vercel Account](https://vercel.com/signup) (optional for deployment)
 
-   ```bash
-   hugo new --kind photo photo/2024-10-27-tuna.md
-   ```
+To get a local copy up and running, follow these steps:
 
-> Blog page is using `pinned` and `tags`, while Project page is `featured` and `categories`.
-> Photo page doesn't have any taxonomy.
-
-### Utilizing Shortcodes
-
-1. Table of Content
-   Simple call, no parameters needed.
-
-   ```bash
-   {{< toc >}}
-   ```
-
-2. Icon and Icon Inline
-   Provide name for the icon name, title for the displayed text, and href.
-   Icon should exist in the `static/icon/...`
+1. Clone the repository
 
    ```bash
-   {{< icon name="python" title="Python" href="https://www.python.org/" >}}
-
-   or
-
-   {{< icon-inline name="python" title="Python" href="https://www.python.org/" >}}
+   git clone https://github.com/odhyp/hugo-tailwindcss-starter.git
    ```
 
-3. Work Experience
-   Provide job title, organization name, organization website URL, start and end date, and the brief description.
+2. Navigate to the project directory
 
    ```bash
-   {{< work-experience title="Accountant" organization="BPKA DIY" organizationLink="https://bpka.jogjaprov.go.id/" startDate="Oct 2024" endDate="Present" >}}
-   Prepare and create financial reports for the Special Region of Yogyakarta, ensuring accuracy and compliance with government standards.
-   {{< /work-experience >}}
+   cd hugo-tailwindcss-starter
    ```
 
-4. Blog and Project Stats
-   Simple call, no parameters needed.
+3. Install the Node.js dependencies
 
    ```bash
-   {{< blog-stats >}} or {{< project-stats >}}
+   npm install
    ```
 
-5. Button
-   Create a CTA in the page
+4. Run the development server
 
    ```bash
-   {{< button label="View Repository" href="https://github.com/odhyp/sipd-ri" icon="github" >}}
+   npm run dev
    ```
+
+5. When development is complete, build the optimized Hugo site
+
+   ```bash
+   npm run build
+   ```
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+- No planned updates at the moment. Feel free to suggest improvements!
+
+See the [open issues](https://github.com/odhyp/hugo-tailwindcss-starter/issues) for a full list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/YourFeature`)
+3. Commit your Changes (`git commit -m 'Add some YourFeature'`)
+4. Push to the Branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+### Top contributors
+
+<a href="https://github.com/odhyp/hugo-tailwindcss-starter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=odhyp/hugo-tailwindcss-starter" alt="contrib.rocks image" />
+</a>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See [`LICENSE`](https://github.com/odhyp/hugo-tailwindcss-starter/blob/master/LICENSE) for more information.
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgements
+
+- [Othneil Drew](https://github.com/othneildrew) for the [README.md Template](https://github.com/othneildrew/Best-README-Template)
+- [Alexandre Sanlim](https://github.com/alexandresanlim) for the [README.md badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)
+- [Cover image](https://upload.wikimedia.org/wikipedia/commons/a/af/Logo_of_Hugo_the_static_website_generator.svg)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/odhyp/hugo-tailwindcss-starter.svg?style=for-the-badge
+[contributors-url]: https://github.com/odhyp/hugo-tailwindcss-starter/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/odhyp/hugo-tailwindcss-starter.svg?style=for-the-badge
+[forks-url]: https://github.com/odhyp/hugo-tailwindcss-starter/network/members
+[stars-shield]: https://img.shields.io/github/stars/odhyp/hugo-tailwindcss-starter.svg?style=for-the-badge
+[stars-url]: https://github.com/odhyp/hugo-tailwindcss-starter/stargazers
+[issues-shield]: https://img.shields.io/github/issues/odhyp/hugo-tailwindcss-starter.svg?style=for-the-badge
+[issues-url]: https://github.com/odhyp/hugo-tailwindcss-starter/issues
