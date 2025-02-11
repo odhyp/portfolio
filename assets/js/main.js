@@ -1,4 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+// TABLE OF CONTENTS
+
+// 00. LOAD ALL FUNCTIONS
+// 01. CODE BLOCK COPY
+
+// 00. LOAD ALL FUNCTION ----------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  copyCodeBlock();
+});
+
+// 01. CODE BLOCK COPY ------------------------------------------------------------------
+function copyCodeBlock() {
   let codeBlocks = document.querySelectorAll("pre > code");
 
   if (codeBlocks.length > 0) {
@@ -15,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let copyButton = document.createElement("button");
       copyButton.innerText = "Copy";
       copyButton.className =
-        "absolute top-4 right-4 bg-neutral-800 text-white-prose px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-700 transition-all ease-in-out copy-btn";
+        "absolute top-4 right-4 bg-neutral-800 text-white-prose px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-700 transition-all ease-in-out copy-btn hover:cursor-pointer";
 
       // Append button inside wrapper instead of <pre>
       wrapper.appendChild(copyButton);
@@ -62,4 +73,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
+}
