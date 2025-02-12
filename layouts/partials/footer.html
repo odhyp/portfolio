@@ -5,3 +5,17 @@
     >
   </div>
 </footer>
+
+<script>
+  function openMail(event) {
+    event.preventDefault();
+
+    const email = "pradhana.odhy@gmail.com";
+    const subject = encodeURIComponent("Hello from your website");
+    const body = encodeURIComponent(
+      "Hi Odhy, I saw your website and wanted to reach out",
+    );
+
+    window.open(`mailto:${email}?subject=${subject}&body=${body}`, "_blank");
+  }
+</script>
