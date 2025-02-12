@@ -2,10 +2,12 @@
 
 // 00. LOAD ALL FUNCTIONS
 // 01. CODE BLOCK COPY
+// 02. OPEN EXTERNAL LINKS IN NEW TAB
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   copyCodeBlock();
+  openExternalLinksInNewTab();
 });
 
 // 01. CODE BLOCK COPY ------------------------------------------------------------------
@@ -73,4 +75,12 @@ function copyCodeBlock() {
       }
     });
   }
+}
+
+// 02. OPEN EXTERNAL LINKS IN NEW TAB ---------------------------------------------------
+function openExternalLinksInNewTab() {
+  document.querySelectorAll('article a[href^="http"]').forEach((link) => {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
 }
