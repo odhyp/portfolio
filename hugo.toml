@@ -1,6 +1,6 @@
 baseURL = 'https://odhyp.com/'
 languageCode = 'en-us'
-title = 'Orion'
+title = 'Odhy'
 
 # Custom taxonomies
 [taxonomies]
