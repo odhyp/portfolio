@@ -6,7 +6,7 @@ date = 2025-02-13
 tags = ["hugo", "tailwindcss"]
 +++
 
-As you can see [here], I have upgraded my site to use TailwindCSS v4. So in this post, I will guide you through the upgrade process... hopefully.
+As you can see [here], I have upgraded my site to use TailwindCSS v4. So in this post, I will guide you through the upgrade process—just like how I upgraded my own website, step by step... hopefully.
 
 {{< toc >}}
 
