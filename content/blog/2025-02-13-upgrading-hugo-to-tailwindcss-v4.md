@@ -6,11 +6,11 @@ date = 2025-02-13
 tags = ["hugo", "tailwindcss"]
 +++
 
-As you can see [here], I have upgraded my site to use TailwindCSS v4. So in this post, I will guide you through the upgrade process—just like how I upgraded my own website, step by step... hopefully.
+As part of [this release], I upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process—just as I did for my own website, step by step… hopefully.
+
+[this release]: https://github.com/odhyp/odhyp.com/releases/tag/v2.0.0
 
 {{< toc >}}
-
-[here]: https://github.com/odhyp/odhyp.com/releases/tag/v2.0.0
 
 ## What's Changed
 
