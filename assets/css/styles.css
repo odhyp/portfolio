@@ -14,6 +14,10 @@ html {
   scroll-padding-top: 32px;
 }
 
+html {
+  @apply scrollbar-thumb-neutral-800 scrollbar-thin scrollbar-track-neutral-900;
+}
+
 body {
   @apply selection:bg-teal-300 selection:text-teal-900;
 }
