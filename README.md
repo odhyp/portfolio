@@ -14,6 +14,8 @@ A quick note for my future self.
 hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
 ```
 
+> This lets you access it from any device on the same network, including your phone.
+
 ### Generating Page with Archetypes
 
 Blog page has `tags`, while Project page has `featured`, `categories`, and `cover` in their front matter.
@@ -39,7 +41,7 @@ Blog page has `tags`, while Project page has `featured`, `categories`, and `cove
    {{< toc >}}
    ```
 
-2. Callouts: `note`, `tip`, `important`, `warning`, and `caution`
+2. Alerts: `note`, `tip`, `important`, `warning`, and `caution`
 
     ```bash
     {{% note %}}
