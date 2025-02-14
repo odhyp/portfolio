@@ -55,7 +55,7 @@ Error: Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/oxide-lin
 
 ### Step 2: Removing old files
 
-Since `tailwind.config.js` is no longer used, migrate your custom styles to `styles.css`. Here's what it looks like now:
+Since `tailwind.config.js` is no longer used, migrate your custom styles to `styles.css` and add `@import "tailwindcss"`. Here's what it looks like now:
 
 ```js
 @import "tailwindcss";
@@ -71,7 +71,7 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 }
 
 .example {
-  @apply text-red-400 italic; // Your custom styles here
+  @apply text-custom-400; // Your custom styles here
 }
 ```
 
@@ -80,6 +80,7 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 I renamed my `postcss.config.js` to `postcss.config.mjs` (this may not be necessary) to match the TailwindCSS docs, so we need to update the `css.html` with the new file name:
 
 ```html
+...
 {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.mjs") -}}
 ...
 ```
