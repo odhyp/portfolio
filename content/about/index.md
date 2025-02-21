@@ -73,15 +73,13 @@ Outside of coding, you can find me here:
 
 I'm currently focused on other projects, but I'm always happy to expand my network and connect with fellow enthusiasts. Feel free to drop me an email or connect with me on these platforms:
 
-{{< wrapper class="flex flex-wrap gap-x-4 gap-y-6 items-center justify-start" >}}
-
-{{< contact name="Gmail" url="mailto:pradhana.odhy@gmail.com" >}}
-{{< contact name="GitHub" url="https://github.com/odhyp/" >}}
-{{< contact name="X" url="https://x.com/valgtreiz" >}}
-{{< contact name="Instagram" url="https://www.instagram.com/odhypradhana" >}}
-{{< contact name="Steam" url="https://steamcommunity.com/valgtreiz" >}}
-{{< contact name="Spotify" url="https://open.spotify.com/user/oz_dhy" >}}
-
+{{< wrapper class="flex flex-wrap gap-x-4 gap-y-1 items-center justify-start" >}}
+{{< icon name="gmail" title="Gmail" url="mailto:pradhana.odhy@gmail.com" >}}
+{{< icon name="github" title="GitHub" url="https://github.com/odhyp/" >}}
+{{< icon name="x" title="X" url="https://x.com/valgtreiz" >}}
+{{< icon name="instagram" title="Instagram" url="https://www.instagram.com/odhypradhana" >}}
+{{< icon name="steam" title="Steam" url="https://steamcommunity.com/valgtreiz" >}}
+{{< icon name="spotify" title="Spotify" url="https://open.spotify.com/user/oz_dhy" >}}
 {{< /wrapper >}}
 
 ## Questions or Feedback?
