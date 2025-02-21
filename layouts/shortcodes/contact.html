@@ -1,4 +1,4 @@
-<a href='{{ .Get "url" }}' class="group relative">
+<a href='{{ .Get "url" }}' class="group relative mt-4 mb-2">
   <iconify-icon
     icon='simple-icons:{{ .Get "name" | lower }}'
     width="32"
@@ -6,7 +6,7 @@
     class="p-1 opacity-75 transition-all ease-in-out group-hover:-translate-y-1 group-hover:opacity-100"
   ></iconify-icon>
   <span
-    class="absolute -bottom-2 left-1/2 -translate-x-1/2 text-sm font-light capitalize opacity-0 transition-all ease-in-out group-hover:opacity-75"
-    >{{ .Get "name" }}</span
+    class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-sm font-light whitespace-nowrap capitalize opacity-0 transition-all ease-in-out group-hover:opacity-75"
+    >{{ .Get "title" }}</span
   >
 </a>
