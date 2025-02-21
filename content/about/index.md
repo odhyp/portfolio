@@ -10,14 +10,13 @@ layout = "about"
 Outside of coding, you can find me here:
 
 - Writing tech-related articles on my [blog], where I share tips, notes, and ideas.
-- Slaying Elder Dragons in Monster Hunter: World via [Steam].
-- Listening to [alternative-rock] via [Spotify].
+- Slaying Elder Dragons in [Monster Hunter: World].
+- Listening to [alternative rock].
 - Hanging out with my wife and [two cats].
 
 [blog]: /blog
-[Steam]: https://steamcommunity.com/valgtreiz
-[alternative-rock]: https://open.spotify.com/playlist/37i9dQZF1DX9GRpeH4CL0S
-[Spotify]: https://open.spotify.com/user/oz_dhy
+[Monster Hunter: World]: https://www.monsterhunter.com/world/
+[alternative rock]: https://open.spotify.com/playlist/37i9dQZF1DX9GRpeH4CL0S
 [two cats]: https://www.instagram.com/tuna_thekitty/
 
 ## Contact
